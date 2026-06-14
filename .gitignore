@@ -1,0 +1,36 @@
+# ROS build output
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Docker / images
+*.tar
+*.img
+
+# Large robotics / AI data
+*.bag
+*.db3
+*.mcap
+*.pt
+*.pth
+*.onnx
+*.engine
+*.weights
+datasets/
+data/
+models/
+
+# VS Code
+.vscode/
+.vscode-server/
+
+# Cache/logs
+.cache/
+*.log
