@@ -14,6 +14,9 @@ venv/
 *.tar
 *.img
 
+# Third-party Isaac ROS tooling (clone per docker/isaac-ros-humble/run.sh, do not commit)
+isaac_ros_ws/src/isaac_ros_common/
+
 # Large robotics / AI data
 *.bag
 *.db3

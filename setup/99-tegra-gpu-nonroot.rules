@@ -1,0 +1,29 @@
+# OPTIONAL / mostly superseded — see scripts/fix-gpu-perms.sh instead.
+#
+# This rule re-groups the Jetson GPU scheduler nodes to 'video' so a non-root
+# user can initialize CUDA *on the host*. It does NOT fix CUDA inside the Isaac
+# ROS dev container, which was the original goal:
+#
+#   - The container is --privileged with a private /dev tmpfs. Docker copies
+#     host /dev nodes by numeric gid, so host group changes don't reliably map
+#     to the same group name inside the container.
+#   - The actual node CUDA fails to open in the container is the DRM render
+#     node /dev/dri/renderD12* (EACCES -> "Error 801"), whose group on the host
+#     is owned by systemd (50-udev-default.rules + 70-uaccess) and can't be
+#     overridden by a later GROUP= rule.
+#
+# The container case is therefore fixed from *inside* the container by
+# scripts/fix-gpu-perms.sh, which run.sh runs automatically on launch.
+#
+# Keep/install this file only if you also want non-root CUDA directly on the
+# host (outside any container). Install:
+#   sudo cp setup/99-tegra-gpu-nonroot.rules /etc/udev/rules.d/
+#   sudo udevadm control --reload-rules && sudo udevadm trigger
+#
+# This filename sorts after 99-tegra-devices.rules, so these settings win.
+
+SUBSYSTEM=="nvidia-gpu-v2", KERNEL=="sched", GROUP="video", MODE="0660"
+SUBSYSTEM=="nvidia-pci-gpu-v2", KERNEL=="sched", GROUP="video", MODE="0660"
+SUBSYSTEM=="nvidia-gpu-v2", KERNEL=="nvsched_ctrl_fifo", GROUP="video", MODE="0660"
+SUBSYSTEM=="nvidia-pci-gpu-v2", KERNEL=="nvsched_ctrl_fifo", GROUP="video", MODE="0660"
+KERNEL=="nvhost-sched-gpu", GROUP="video", MODE="0660"
