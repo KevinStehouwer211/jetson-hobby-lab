@@ -1,0 +1,10 @@
+# Parameters for the jetson_gpio_driver node.
+# Pin numbers follow `mode` below. Edit to match your wiring, then rebuild
+# (colcon build --symlink-install picks up yaml changes without a recompile).
+/**:
+  ros__parameters:
+    mode: "BOARD"          # BOARD | BCM | CVM | TEGRA_SOC
+    output_pins: [18]      # driven via /gpio_driver/output_18 (Bool)
+    input_pins: [16]       # published on /gpio_driver/input_16  (Bool)
+    input_pull: "PUD_OFF"  # PUD_OFF | PUD_UP | PUD_DOWN
+    publish_rate_hz: 20.0  # input poll/publish rate

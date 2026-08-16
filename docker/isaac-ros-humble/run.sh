@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$HOME/jetson-hobby-lab"
 ISAAC_COMMON="$REPO_ROOT/isaac_ros_ws/src/isaac_ros_common"
 
@@ -39,6 +40,9 @@ cd "$ISAAC_COMMON"
 # Without -d, run_dev.sh falls back to mounting isaac_ros_common itself.
 # Also bind-mount the repo's helper scripts at /host_scripts (read-only) so
 # check-env.sh and friends are available without duplicating them into the ws.
+# Also bind-mount our own .bashrc onto /home/admin/.bashrc so the interactive
+# shell gets colors + ROS sourcing. The container recreates admin's home empty
+# (host UID collision), so the image's skel .bashrc never lands there.
 ./scripts/run_dev.sh \
     -d "$REPO_ROOT/isaac_ros_ws" \
-    -a "-v $REPO_ROOT/scripts:/host_scripts:ro"
+    -a "-v $REPO_ROOT/scripts:/host_scripts:ro -v $SCRIPT_DIR/bashrc:/home/admin/.bashrc:ro"

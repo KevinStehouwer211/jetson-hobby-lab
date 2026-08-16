@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>jetson_gpio_driver</name>
+  <version>0.1.0</version>
+  <description>
+    ROS 2 driver exposing NVIDIA Jetson board GPIO over topics. Runs on the
+    host (which owns /dev/gpiochip* and the 'gpio' group) so compute
+    containers never need privileged device access.
+  </description>
+  <maintainer email="stehouwerkevin@gmail.com">Kevin Stehouwer</maintainer>
+  <license>MIT</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

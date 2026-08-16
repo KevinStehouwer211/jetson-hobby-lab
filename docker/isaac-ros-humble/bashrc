@@ -1,0 +1,33 @@
+# Bash init for the Isaac ROS container.
+#
+# The container's entrypoint recreates /home/admin empty when the host UID
+# collides with the image's pre-baked 'admin' user, so /etc/skel (and the
+# stock .bashrc) never lands here -> no colors, no ROS sourcing. This file is
+# bind-mounted to /home/admin/.bashrc by run.sh to restore a sane shell.
+
+# If not running interactively, do nothing.
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# System-wide settings (completion, etc.).
+[ -f /etc/bash.bashrc ] && source /etc/bash.bashrc
+
+# History niceties.
+HISTCONTROL=ignoreboth
+shopt -s histappend checkwinsize
+HISTSIZE=10000
+HISTFILESIZE=20000
+
+# Colored prompt + ls/grep.
+force_color_prompt=yes
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias ll='ls -alF'
+
+# ROS 2 + Isaac ROS workspace.
+source /opt/ros/humble/setup.bash 2>/dev/null
+[ -f /workspaces/isaac_ros-dev/install/setup.bash ] && \
+    source /workspaces/isaac_ros-dev/install/setup.bash
