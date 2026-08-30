@@ -37,3 +37,6 @@ models/
 # Cache/logs
 .cache/
 *.log
+
+# Stored videos
+python_scripts/saved_vids/
