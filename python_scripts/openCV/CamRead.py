@@ -1,17 +1,29 @@
 import cv2
+import os
 print(cv2.__version__)
 
-dispW=320
-dispH=240
-flip=2
+VID_PATH = 'python_scripts/saved_vids/output.avi'
 
-# read the video file that was saved by CamSave.py
-cam=cv2.VideoCapture('python_scripts/saved_vids/output.avi')
+print("Video path:", VID_PATH)
+print("File exists:", os.path.exists(VID_PATH))
+print("File size:", os.path.getsize(VID_PATH), "bytes")
+
+cam = cv2.VideoCapture(VID_PATH)
+
+print("Video opened:", cam.isOpened())
+print("Frames:", cam.get(cv2.CAP_PROP_FRAME_COUNT))
+print("FPS:", cam.get(cv2.CAP_PROP_FPS))
+print("Width:", cam.get(cv2.CAP_PROP_FRAME_WIDTH))
+print("Height:", cam.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
 while True:
     ret, frame=cam.read()
+    if not ret:
+        break
     cv2.imshow('WEBCAM', frame)
-    if cv2.waitKey(1)==ord('q'):
+    cv2.moveWindow('WEBCAM', 0, 0)
+    # same framerate as the original video
+    if cv2.waitKey(30)==ord('q'):
         break
 
 cam.release()

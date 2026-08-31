@@ -12,8 +12,23 @@ flip=2
 # For USB webcam, use the following line:
 cam=cv2.VideoCapture(0, cv2.CAP_V4L2)
 
+cv2.namedWindow('WEBCAM')
+cv2.createTrackbar('cX', 'WEBCAM', 0, dispW, lambda x: None)
+cv2.createTrackbar('cY', 'WEBCAM', 0, dispH, lambda x: None)
+cv2.createTrackbar('width', 'WEBCAM', 0, dispW, lambda x: None)
+cv2.createTrackbar('height', 'WEBCAM', 0, dispH, lambda x: None)
+
+
 while True:
     ret, frame=cam.read()
+
+    cX = cv2.getTrackbarPos('cX', 'WEBCAM')
+    cY = cv2.getTrackbarPos('cY', 'WEBCAM')
+    width = cv2.getTrackbarPos('width', 'WEBCAM')
+    height = cv2.getTrackbarPos('height', 'WEBCAM')
+
+    cv2.rectangle(frame, (cX-width//2, cY-height//2), (cX+width//2, cY+height//2), (0, 255, 0), 2)
+    
     cv2.imshow('WEBCAM', frame)
     cv2.moveWindow('WEBCAM', 0, 0)
     if cv2.waitKey(1)==ord('q'):

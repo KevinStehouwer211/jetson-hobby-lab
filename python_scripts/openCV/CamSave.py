@@ -15,23 +15,17 @@ cam.set(cv2.CAP_PROP_FRAME_WIDTH, dispW)
 cam.set(cv2.CAP_PROP_FRAME_HEIGHT, dispH)
 cam.set(cv2.CAP_PROP_FPS, 30)
 
-outVideo = cv2.VideoWriter('saved_vids/output.avi', cv2.VideoWriter_fourcc(*'MJPG'), 30, (dispW, dispH))
+outVideo = cv2.VideoWriter('python_scripts/saved_vids/output.avi', cv2.VideoWriter_fourcc(*'MJPG'), 30, (int(cam.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cam.get(cv2.CAP_PROP_FRAME_HEIGHT))))
 
-try:
-    while True:
-        ret, frame=cam.read()
-        # Write the frame to the output video file
-        outVideo.write(frame)
+while True:
+    ret, frame=cam.read()
+    # Write the frame to the output video file
+    outVideo.write(frame)
 
-        # Use this when there is a monitor attached to the Jetson.
-        #cv2.imshow('WEBCAM', frame)
-        if cv2.waitKey(1)==ord('q'):
-            break
-
-# Use this line since the Jetson is headless and can't display a window.  
-# If you run this on a computer with a monitor, you can use the line above instead.
-except KeyboardInterrupt:
-    print("Keyboard interrupt received. Exiting...")
+    # Use this when there is a monitor attached to the Jetson.
+    cv2.imshow('WEBCAM', frame)
+    if cv2.waitKey(1)==ord('q'):
+        break
 
 outVideo.release()
 cam.release()
