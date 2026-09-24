@@ -1,0 +1,113 @@
+C51 COMPILER V9.60.0.0   MAIN                                                              12/19/2022 16:58:47 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\keli\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          
+   2          #include <reg52.h>
+   3          
+   4          sbit beep=P2^3;
+   5          sbit dula=P2^6;
+   6          sbit wela=P2^7;
+   7          unsigned char i=100;
+   8          unsigned char j,k,temp,key;
+   9          unsigned char code table[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,
+  10                                  0x07,0x7f,0x6f,0x77,0x7c,0x39,0x5e,0x79,0x71};
+  11          unsigned char date1,date2,date3;
+  12          
+  13          void Delay_Us(int i)
+  14          {
+  15   1        while(--i);
+  16   1      }
+  17          void delay(unsigned char m)
+  18          {
+  19   1        unsigned char i;
+  20   1        while(m--)
+  21   1        {
+  22   2          i = 10;
+  23   2          while(i--)
+  24   2          {
+  25   3            Delay_Us(125);
+  26   3          }
+  27   2          
+  28   2        }
+  29   1      }
+  30          void init(void)       //串口初始化
+  31          {
+  32   1          SCON=0x50;   //UART方式1:8位UART;   REN=1:允许接收 
+  33   1          PCON=0x00;   //SMOD=0:波特率不加倍 
+  34   1          TMOD=0x20;   //T1方式2,用于UART波特率 
+  35   1          TH1=0xFD; 
+  36   1          TL1=0xFD;   //UART波特率设置:FDFD，9600;FFFF,57600
+  37   1          TR1=1;   //允许T1计数 
+  38   1          EA=1;
+  39   1      }
+  40          
+  41          void send(unsigned char d)      //发送一个字节的数据，形参d即为待发送数据。
+  42          {
+  43   1        SBUF = d;
+  44   1        while(!TI);   //发送完为1 
+  45   1        TI = 0;
+  46   1      }
+  47          
+  48          bit UART_Servo(unsigned char servonum,unsigned char angle)
+  49          {
+  50   1        
+  51   1        servonum = 64 + servonum;
+  52   1          date1 = angle/100 + 48;
+  53   1          date2 = (angle%100)/10 + 48;
+  54   1          date3 = angle%10 + 48;
+  55   1          send(0x24);//发送包头
+C51 COMPILER V9.60.0.0   MAIN                                                              12/19/2022 16:58:47 PAGE 2   
+
+  56   1        send(servonum);//发送舵机编号
+  57   1        send(date1);//发送角度
+  58   1        send(date2);//发送角度
+  59   1        send(date3);//发送角度
+  60   1        send(0x23);//发送包尾
+  61   1        delay(100);
+  62   1          return(1);
+  63   1      
+  64   1      }
+  65          void display(unsigned char num)
+  66          {
+  67   1               P0=table[num];
+  68   1               dula=1;
+  69   1               dula=0;
+  70   1               P0=0x00;
+  71   1               wela=1;
+  72   1               wela=0;
+  73   1      }
+  74          
+  75          void main()
+  76          {
+  77   1        init();
+  78   1        while(1)
+  79   1        { 
+  80   2          delay(1);
+  81   2          UART_Servo(1,0);
+  82   2          delay(1);
+  83   2          UART_Servo(1,90); 
+  84   2          delay(1);
+  85   2          UART_Servo(1,180); 
+  86   2          delay(1);
+  87   2        }
+  88   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    193    ----
+   CONSTANT SIZE    =     16    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      8    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

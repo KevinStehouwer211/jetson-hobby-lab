@@ -1,0 +1,22 @@
+[
+   {
+      "directory" : "C:/Users/leo/workspace_ccstheia/24CServo-uart/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart\" -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart/Debug\" -I\"E:/SoftWare/ti/mspm0_sdk_2_02_00_05/source/third_party/CMSIS/Core/Include\" -I\"E:/SoftWare/ti/mspm0_sdk_2_02_00_05/source\" -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart/BSP\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/include/c++/v1\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/lib/clang/18/include\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/include/c\" -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart/Debug/syscfg\"",
+      "file"      : "C:/Users/leo/workspace_ccstheia/24CServo-uart/BSP/delay.c"
+   },
+   {
+      "directory" : "C:/Users/leo/workspace_ccstheia/24CServo-uart/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart\" -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart/Debug\" -I\"E:/SoftWare/ti/mspm0_sdk_2_02_00_05/source/third_party/CMSIS/Core/Include\" -I\"E:/SoftWare/ti/mspm0_sdk_2_02_00_05/source\" -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart/BSP\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/include/c++/v1\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/lib/clang/18/include\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/include/c\" -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart/Debug/syscfg\"",
+      "file"      : "C:/Users/leo/workspace_ccstheia/24CServo-uart/BSP/usart.c"
+   },
+   {
+      "directory" : "C:/Users/leo/workspace_ccstheia/24CServo-uart/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart\" -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart/Debug\" -I\"E:/SoftWare/ti/mspm0_sdk_2_02_00_05/source/third_party/CMSIS/Core/Include\" -I\"E:/SoftWare/ti/mspm0_sdk_2_02_00_05/source\" -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart/BSP\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/include/c++/v1\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/lib/clang/18/include\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/include/c\" -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart/Debug/syscfg\"",
+      "file"      : "C:/Users/leo/workspace_ccstheia/24CServo-uart/empty.c"
+   },
+   {
+      "directory" : "C:/Users/leo/workspace_ccstheia/24CServo-uart/Debug",
+      "command"   : "clang++ -D__MSPM0G3507__ -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart\" -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart/Debug\" -I\"E:/SoftWare/ti/mspm0_sdk_2_02_00_05/source/third_party/CMSIS/Core/Include\" -I\"E:/SoftWare/ti/mspm0_sdk_2_02_00_05/source\" -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart/BSP\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/include/c++/v1\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/lib/clang/18/include\" -isystem\"E:/SoftWare/ti/ccstheia151/ccs/tools/compiler/ti-cgt-armllvm_4.0.0.LTS/include/c\" -I\"C:/Users/leo/workspace_ccstheia/24CServo-uart/Debug/syscfg\"",
+      "file"      : "C:/Users/leo/workspace_ccstheia/24CServo-uart/Debug/syscfg/ti_msp_dl_config.c"
+   }
+]
