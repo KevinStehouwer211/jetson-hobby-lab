@@ -51,6 +51,13 @@ u8 deal_data(void) //传过来的是字符类型
 		angle = 180;
 	}
 	
+	if(duo_num == 25)          /* '$Y###' sets the slew rate in degrees/second */
+	{
+		Servo_Speed = angle;
+		return 0;
+	}
+	if(duo_num < 1 || duo_num > 24) return 0;
+
 	Angle_J[Hor][column] = angle;	
 	
 	return 0;

@@ -15,6 +15,8 @@ int main(void)
 		for(Dnum = 0;Dnum <DUOJI_NUM;Dnum++)
 		{
 			Angle_J[Doup][Dnum] = 90;
+			Angle_Q[Doup][Dnum] = 90 * 16;
+			Pulse_T[Doup][Dnum] = (90 * 11 + 500) / SERVO_TICK_US;
 		}
 		
 	}

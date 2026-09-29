@@ -12,13 +12,13 @@ def main():
         # A: 90 -> 45, in 1-degree steps. 0.1 seconds per step ~ 10 degrees/s.
         for angle in range(89, 44, -1):
             kit.servo[0].angle = angle
-            time.sleep(0.1)
+            time.sleep(0.01)
         time.sleep(0.5)  # Optional settling allowance at 45 degrees.
 
         # This loop only starts after the preceding loop and wait finish.
         for angle in range(46, 91):
             kit.servo[0].angle = angle
-            time.sleep(0.1)
+            time.sleep(0.01)
         time.sleep(0.5)
 
 

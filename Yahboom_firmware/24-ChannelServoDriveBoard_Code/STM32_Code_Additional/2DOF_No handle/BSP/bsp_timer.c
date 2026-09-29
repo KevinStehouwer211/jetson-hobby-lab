@@ -63,7 +63,48 @@ void TIM1_Int_Init(u16 arr,u16 psc)
 * @par History   这里时钟选择为APB1的2倍，而APB1为36M
 */
 int num = 0;
-int times = 100;
+
+/* Advance every channel one 20ms frame toward its target, then refresh the
+ * pulse table the ISR compares against. Runs once per frame, not per tick. */
+static void servo_frame_update(void)
+{
+	u8 g, c;
+	int step;
+
+	if (Servo_Speed == 0)
+	{
+		step = 180 * 16;                      /* no rate limit: arrive this frame */
+	}
+	else
+	{
+		step = ((int)Servo_Speed * 16) / 50;  /* deg/s -> 1/16 deg per 20ms frame */
+		if (step < 1) step = 1;               /* never stall at very slow rates */
+	}
+
+	for (g = 0; g < GROUP_NUM; g++)
+	{
+		for (c = 0; c < DUOJI_NUM; c++)
+		{
+			int target = Angle_J[g][c] * 16;
+			int cur    = Angle_Q[g][c];
+
+			if (cur < target)
+			{
+				cur += step;
+				if (cur > target) cur = target;
+			}
+			else if (cur > target)
+			{
+				cur -= step;
+				if (cur < target) cur = target;
+			}
+			Angle_Q[g][c] = cur;
+
+			/* pulse us = angle*11 + 500, angle = cur/16 */
+			Pulse_T[g][c] = (u16)(((cur * 11) / 16 + 500) / SERVO_TICK_US);
+		}
+	}
+}
 
 void TIM1_UP_IRQHandler(void)   //TIM1中断
 {
@@ -74,7 +115,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 	
 
 		#ifdef USE_SERVO_J1
-		if(num <= (Angle_J[0][0] * 11 + 500)/times)
+		if(num <= Pulse_T[0][0])
 		{
 			GPIO_SetBits(Servo_J1_PORT, Servo_J1_PIN );		//将舵机接口电平置高
 		}
@@ -85,7 +126,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif	   	
 
 		#ifdef USE_SERVO_J2
-		if(num <= (Angle_J[0][1] * 11 + 500)/times)
+		if(num <= Pulse_T[0][1])
 		{
 			GPIO_SetBits(Servo_J2_PORT, Servo_J2_PIN );		//将舵机接口电平置高
 		}
@@ -97,7 +138,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 
 		#ifdef USE_SERVO_J3
 
-		if(num <= (Angle_J[0][2] * 11 + 500)/times)
+		if(num <= Pulse_T[0][2])
 		{
 			GPIO_SetBits(Servo_J3_PORT, Servo_J3_PIN );		//将舵机接口电平置高
 		}
@@ -108,7 +149,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif
 
 		#ifdef USE_SERVO_J4
-		if(num <= (Angle_J[0][3] * 11 + 500)/times)
+		if(num <= Pulse_T[0][3])
 		{
 			GPIO_SetBits(Servo_J4_PORT, Servo_J4_PIN );		//将舵机接口电平置高
 		}
@@ -119,7 +160,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif
 
 		#ifdef USE_SERVO_J5
-		if(num <= (Angle_J[0][4] * 11 + 500)/times)
+		if(num <= Pulse_T[0][4])
 		{
 			GPIO_SetBits(Servo_J5_PORT, Servo_J5_PIN );		//将舵机接口电平置高
 		}
@@ -130,7 +171,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif
 
 		#ifdef USE_SERVO_J6
-		if(num <= (Angle_J[0][5] * 11 + 500)/times)
+		if(num <= Pulse_T[0][5])
 		{
 			GPIO_SetBits(Servo_J6_PORT, Servo_J6_PIN );		//将舵机接口电平置高
 		}
@@ -141,7 +182,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif
 		
 		#ifdef USE_SERVO_J7
-		if(num <= (Angle_J[0][6] * 11 + 500)/times)
+		if(num <= Pulse_T[0][6])
 		{
 			GPIO_SetBits(Servo_J7_PORT, Servo_J7_PIN );		//将舵机接口电平置高
 		}
@@ -152,7 +193,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif
 		
 		#ifdef USE_SERVO_J8
-		if(num <= (Angle_J[0][7] * 11 + 500)/times)
+		if(num <= Pulse_T[0][7])
 		{
 			GPIO_SetBits(Servo_J8_PORT, Servo_J8_PIN );		//将舵机接口电平置高
 		}
@@ -163,7 +204,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif
 		
 		#ifdef USE_SERVO_J9
-		if(num <= (Angle_J[1][0] * 11 + 500)/times)
+		if(num <= Pulse_T[1][0])
 		{
 			GPIO_SetBits(Servo_J9_PORT, Servo_J9_PIN );		//将舵机接口电平置高
 		}
@@ -174,7 +215,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif
 		
 		#ifdef USE_SERVO_J10
-		if(num <= (Angle_J[1][1] * 11 + 500)/times)
+		if(num <= Pulse_T[1][1])
 		{
 			GPIO_SetBits(Servo_J10_PORT, Servo_J10_PIN );		//将舵机接口电平置高
 		}
@@ -185,7 +226,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif
 		
 		#ifdef USE_SERVO_J11
-		if(num <= (Angle_J[1][2] * 11 + 500)/times)
+		if(num <= Pulse_T[1][2])
 		{
 			GPIO_SetBits(Servo_J11_PORT, Servo_J11_PIN );		//将舵机接口电平置高
 		}
@@ -195,7 +236,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		}
 		#endif
 		#ifdef USE_SERVO_J12
-		if(num <= (Angle_J[1][3] * 11 + 500)/times)
+		if(num <= Pulse_T[1][3])
 		{
 			GPIO_SetBits(Servo_J12_PORT, Servo_J12_PIN );		//将舵机接口电平置高
 		}
@@ -206,7 +247,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif
 		
 		#ifdef USE_SERVO_J13
-		if(num <= (Angle_J[1][4] * 11 + 500)/times)
+		if(num <= Pulse_T[1][4])
 		{
 			GPIO_SetBits(Servo_J13_PORT, Servo_J13_PIN );		//将舵机接口电平置高
 		}
@@ -216,7 +257,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		}
 		#endif
 		#ifdef USE_SERVO_J14
-		if(num <= (Angle_J[1][5] * 11 + 500)/times)
+		if(num <= Pulse_T[1][5])
 		{
 			GPIO_SetBits(Servo_J14_PORT, Servo_J14_PIN );		//将舵机接口电平置高
 		}
@@ -227,7 +268,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif
 		
 		#ifdef USE_SERVO_J15
-		if(num <= (Angle_J[1][6] * 11 + 500)/times)
+		if(num <= Pulse_T[1][6])
 		{
 			GPIO_SetBits(Servo_J15_PORT, Servo_J15_PIN );		//将舵机接口电平置高
 		}
@@ -238,7 +279,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif	
 		
 		#ifdef USE_SERVO_J16
-		if(num <= (Angle_J[1][7] * 11 + 500)/times)
+		if(num <= Pulse_T[1][7])
 		{
 			GPIO_SetBits(Servo_J16_PORT, Servo_J16_PIN );		//将舵机接口电平置高
 		}
@@ -249,7 +290,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif	
 		
 		#ifdef USE_SERVO_J17
-		if(num <= (Angle_J[2][0] * 11 + 500)/times)
+		if(num <= Pulse_T[2][0])
 		{
 			GPIO_SetBits(Servo_J17_PORT, Servo_J17_PIN );		//将舵机接口电平置高
 		}
@@ -260,7 +301,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif	
 				
 		#ifdef USE_SERVO_J18
-		if(num <= (Angle_J[2][1] * 11 + 500)/times)
+		if(num <= Pulse_T[2][1])
 		{
 			GPIO_SetBits(Servo_J18_PORT, Servo_J18_PIN );		//将舵机接口电平置高
 		}
@@ -272,7 +313,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 				
 						
 		#ifdef USE_SERVO_J19
-		if(num <= (Angle_J[2][2] * 11 + 500)/times)
+		if(num <= Pulse_T[2][2])
 		{
 			GPIO_SetBits(Servo_J19_PORT, Servo_J19_PIN );		//将舵机接口电平置高
 		}
@@ -283,7 +324,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif	
 						
 		#ifdef USE_SERVO_J20
-		if(num <= (Angle_J[2][3] * 11 + 500)/times)
+		if(num <= Pulse_T[2][3])
 		{
 			GPIO_SetBits(Servo_J20_PORT, Servo_J20_PIN );		//将舵机接口电平置高
 		}
@@ -294,7 +335,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif	
 						
 		#ifdef USE_SERVO_J21
-		if(num <= (Angle_J[2][4] * 11 + 500)/times)
+		if(num <= Pulse_T[2][4])
 		{
 			GPIO_SetBits(Servo_J21_PORT, Servo_J21_PIN );		//将舵机接口电平置高
 		}
@@ -305,7 +346,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif
 
 		#ifdef USE_SERVO_J22
-		if(num <= (Angle_J[2][5] * 11 + 500)/times)
+		if(num <= Pulse_T[2][5])
 		{
 			GPIO_SetBits(Servo_J22_PORT, Servo_J22_PIN );		//将舵机接口电平置高
 		}
@@ -316,7 +357,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif
 
 		#ifdef USE_SERVO_J23
-		if(num <= (Angle_J[2][6] * 11 + 500)/times)
+		if(num <= Pulse_T[2][6])
 		{
 			GPIO_SetBits(Servo_J23_PORT, Servo_J23_PIN );		//将舵机接口电平置高
 		}
@@ -327,7 +368,7 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		#endif		
 		
 		#ifdef USE_SERVO_J24
-		if(num <= (Angle_J[2][7] * 11 + 500)/times)
+		if(num <= Pulse_T[2][7])
 		{
 			GPIO_SetBits(Servo_J24_PORT, Servo_J24_PIN );		//将舵机接口电平置高
 		}
@@ -337,9 +378,10 @@ void TIM1_UP_IRQHandler(void)   //TIM1中断
 		}
 		#endif	
 
-		if(num == 200) //200*100=20ms  20ms一个周期
+		if(num >= SERVO_FRAME_TICKS) //SERVO_FRAME_TICKS * SERVO_TICK_US = 20ms  20ms一个周期
 		{
 			num = 0;
+			servo_frame_update();
 		}
 		
 	}

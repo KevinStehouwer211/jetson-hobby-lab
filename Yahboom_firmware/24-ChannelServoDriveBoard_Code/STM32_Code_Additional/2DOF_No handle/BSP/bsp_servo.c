@@ -16,6 +16,16 @@
 /*½Ç¶È·¶Î§ 0~180*/
 int Angle_J[GROUP_NUM][DUOJI_NUM];
 
+/* ---- smooth motion -------------------------------------------------------
+ * Angle_J     : commanded TARGET angle in degrees (written by serial / PS2)
+ * Angle_Q     : CURRENT angle in 1/16 degree, slewed toward the target
+ * Pulse_T     : current pulse width in PWM ticks, precomputed for the ISR
+ * Servo_Speed : slew rate in degrees/second; 0 = jump instantly (old behaviour)
+ */
+int Angle_Q[GROUP_NUM][DUOJI_NUM];
+u16 Pulse_T[GROUP_NUM][DUOJI_NUM];
+u16 Servo_Speed = 0;
+
 
 /**
 * Function       Servo_J1

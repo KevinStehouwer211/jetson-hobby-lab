@@ -31,7 +31,7 @@ void bsp_init(void)
 
 	
 	Servo_GPIO_Init();
-	TIM1_Int_Init(99, 72);			/*计数到10为100us   Tout = (99+1)*(71+1)/72M = 100us */
+	TIM1_Int_Init(SERVO_TICK_US - 1, 72);			/*计数到10为100us   Tout = (99+1)*(71+1)/72M = 100us */
 ////	
 	USART1_init(115200); //调试串口
 	USART3_init(9600);//和上位机通信

@@ -85,6 +85,17 @@ extern float version;//版本号
 
 //定时器输出pwm，实现角度控制
 extern int Angle_J[GROUP_NUM][DUOJI_NUM];
+extern int Angle_Q[GROUP_NUM][DUOJI_NUM];
+extern u16 Pulse_T[GROUP_NUM][DUOJI_NUM];
+extern u16 Servo_Speed;
+
+/* PWM timebase. One timer interrupt every SERVO_TICK_US, 20ms per frame.
+ * Position resolution is SERVO_TICK_US/11 degrees:
+ *   20us -> ~1.8 deg  (default)
+ *   10us -> ~0.9 deg  (roughly double the interrupt load)
+ * The original firmware used 100us, which is ~9 deg per step. */
+#define SERVO_TICK_US     20
+#define SERVO_FRAME_TICKS (20000 / SERVO_TICK_US)
 
 void void_jutce(void);
 
