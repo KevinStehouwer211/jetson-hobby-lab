@@ -1,169 +1,170 @@
-# Yahboom 24-Channel Servo Driver Board — Firmware Rebuild
+# Yahboom 24-channel servo controller firmware
 
-Vendor source for the Yahboom 24-channel servo control board (STM32F103RCT6), plus
-the replacement firmware image built from it.
+This folder contains the firmware for the **Yahboom 24-channel dual PWM servo control debugging board**, using the **STM32F103RCT6** controller.
 
-**Why this folder exists:** the board as shipped would not accept servo commands over
-its USB-C port — the firmware echoed that UART's traffic back instead of parsing it. A
-one-line patch to the vendor source, rebuilt and flashed, fixed that. The board is now
-driven from the Jetson over plain USB.
+It lets the Jetson control servos through the board's **USB-C connection**, while keeping the voltage/current display and buzzer functions. The owner confirmed the board works as expected after flashing and restarting it.
 
-Working configuration after the reflash:
+**Flash [stree_free_ii.hex](stree_free_ii.hex) in this folder.** Other HEX files deeper in the source folders belong to older builds or other projects.
 
-| | |
-|---|---|
-| Port | `/dev/ttyUSB0` (onboard CH340, USB-C) |
-| Baud | 115200, 8N1 |
-| Protocol | `$<channel><angle>#` e.g. `$A090#` |
-| Host script | [ServoSimple.py](../python_scripts/servo/ServoSimple.py) |
-| Flashed image | [stree_free_ii.hex](stree_free_ii.hex) (70505 bytes, md5 `01e7eb3a9255c80079b01f7eabdb5e01`) |
+## What was done
 
----
+1. Cloned the repository and selected the `2DOF_No handle` controller project.
+2. Built the existing source from commit [65ffd42](https://github.com/KevinStehouwer211/jetson-hobby-lab/commit/65ffd425ef4f5271f3f780f519b844e3eae7b74b) using Keil ARM Compiler 5.06 update 7 (build 960) on Windows.
+3. Checked the build for errors and verified all 1,552 HEX records, flash boundaries, startup address and stack address.
+4. Replaced this folder's HEX and pushed it in commit [e8bacdf](https://github.com/KevinStehouwer211/jetson-hobby-lab/commit/e8bacdf98a88c3118d1c1fcfde3810536881ae8b).
+5. Flashed from the Jetson over USB-C. The flashing tool verified the written data, and the owner confirmed operation after reset.
 
-## The problem
+The source was already edited in the repository. This rebuild added **no source changes**: it included the existing USB command fix and newer servo speed-control code. The linker also enforced the chip's 256 KiB flash and 48 KiB RAM limits.
 
-Servos would not move, while every sign pointed to a healthy setup:
+Initially the OLED was blank and servos did not respond after flashing. The board was still in its **bootloader**, the built-in program that receives new firmware. **Releasing BOOT and resetting started the application and resolved this. No additional firmware fix was needed or pushed.**
 
-- The Jetson opened the port and wrote without error.
-- The board echoed back every byte sent to it.
-- The `7V4` servo-rail LED was lit, so the board was properly powered.
+## How it works
 
-The echo was the misleading part. The board echoes **everything** — `$A090#`, `ZZZZZZ`,
-`hello!`, raw null bytes — so a returned frame only proves the link is alive. It says
-nothing about whether the command was parsed. The vendor manual describes this as
-intended behaviour: *"the servo control board will immediately return the received
-information, that is, what is sent back to what is sent back."*
+The Jetson sends a short text command over USB. The controller reads the command, stores the requested angle and repeatedly sends a pulse to the servo. The pulse width tells the servo which position to move toward.
 
-Two other things were ruled out along the way, both worth knowing:
+Pulses repeat every **20 milliseconds (50 times per second)**. This version uses a timer interrupt and GPIO outputs to generate them in software, with 20-microsecond timing steps. A new command replaces the previous target for that channel; there is no movement queue.
 
-- **Wrong device.** The vendor's sample script opens `/dev/ttyTHS1`, the Jetson's TX3/RX3
-  header pins. That UART exists and accepts writes silently, so the script looks like it
-  is working while the bytes go out the 40-pin header. Driving the board over USB means
-  `/dev/ttyUSB0` instead.
-- **Wrong baud.** The 9600 in the vendor docs applies to the `TXD3/RXD3` pin header.
-  The USB-C port runs at 115200. Sweeping baud rates made this obvious: only at 115200
-  did the echo come back intact, since a real UART re-clocks the reply at its own fixed
-  rate while a plain wire loopback would have echoed cleanly at every rate.
+By default, the next pulse frame uses the new target without a firmware speed limit. The servo still takes time to move physically. An optional speed command makes the controller change its requested position gradually instead.
 
-With port and baud correct, frames still did not move servos — which left the firmware.
+All target positions start at **90 degrees**. The controller also reads voltage/current sensors and updates the OLED. It does not measure actual servo positions, so sending a command does not confirm physical arrival.
 
-## Root cause
+### USB connection and commands
 
-The board has three UARTs. From
-`24-ChannelServoDriveBoard_Code/STM32_Code_Additional/2DOF_No handle/BSP/bsp.c`:
+| Setting | Value |
+| --- | --- |
+| Connection | Jetson USB host port to controller USB-C port |
+| Typical Linux device | `/dev/ttyUSB0`; check your actual device |
+| Application serial settings | **115200 baud, 8N1** |
+| Servo channels | `A`–`X`, corresponding to `S1`–`S24` |
+| Position range | `000`–`180` degrees |
 
-```c
-USART1_init(115200); // debug serial  -> USB-C (PA9/PA10)
-USART3_init(9600);   // host comms    -> RXD/TXD pin header (PC10/PC11, partial remap)
-UART5_init(9600);    // Bluetooth module
-```
+The vendor USB handler originally echoed incoming bytes. The existing change in `BSP/bsp_usart.c` passes them to `deal_bluetooth()` instead, allowing USB commands to control servos. The separate USART3 header and UART5 Bluetooth interface still use 9600 baud; USB-C uses 115200.
 
-The USART3 and UART5 interrupt handlers in `BSP/bsp_usart.c` both pass received bytes to
-`deal_bluetooth()`, the `$...#` servo parser in `APP/user_bluetooth.c`. **USART1 did not.**
-In the vendor source it echoed the byte straight back out and did nothing else:
+Each command starts with `$`, has a letter and **exactly three digits**, and ends with `#`:
 
-```c
-void USART1_IRQHandler(void)
-{
-    uint8_t Rx1_Temp = 0;
-    if (USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
-    {
-        Rx1_Temp = USART_ReceiveData(USART1);
-        USART1_Send_U8(Rx1_Temp);   // echo only — never reaches the parser
-    }
-}
-```
+| Command | Meaning |
+| --- | --- |
+| `$A090#` | Set servo S1's target to 90 degrees |
+| `$B045#` | Set servo S2's target to 45 degrees |
+| `$X180#` | Set servo S24's target to 180 degrees |
+| `$Y060#` | Set the shared movement rate to approximately 60 degrees/second |
+| `$Y000#` | Disable the firmware speed limit; this is the startup default |
 
-That single line is the whole bug, and it explains the symptom exactly: USB-C was wired
-to a UART whose only job was to repeat back whatever it heard. Every frame looked
-accepted and none of them ever reached a servo.
+`Y` is a speed setting, not a 25th servo. It applies to all channels until changed or the controller restarts. Nonzero settings are `001`–`180`; actual rates are approximate because movement is calculated in small steps.
 
-## The fix
+Send valid short commands and use one sender at a time. The existing parser does not safely handle arbitrary long or malformed input.
 
-One line, in `2DOF_No handle/BSP/bsp_usart.c:79` — route USART1's received bytes into the
-servo parser instead of back out the wire:
+## Flash from the Jetson
 
-```c
--       USART1_Send_U8(Rx1_Temp);   // echo the byte back
-+       deal_bluetooth(Rx1_Temp);   // feed the byte to the $...# parser
-```
+### 1. Get the latest HEX
 
-This edit is committed in this repository. The untouched vendor original survives in the
-sibling `2DOF_Handle` project, so the change can always be recovered with a diff:
+Run in a Jetson terminal, including a VS Code SSH terminal connected to the Jetson:
 
 ```bash
-cd "24-ChannelServoDriveBoard_Code/STM32_Code_Additional"
-diff "2DOF_No handle/BSP/bsp_usart.c" "2DOF_Handle/BSP/bsp_usart.c"
-# 79c79
-# <     deal_bluetooth(Rx1_Temp);
-# ---
-# >     USART1_Send_U8(Rx1_Temp);
+cd ~/jetson-hobby-lab
+git pull --ff-only
+sudo apt update
+sudo apt install stm32flash python3-serial
 ```
 
-After the edit all three UARTs feed the same parser, so the board accepts identical
-`$A090#` framing over USB-C at 115200, the pin header at 9600, or Bluetooth.
-
-## Rebuilding
-
-The project is `STM32_Code_Additional/2DOF_No handle/USER/steer_freeII.uvprojx`
-(target `steer_free_II`, device STM32F103RC, output `stree_free_ii`).
-
-**Toolchain: Keil uVision 5 with ARM Compiler 5.** This is the one real gotcha. The
-project is pinned to AC5:
-
-```xml
-<pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
-<uAC6>0</uAC6>
-```
-
-MDK-ARM v5 ships with ARM Compiler 6 by default and AC6 will not build this source.
-ARM Compiler 5.06 update 7 must be installed alongside it as a separate download from
-Arm, and selected under *Options for Target → Target → ARM Compiler*. A 1-month
-evaluation licence from Arm is enough to produce the image.
-
-Build steps:
-
-1. Open `steer_freeII.uvprojx` in Keil uVision 5.
-2. Confirm ARM Compiler V5.06 update 7 is the selected compiler for the target.
-3. Build. The image lands in `2DOF_No handle/OBJ/stree_free_ii.hex`.
-
-The resulting image is committed at the root of this folder as
-[stree_free_ii.hex](stree_free_ii.hex), so the board can be reflashed without a Keil
-licence on hand.
-
-## Flashing
-
-Flash the built `.hex` to the STM32F103RCT6. The board provides `BOOT0` and `RESET`
-buttons next to the USB-C port for serial bootloader entry.
-
-## Verifying
+Optional file check:
 
 ```bash
-python3 ../python_scripts/servo/ServoSimple.py
+sha256sum Yahboom_firmware/stree_free_ii.hex
 ```
 
-Servos on `S1` and `S2` should move to 90°. If frames go out but nothing moves, check in
-this order: the `7V4` LED (servo rail powered, slide switch `ON`, 6–8.4V into the XT60 or
-the blue screw terminal), then servo plug orientation — each `S` header is
-**yellow = signal, red = VCC, black = GND**, with yellow nearest the `S1`/`S2` label.
+For this build, the expected SHA256 is:
 
-## Protocol reference
-
-```
-$<channel><angle>#      e.g.  $A090#  = channel S1 to 90°
+```text
+706e407bbdcd5b38eaea53abb765feaec836971889c4ae01915235999e4bd8e9
 ```
 
-- **channel** — a single letter `A`–`X`, mapping to `S1`–`S24`.
-- **angle** — exactly three digits, zero-padded, `000`–`180`. Two digits will not parse;
-  the firmware indexes `rxbuff[2..4]` by fixed offset.
+### 2. Enter flashing mode
 
-The parser clamps out-of-range angles to 0 or 180 and maps the channel to one of three
-groups of eight (`Angle_J[group][column]`), which is how the 24 channels are organised
-internally.
+Stop Python/ROS servo programs and close serial monitors. Hold **BOOT** while connecting the board's USB-C cable to the Jetson. If already powered, hold **BOOT** while pressing and releasing **RESET**.
 
-## Note on the source tree
+Identify the board's port:
 
-Apart from the one-line change documented above, this tree is the vendor source as
-downloaded. The build itself was done on a Windows machine, so `OBJ/stree_free_ii.hex`
-inside the project folder is still the vendor's prebuilt image, **not** the one running on
-the board. The image that was actually flashed is the copy at the root of this folder.
+```bash
+ls -l /dev/serial/by-id/
+ls /dev/ttyUSB* /dev/ttyACM* 2>/dev/null
+```
+
+Replace `/dev/ttyUSB0` below if the board has another device path.
+
+### 3. Write and verify
+
+From the repository root on the Jetson:
+
+```bash
+sudo stm32flash -b 115200 \
+  -w Yahboom_firmware/stree_free_ii.hex \
+  -v /dev/ttyUSB0
+```
+
+Wait for `Wrote and verified ... (100.00%) Done.` The bootloader uses **8E1**, selected automatically by stm32flash. Normal servo commands use **8N1**.
+
+### 4. Start the firmware — do not skip this
+
+**The command above writes and verifies the firmware; it does not start it.**
+
+Release **BOOT**, then press **RESET**. Alternatively, disconnect **both USB and external power**, then reconnect with BOOT released. Removing USB alone does not restart a board that still has external power.
+
+The OLED should start again. Allow room for the servos to move to their initial 90-degree positions. Use the appropriate external servo supply; USB alone is not the servo power supply and may produce a low-voltage warning.
+
+## Try a servo command
+
+After restarting, run this on the Jetson to set S1 and S2 to 90 degrees:
+
+```bash
+sudo python3 - <<'PY'
+import serial
+import time
+
+with serial.Serial('/dev/ttyUSB0', 115200, timeout=1) as board:
+    time.sleep(0.2)
+    board.write(b'$Y000#$A090#$B090#')
+    board.flush()
+PY
+```
+
+More examples are in [python_scripts/servo](../python_scripts/servo/).
+
+## Troubleshooting
+
+| Symptom | What to check |
+| --- | --- |
+| Blank OLED and no response immediately after flashing | Release BOOT and reset, or disconnect both power sources and reconnect. The board may still be in its bootloader. |
+| Flashing cannot connect | Enter BOOT/reset mode again; check the device path, USB data cable and competing serial programs. |
+| OLED works but servos do not move | Check external servo power, the board's switch, servo plug orientation, channel and 115200 baud. |
+| Low-voltage message or buzzer | Check external power; USB-only operation can trigger the existing warning. |
+
+If it remains blank after a full restart, keep the complete flashing output for diagnosis.
+
+## Source and rebuilding
+
+The active source project is:
+
+```text
+24-ChannelServoDriveBoard_Code/STM32_Code_Additional/2DOF_No handle/
+```
+
+| File | Purpose |
+| --- | --- |
+| `USER/main.c` | Set startup positions and run voltage/current display updates |
+| `BSP/bsp_usart.c` | Receive serial commands, including USB-C traffic |
+| `APP/user_bluetooth.c` | Read angle commands and the `Y` speed setting |
+| `BSP/bsp_servo.c` | Store target positions, intermediate positions and speed |
+| `BSP/bsp_timer.c` | Move intermediate positions toward targets and generate pulses |
+| `APP/user_vol.c` | Format voltage/current readings and alarm messages |
+
+On Windows, open `USER/steer_freeII.uvprojx` in Keil uVision and select target **steer_free_II** with **ARM Compiler 5.06 update 7 (build 960)**. This project is configured for Compiler 5; switching to Compiler 6 needs separate porting and validation. Set the target limits to 256 KiB flash and 48 KiB RAM.
+
+The output is `OBJ/stree_free_ii.hex`. For this release, uVision's build stalled, so the installed Compiler 5 tools were called directly with the project's source list, C99, O0, microlib, defines and include paths. The resulting HEX was copied to this folder's root for flashing.
+
+A compiler license is needed for rebuilding. The compiled HEX does not expire or require that license to flash. Build/image checks and the owner's confirmation establish this release's verification; pulse accuracy and every channel were not bench-measured.
+
+## References
+
+- [Yahboom USB-C flashing and BOOT-button instructions](https://www.yahboom.net/public/upload/upload-html/1705379178/Download%20program.html)
+- [stm32flash command reference](https://manpages.ubuntu.com/manpages/bionic/man1/stm32flash.1.html)
