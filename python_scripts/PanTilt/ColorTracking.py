@@ -43,21 +43,68 @@ time.sleep(1.0)  # Allow the initial targets to settle; adjust as needed.
 DEADBAND_X = 5
 DEADBAND_Y = 5
 
-# Proportional gain
-KP_PAN = 0.01
-KP_TILT = 0.01
+# Standard PID per axis:
+#   output = KP * error + KI * integral(error) + KD * d(error)/dt
+# The output is a servo speed in degrees per second, applied as
+#   angle += output * dt
+# so with error = 0 the servo holds its position instead of
+# returning to center.
 
-# Derivative gain
+# Proportional gain (deg/s per pixel of error)
+KP_PAN = 2.0
+KP_TILT = 0.5
+
+# Integral gain (deg/s per pixel*second of accumulated error)
+KI_PAN = 0.1
+KI_TILT = 0.05
+
+# Derivative gain (deg/s per pixel/second of error change)
 KD_PAN = 0.1
-KD_TILT = 0.1
+KD_TILT = 0.05
 
-# Integral gain
-KI_PAN = 0.01
-KI_TILT = 0.01
+# Anti-windup: clamp on the accumulated error (pixel*seconds)
+INTEGRAL_LIMIT = 50.0
+
+# Cap on dt so a stalled frame can't cause a large jump
+MAX_DT = 0.1
+
+
+class PID:
+    def __init__(self, kp, ki, kd, deadband, integral_limit):
+        self.kp = kp
+        self.ki = ki
+        self.kd = kd
+        self.deadband = deadband
+        self.integral_limit = integral_limit
+        self.reset()
+
+    def reset(self):
+        self.integral = 0.0
+        self.last_error = None
+
+    def update(self, error, dt):
+        # No derivative on the first sample after a reset (avoids a kick)
+        if self.last_error is None or dt <= 0:
+            derivative = 0.0
+        else:
+            derivative = (error - self.last_error) / dt
+        self.last_error = error
+
+        # Inside the deadband: hold position and stop integrating
+        if abs(error) <= self.deadband:
+            return 0.0
+
+        self.integral += error * dt
+        self.integral = max(-self.integral_limit, min(self.integral_limit, self.integral))
+
+        return self.kp * error + self.ki * self.integral + self.kd * derivative
+
+
+pid_pan = PID(KP_PAN, KI_PAN, KD_PAN, DEADBAND_X, INTEGRAL_LIMIT)
+pid_tilt = PID(KP_TILT, KI_TILT, KD_TILT, DEADBAND_Y, INTEGRAL_LIMIT)
 
 last_control_time = time.monotonic()
-tm_pan = 0
-tm_tilt = 0
+tracking = False
 
 
 # =========================
@@ -161,10 +208,13 @@ try:
         contours, _ = cv2.findContours(FG_maskComp, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         contours = sorted(contours, key=cv2.contourArea, reverse=True)
 
+        object_found = False
+
         if contours:
             cnt = contours[0]
             area = cv2.contourArea(cnt)
             if area > 50:
+                object_found = True
                 x, y, w, h = cv2.boundingRect(cnt)
                 cv2.drawContours(frame, [cnt], 0, (255, 0, 0), 3)
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
@@ -198,33 +248,19 @@ try:
                 # =========================
 
                 now = time.monotonic()
-                dt = now - last_control_time
 
-                # PAN
-                if abs(errorPan) > DEADBAND_X:
-                    tm_pan += dt
-                    #kp error
-                    error_kp_pan = KP_PAN * errorPan
-                    #ki error
-                    error_ki_pan = KI_PAN * tm_pan * (errorPan/abs(errorPan))
-                    pan += error_kp_pan + error_ki_pan
+                # Object just (re)acquired: clear integral and derivative
+                # history so stale state doesn't cause a jump
+                if not tracking:
+                    pid_pan.reset()
+                    pid_tilt.reset()
+                    last_control_time = now
+                    tracking = True
 
-                if abs(errorPan) < DEADBAND_X:
-                    tm_pan = 0
+                dt = min(now - last_control_time, MAX_DT)
 
-                # TILT
-                if abs(errorTilt) > DEADBAND_Y:
-                    tm_tilt += dt
-                    #kp error
-                    error_kp_tilt = KP_TILT * errorTilt
-                    #ki error
-                    error_ki_tilt = KI_TILT * tm_tilt * (errorTilt/abs(errorTilt))
-                    tilt += error_kp_tilt + error_ki_tilt
-
-                if abs(errorTilt) < DEADBAND_Y:
-                    tm_tilt = 0
-
-                print(error_kp_pan, error_ki_pan)
+                pan += pid_pan.update(errorPan, dt) * dt
+                tilt += pid_tilt.update(errorTilt, dt) * dt
 
                 # Limit servo range
                 pan = np.clip(pan, PAN_MIN, PAN_MAX)
@@ -248,6 +284,10 @@ try:
                     last_tilt_sent = tilt_out
 
                 last_control_time = now
+
+        # Lost the object: reset controller state on next detection
+        if not object_found:
+            tracking = False
 
 
         # =========================
