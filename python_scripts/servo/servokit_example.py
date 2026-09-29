@@ -1,0 +1,26 @@
+"""Run on the Jetson with yahboom_servokit.py in the same folder."""
+from yahboom_servokit import ServoKit
+import time
+
+
+def main():
+    with ServoKit(channels=24, port='/dev/ttyUSB0') as kit:
+        kit.servo[0].angle = 90  # A: sends $A090#
+        kit.servo[1].angle = 90  # B: sends $B090#
+        time.sleep(1.0)  # Allow the initial targets to settle; adjust as needed.
+
+        # A: 90 -> 45, in 1-degree steps. 0.1 seconds per step ~ 10 degrees/s.
+        for angle in range(89, 44, -1):
+            kit.servo[0].angle = angle
+            time.sleep(0.1)
+        time.sleep(0.5)  # Optional settling allowance at 45 degrees.
+
+        # This loop only starts after the preceding loop and wait finish.
+        for angle in range(46, 91):
+            kit.servo[0].angle = angle
+            time.sleep(0.1)
+        time.sleep(0.5)
+
+
+if __name__ == '__main__':
+    main()
