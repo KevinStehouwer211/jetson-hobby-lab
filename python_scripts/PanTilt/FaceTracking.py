@@ -4,10 +4,23 @@ import sys
 import time
 import numpy as np
 
+# Haar cascade installed with the source-built OpenCV
+path_face = '/home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/machine_learning/face.xml'
+path_eye = '/home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/machine_learning/eye.xml'
+
+# Load face classifier
+face_cascade = cv2.CascadeClassifier(path_face)
+if face_cascade.empty():
+    raise SystemExit('Could not load face cascade: ' + path_face)
+
+# Load eye classifier
+eye_cascade = cv2.CascadeClassifier(path_eye)
+if eye_cascade.empty():
+    raise SystemExit('Could not load face cascade: ' + path_eye)
+
 # Allow importing local modules from python_scripts/
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from servo.yahboom_servokit import ServoKit
-
 
 # =========================
 # SERVO SETTINGS
@@ -113,13 +126,17 @@ pid_tilt = PID(KP_TILT, KI_TILT, KD_TILT, DEADBAND_Y, INTEGRAL_LIMIT)
 last_control_time = time.monotonic()
 tracking = False
 
-
 # =========================
 # CAMERA SETTINGS
 # =========================
 
+# For Pi camera, use the following line:
+# camSet='nvarguscamerasrc !  video/x-raw(memory:NVMM), width=3264, height=2464, format=NV12, framerate=28/1 ! nvvidconv flip-method='+str(flip)+' ! video/x-raw, width='+str(dispW)+', height='+str(dispH)+', format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink'
+#cam=cv2.VideoCapture(camSet)
+
 dispW = 320
 dispH = 240
+flip=2
 
 cam = cv2.VideoCapture(0, cv2.CAP_V4L2)
 cam.set(cv2.CAP_PROP_FRAME_WIDTH, dispW)
@@ -144,100 +161,41 @@ def mouse_callback(event, x, y, flags, param):
         if 10 <= x <= 130 and 10 <= y <= 65:
             exit_program = True
 
-cv2.namedWindow('Trackbars')
-cv2.moveWindow('Trackbars', 800, 0)
-
-cv2.createTrackbar('HUE lower', 'Trackbars', 80, 179, lambda x: None)
-cv2.createTrackbar('HUE upper', 'Trackbars', 120, 179, lambda x: None)
-cv2.createTrackbar('HUE2 lower', 'Trackbars', 179, 179, lambda x: None)
-cv2.createTrackbar('HUE2 upper', 'Trackbars', 179, 179, lambda x: None)
-cv2.createTrackbar('SAT lower', 'Trackbars', 130, 255, lambda x: None)
-cv2.createTrackbar('SAT upper', 'Trackbars', 255, 255, lambda x: None)
-cv2.createTrackbar('VALUE lower', 'Trackbars', 70, 255, lambda x: None)
-cv2.createTrackbar('VALUE upper', 'Trackbars', 255, 255, lambda x: None)
-
 cv2.namedWindow('WEBCAM', cv2.WINDOW_NORMAL)
 cv2.setMouseCallback('WEBCAM', mouse_callback)
-
-cv2.namedWindow('FG_MASKCOMP', cv2.WINDOW_NORMAL)
-
-
-# =========================
-# MAIN LOOP
-# =========================
 
 try:
 
     while True:
-        ret, frame = cam.read()
-
-        if not ret:
-            print("Failed to read camera frame")
-            break
-
+        ret, frame=cam.read()
         frame = cv2.resize(frame, (dispW, dispH))
-        hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-        # =========================
-        # GET TRACKBAR VALUES
-        # =========================
-
-        h_lower = cv2.getTrackbarPos('HUE lower', 'Trackbars')
-        h_upper = cv2.getTrackbarPos('HUE upper', 'Trackbars')
-        h2_lower = cv2.getTrackbarPos('HUE2 lower', 'Trackbars')
-        h2_upper = cv2.getTrackbarPos('HUE2 upper', 'Trackbars')
-        s_lower = cv2.getTrackbarPos('SAT lower', 'Trackbars')
-        s_upper = cv2.getTrackbarPos('SAT upper', 'Trackbars')
-        v_lower = cv2.getTrackbarPos('VALUE lower', 'Trackbars')
-        v_upper = cv2.getTrackbarPos('VALUE upper', 'Trackbars')
-
-        lb = np.array([h_lower, s_lower, v_lower])
-        ub = np.array([h_upper, s_upper, v_upper])
-        lb2 = np.array([h2_lower, s_lower, v_lower])
-        ub2 = np.array([h2_upper, s_upper, v_upper])
-
-        # =========================
-        # CREATE MASK
-        # =========================
-
-        FG_mask = cv2.inRange(hsv, lb, ub)
-        FG_mask2 = cv2.inRange(hsv, lb2, ub2)
-
-        FG_maskComp = cv2.add(FG_mask, FG_mask2)
-
-        cv2.imshow('FG_MASKCOMP', FG_maskComp)
-        cv2.moveWindow('FG_MASKCOMP', 0, 300)
-
-        # =========================
-        # FIND OBJECT
-        # =========================
-
-        contours, _ = cv2.findContours(FG_maskComp, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-        contours = sorted(contours, key=cv2.contourArea, reverse=True)
+        faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+        faces = sorted(faces, key=lambda f: f[2] * f[3], reverse=True)
 
         object_found = False
 
-        if contours:
-            cnt = contours[0]
-            area = cv2.contourArea(cnt)
+        if len(faces) > 0:
+
+            x1,y1,w1,h1 = faces[0]
+            area = w1*h1
+
             if area > 50:
+
                 object_found = True
-                x, y, w, h = cv2.boundingRect(cnt)
-                cv2.drawContours(frame, [cnt], 0, (255, 0, 0), 3)
-                cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
                 # Object center
-                objX = x + w // 2
-                objY = y + h // 2
-
-                # Draw object center lines
-                cv2.line(frame, (objX, 0), (objX, dispH), (0, 255, 0), 1)
-                cv2.line(frame, (0, objY), (dispW, objY), (0, 255, 0), 1)
+                objX = x1 + w1 // 2
+                objY = y1 + h1 // 2
 
                 # Draw frame center
                 centerX = dispW // 2
                 centerY = dispH // 2
                 cv2.circle(frame, (centerX, centerY), 5, (0, 0, 255), -1)
+
+                #cv2.rectangle(frame, (x1,y1), (x1+w1,y1+h1), (0,255,0), 1)
+                cv2.circle(frame, (objX, objY), w1//2, (0,255,0))
 
                 # =========================
                 # ERROR
@@ -292,27 +250,28 @@ try:
 
                 last_control_time = now
 
-        # Lost the object: reset controller state on next detection
-        if not object_found:
-            tracking = False
+            # Lost the object: reset controller state on next detection
+            if not object_found:
+                tracking = False
 
+            cv2.imshow('WEBCAM', frame)
+            cv2.moveWindow('WEBCAM', 0, 0)
 
-        # =========================
-        # EXIT BUTTON
-        # =========================
+            # =========================
+            # EXIT BUTTON
+            # =========================
 
-        cv2.rectangle(frame, (10, 10), (130, 65), (0, 0, 255), -1)
-        cv2.rectangle(frame, (10, 10), (130, 65), (255, 255, 255), 2)
-        cv2.putText(frame, 'EXIT', (28, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.1, (255, 255, 255), 3)
+            cv2.rectangle(frame, (10, 10), (130, 65), (0, 0, 255), -1)
+            cv2.rectangle(frame, (10, 10), (130, 65), (255, 255, 255), 2)
+            cv2.putText(frame, 'EXIT', (28, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.1, (255, 255, 255), 3)
 
-        cv2.imshow('WEBCAM', frame)
-        cv2.moveWindow('WEBCAM', 0, 0)
+            cv2.imshow('WEBCAM', frame)
+            cv2.moveWindow('WEBCAM', 0, 0)
 
-        key = cv2.waitKey(1) & 0xFF
+            key = cv2.waitKey(1) & 0xFF
 
-        if key == ord('q') or exit_program:
-            break
-
+            if key == ord('q') or exit_program:
+                break
 
 finally:
 
