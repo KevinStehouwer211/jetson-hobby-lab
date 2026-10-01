@@ -3,6 +3,12 @@ build/
 install/
 log/
 
+# Facial recognition archive and folder
+dlib-19.17
+dlib-19.17.tar.bz2
+python_scripts/faceRecognizer/demoImages
+installSwapfile/
+
 # Python
 __pycache__/
 *.pyc

@@ -5,8 +5,8 @@ import time
 import numpy as np
 
 # Haar cascade installed with the source-built OpenCV
-path_face = '/home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/machine_learning/face.xml'
-path_eye = '/home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/machine_learning/eye.xml'
+path_face = '/home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/PreTrainedModels/face.xml'
+path_eye = '/home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/PreTrainedModels/eye.xml'
 
 # Load face classifier
 face_cascade = cv2.CascadeClassifier(path_face)
@@ -178,100 +178,103 @@ try:
 
         if len(faces) > 0:
 
+            # Dimensions of face
             x1,y1,w1,h1 = faces[0]
-            area = w1*h1
+            object_found = True
 
-            if area > 50:
+            # Object center
+            objX = x1 + w1 // 2
+            objY = y1 + h1 // 2
 
-                object_found = True
+            # Draw frame center
+            centerX = dispW // 2
+            centerY = dispH // 2
+            cv2.circle(frame, (centerX, centerY), 5, (0, 0, 255), -1)
 
-                # Object center
-                objX = x1 + w1 // 2
-                objY = y1 + h1 // 2
+            # Draw circle around face
+            cv2.circle(frame, (objX, objY), w1//2, (0,255,0))
 
-                # Draw frame center
-                centerX = dispW // 2
-                centerY = dispH // 2
-                cv2.circle(frame, (centerX, centerY), 5, (0, 0, 255), -1)
+            face_gray = gray[y1:y1+h1, x1:x1+w1]
+            eyes = eye_cascade.detectMultiScale(face_gray)
 
-                #cv2.rectangle(frame, (x1,y1), (x1+w1,y1+h1), (0,255,0), 1)
-                cv2.circle(frame, (objX, objY), w1//2, (0,255,0))
+            for x2,y2,w2,h2 in eyes:
+                cv2.circle(frame, (x1+x2+w2//2, y1+y2+h2//2), h2//2, (255,0,0), 1)
 
-                # =========================
-                # ERROR
-                # =========================
+            # =========================
+            # ERROR
+            # =========================
 
-                errorPan = -(objX - centerX)
-                errorTilt = -(objY - centerY)
+            errorPan = -(objX - centerX)
+            errorTilt = -(objY - centerY)
 
-                # Display errors
-                cv2.putText(frame, f"Pan err: {errorPan}", (150, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 255), 1)
-                cv2.putText(frame, f"Tilt err: {errorTilt}", (150, 40), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 255), 1)
+            # Display errors
+            cv2.putText(frame, f"Pan err: {errorPan}", (150, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 255), 1)
+            cv2.putText(frame, f"Tilt err: {errorTilt}", (150, 40), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 255), 1)
 
-                # =========================
-                # SERVO CONTROL
-                # =========================
+            # =========================
+            # SERVO CONTROL
+            # =========================
 
-                now = time.monotonic()
+            now = time.monotonic()
 
-                # Object just (re)acquired: clear integral and derivative
-                # history so stale state doesn't cause a jump
-                if not tracking:
-                    pid_pan.reset()
-                    pid_tilt.reset()
-                    last_control_time = now
-                    tracking = True
-
-                dt = min(now - last_control_time, MAX_DT)
-
-                pan += pid_pan.update(errorPan, dt) * dt
-                tilt += pid_tilt.update(errorTilt, dt) * dt
-
-                # Limit servo range
-                pan = np.clip(pan, PAN_MIN, PAN_MAX)
-                tilt = np.clip( tilt, TILT_MIN, TILT_MAX)
-
-                # Convert to integer because current
-                # firmware protocol uses integer angles
-                pan_out = int(round(pan))
-                tilt_out = int(round(tilt))
-
-                # Only send if position actually changed
-                if pan_out != last_pan_sent:
-
-                    kit.servo[0].angle = pan_out
-                    last_pan_sent = pan_out
-
-
-                if tilt_out != last_tilt_sent:
-
-                    kit.servo[1].angle = tilt_out
-                    last_tilt_sent = tilt_out
-
+            # Object just (re)acquired: clear integral and derivative
+            # history so stale state doesn't cause a jump
+            if not tracking:
+                pid_pan.reset()
+                pid_tilt.reset()
                 last_control_time = now
+                tracking = True
 
-            # Lost the object: reset controller state on next detection
-            if not object_found:
-                tracking = False
+            dt = min(now - last_control_time, MAX_DT)
 
-            cv2.imshow('WEBCAM', frame)
-            cv2.moveWindow('WEBCAM', 0, 0)
+            pan += pid_pan.update(errorPan, dt) * dt
+            tilt += pid_tilt.update(errorTilt, dt) * dt
 
-            # =========================
-            # EXIT BUTTON
-            # =========================
+            # Limit servo range
+            pan = np.clip(pan, PAN_MIN, PAN_MAX)
+            tilt = np.clip( tilt, TILT_MIN, TILT_MAX)
 
-            cv2.rectangle(frame, (10, 10), (130, 65), (0, 0, 255), -1)
-            cv2.rectangle(frame, (10, 10), (130, 65), (255, 255, 255), 2)
-            cv2.putText(frame, 'EXIT', (28, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.1, (255, 255, 255), 3)
+            # Convert to integer because current
+            # firmware protocol uses integer angles
+            pan_out = int(round(pan))
+            tilt_out = int(round(tilt))
 
-            cv2.imshow('WEBCAM', frame)
-            cv2.moveWindow('WEBCAM', 0, 0)
+            # Only send if position actually changed
+            if pan_out != last_pan_sent:
 
-            key = cv2.waitKey(1) & 0xFF
+                kit.servo[0].angle = pan_out
+                last_pan_sent = pan_out
 
-            if key == ord('q') or exit_program:
-                break
+
+            if tilt_out != last_tilt_sent:
+
+                kit.servo[1].angle = tilt_out
+                last_tilt_sent = tilt_out
+
+            last_control_time = now
+
+        # Lost the object: reset controller state on next detection
+        if not object_found:
+            tracking = False
+
+        cv2.imshow('WEBCAM', frame)
+        cv2.moveWindow('WEBCAM', 0, 0)
+
+        # =========================
+        # EXIT BUTTON
+        # =========================
+
+        cv2.rectangle(frame, (10, 10), (130, 65), (0, 0, 255), -1)
+        cv2.rectangle(frame, (10, 10), (130, 65), (255, 255, 255), 2)
+        cv2.putText(frame, 'EXIT', (28, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.1, (255, 255, 255), 3)
+
+        cv2.imshow('WEBCAM', frame)
+        cv2.moveWindow('WEBCAM', 0, 0)
+
+        key = cv2.waitKey(1) & 0xFF
+
+        if key == ord('q') or exit_program:
+            break
 
 finally:
 

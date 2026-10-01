@@ -6,8 +6,8 @@ dispH=240
 flip=2
 
 # Haar cascade installed with the source-built OpenCV
-path_face = '/home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/machine_learning/face.xml'
-path_eye = '/home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/machine_learning/eye.xml'
+path_face = '/home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/PreTrainedModels/face.xml'
+path_eye = '/home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/PreTrainedModels/eye.xml'
 # For Pi camera, use the following line:
 # camSet='nvarguscamerasrc !  video/x-raw(memory:NVMM), width=3264, height=2464, format=NV12, framerate=28/1 ! nvvidconv flip-method='+str(flip)+' ! video/x-raw, width='+str(dispW)+', height='+str(dispH)+', format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink'
 #cam=cv2.VideoCapture(camSet)
