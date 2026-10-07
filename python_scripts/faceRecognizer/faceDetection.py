@@ -1,7 +1,11 @@
 import face_recognition
 import cv2
+from pathlib import Path
 
-image = face_recognition.load_image_file('python_scripts/faceRecognizer/demoImages/unknown/u3.jpg')
+base_dir = Path(__file__).resolve().parent
+image_file = base_dir / 'demoImages' / 'unknown' / 'u3.jpg'
+
+image = face_recognition.load_image_file(image_file)
 face_locations = face_recognition.face_locations(image)
 print(face_locations)
 

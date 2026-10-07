@@ -7,6 +7,7 @@ log/
 dlib-19.17
 dlib-19.17.tar.bz2
 python_scripts/faceRecognizer/demoImages
+python_scripts/faceRecognizer/faceData
 installSwapfile/
 
 # Python
