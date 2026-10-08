@@ -3,6 +3,9 @@ build/
 install/
 log/
 
+# Jetson repositories
+jetson-inference
+
 # Facial recognition archive and folder
 dlib-19.17
 dlib-19.17.tar.bz2
