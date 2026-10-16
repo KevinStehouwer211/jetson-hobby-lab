@@ -1,32 +1,88 @@
 import cv2
+from pathlib import Path
+
 print(cv2.__version__)
 
-dispW=320
-dispH=240
-flip=2
+dispW = 640
+dispH = 480
 
-# For Pi camera, use the following lines:
-# camSet='nvarguscamerasrc !  video/x-raw(memvory:NVMM), width=3264, height=2464, format=NV12, framerate=28/1 ! nvvidconv flip-method='+str(flip)+' ! video/x-raw, width='+str(dispW)+', height='+str(dispH)+', format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink'
-#cam=cv2.VideoCapture(camSet)
-
-# For USB webcam, use the following lines:
-cam=cv2.VideoCapture(0, cv2.CAP_V4L2)
+# Open USB webcam
+cam = cv2.VideoCapture(0, cv2.CAP_V4L2)
 cam.set(cv2.CAP_PROP_FRAME_WIDTH, dispW)
 cam.set(cv2.CAP_PROP_FRAME_HEIGHT, dispH)
 cam.set(cv2.CAP_PROP_FPS, 30)
 
-outVideo = cv2.VideoWriter('python_scripts/saved_vids/output.avi', cv2.VideoWriter_fourcc(*'MJPG'), 30, (int(cam.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cam.get(cv2.CAP_PROP_FRAME_HEIGHT))))
+if not cam.isOpened():
+    raise RuntimeError("Could not open webcam")
+
+# Video output
+output_path = Path("python_scripts/saved_vids/dofbotCalibration.avi")
+output_path.parent.mkdir(parents=True, exist_ok=True)
+
+fps = 30
+fourcc = cv2.VideoWriter_fourcc(*"MJPG")
+
+outVideo = None
+recording = False
 
 while True:
-    ret, frame=cam.read()
-    # Write the frame to the output video file
-    outVideo.write(frame)
+    ret, frame = cam.read()
 
-    # Use this when there is a monitor attached to the Jetson.
-    cv2.imshow('WEBCAM', frame)
-    if cv2.waitKey(1)==ord('q'):
+    if not ret:
+        print("Failed to read frame")
         break
 
-outVideo.release()
+    # Record only when enabled
+    if recording and outVideo is not None:
+        outVideo.write(frame)
+
+    # Show recording status on preview only
+    preview = frame.copy()
+
+    if recording:
+        cv2.circle(preview, (20, 25), 10, (0, 0, 255), -1)
+        cv2.putText(preview, "REC", (40, 32),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.8,
+                    (0, 0, 255), 2)
+    else:
+        cv2.putText(preview, "READY", (15, 32),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.8,
+                    (0, 255, 0), 2)
+
+    cv2.imshow("WEBCAM", preview)
+
+    key = cv2.waitKey(1) & 0xFF
+
+    # SPACE toggles recording
+    if key == ord(" "):
+        recording = not recording
+
+        if recording:
+            if outVideo is None:
+                width = int(cam.get(cv2.CAP_PROP_FRAME_WIDTH))
+                height = int(cam.get(cv2.CAP_PROP_FRAME_HEIGHT))
+
+                outVideo = cv2.VideoWriter(
+                    str(output_path), fourcc, fps, (width, height)
+                )
+
+                if not outVideo.isOpened():
+                    raise RuntimeError("Could not create video file")
+
+            print("Recording started")
+
+        else:
+            print("Recording paused")
+
+    # Q quits
+    elif key == ord("q"):
+        break
+
+# Cleanup
+if outVideo is not None:
+    outVideo.release()
+
 cam.release()
 cv2.destroyAllWindows()
+
+print(f"Video saved to: {output_path}")

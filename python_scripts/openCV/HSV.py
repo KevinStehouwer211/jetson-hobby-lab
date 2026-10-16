@@ -31,7 +31,7 @@ flip=2
 cam=cv2.VideoCapture(0, cv2.CAP_V4L2)
 
 while True:
-    #ret, frame=cam.read()
+    ret, frame=cam.read()
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     h_lower = cv2.getTrackbarPos('HUE lower', 'Trackbars')
     h_upper = cv2.getTrackbarPos('HUE upper', 'Trackbars')

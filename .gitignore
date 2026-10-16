@@ -19,10 +19,23 @@ __pycache__/
 .venv/
 venv/
 .env
+.env.*
+!.env.example
+/argus_env/
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # Docker / images
 *.tar
 *.img
+*.zip
+*.tar.gz
+*.tar.bz2
+*.tar.xz
 
 # Third-party Isaac ROS tooling (clone per docker/isaac-ros-humble/run.sh, do not commit)
 isaac_ros_ws/src/isaac_ros_common/
@@ -47,6 +60,19 @@ models/
 # Cache/logs
 .cache/
 *.log
+# Camera recordings and generated calibration detection caches
+saved_vids/
+*.avi
+*.mp4
+*.mkv
+*.mov
+python_scripts/openCV/CamCalibration/**/*_patterns.pkl
 
-# Stored videos
-python_scripts/saved_vids/
+# Local credentials and editor/OS state
+/.aws/
+.DS_Store
+Thumbs.db
+.idea/
+*~
+*.swp
+*.swo

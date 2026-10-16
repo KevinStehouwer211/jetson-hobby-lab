@@ -1,0 +1,29 @@
+# Keep firmware sources, project configuration, and the documented release HEX.
+# Compiler outputs remain available locally for rebuilding and debugging.
+OBJ/
+Objects/
+Listings/
+Debug/
+Release/
+*.o
+*.obj
+*.OBJ
+*.axf
+*.out
+*.crf
+*.d
+*.dep
+*.map
+*.M51
+*.LST
+*.lnp
+*.build_log.htm
+*.uvgui.*
+*.uvguix.*
+*.uvopt
+*.uvoptx
+*.hex
+!/stree_free_ii.hex
+
+# Keil C51 emits an extensionless executable alongside main.c.
+/24-ChannelServoDriveBoard_Code/Control_Code/C51/24CServo-uart/24CServo-uart

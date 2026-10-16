@@ -3,7 +3,7 @@
 import time
 from Arm_Lib import Arm_Device
 
-servos = [(1, 45), (2, 90), (3, 90), (4, 0), (5, 90), (6, 90)]
+servos = [(1, 90), (2, 155), (3, 60), (4, 0), (5, 90), (6, 90)]
 duration_ms = 1000
 
 # Check every target before sending any movement commands.
@@ -24,7 +24,7 @@ try:
               f"in {duration_ms} ms.", flush=True)
         
         # Let the movement finish and the controller settle before querying.
-        time.sleep(duration_ms / 1000 + 1.0)
+        time.sleep(.5)
         feedback = arm.Arm_serial_servo_read(servo)
         if feedback is None:
             raise RuntimeError(f"Servo {servo}: no valid feedback; remaining moves cancelled")

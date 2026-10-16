@@ -62,6 +62,7 @@ Roughly in the order they're worth reading.
 | [CamOpen.py](openCV/CamOpen.py) | Open the webcam, show frames, quit on `q` |
 | [CamSave.py](openCV/CamSave.py) | `VideoWriter` → `saved_vids/output.avi` |
 | [CamRead.py](openCV/CamRead.py) | Play that file back, print FPS/frame count |
+| [DualCamSave.py](openCV/DualCamSave.py) | Preview Dofbot and dashcam together; Space records/pauses separate AVI files, Q saves and quits |
 | [WebCamStream.py](openCV/WebCamStream.py) | Flask MJPEG server on `:5000` — the *no-screen* alternative |
 
 ### Drawing and input

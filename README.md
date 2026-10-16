@@ -27,7 +27,7 @@ These experiments run directly on the Jetson host using Python.
 | [PanTilt/](python_scripts/PanTilt/) | Color and face tracking with pan/tilt servo control |
 | [servo/](python_scripts/servo/) | A Python interface and example for the Yahboom serial servo controller |
 
-Recent work includes [twinCamLiveFace.py](python_scripts/faceRecognizer/twinCamLiveFace.py),
+Recent work includes [twinCamLiveFace.py](python_scripts/openCV/twinCamLiveFace.py),
 which captures two cameras in separate threads and displays their frames side by
 side with an FPS counter.
 
@@ -46,6 +46,26 @@ setup. See the [Python notes](python_scripts/README.md) and
 [face recognition setup](python_scripts/faceRecognizer/README.md) for details.
 
 ---
+
+## Argus camera calibration on Linux
+
+If `argus-gui` fails with a missing `libsbaprojs.so` or `libsba.so`, build the
+Linux libraries from the C sources bundled with the installed Argus package:
+
+```bash
+bash scripts/fix-argus-sba.sh
+source argus_env/bin/activate
+python -m pip install tqdm
+argus-gui
+```
+
+The repair script uses `argus_env` by default, or accepts another virtual
+environment's Python as its first argument. It requires GCC and the BLAS/LAPACK
+development libraries (`build-essential libblas-dev liblapack-dev` on Ubuntu).
+It compiles for the host architecture, including Jetson ARM64, and installs both
+libraries into Argus's resources directory. Run it again after reinstalling Argus
+if the libraries are missing. The projection library finds `libsba.so` beside it
+using an `$ORIGIN` runtime path; no system-wide library installation is needed.
 
 ## 🧠 jetson-inference and pretrained models
 
@@ -186,6 +206,16 @@ Large downloads and generated data stay local: `jetson-inference/`, dlib source
 and its archive, `installSwapfile/`, face photos and training data, recordings,
 and ROS build output are excluded through [.gitignore](.gitignore).
 A fresh clone needs its own dependencies, model downloads, and face data.
+
+Git keeps source code, setup scripts, documentation, cleaned notebooks, small
+example inputs, and camera calibration parameters (`CamCalibration/*.txt` and
+the per-camera CSV/text profiles). Firmware source and project files are kept,
+along with the documented release image `Yahboom_firmware/stree_free_ii.hex`.
+Firmware compiler output, duplicate ZIP archives, Python environments (including
+`argus_env/`), recordings, and generated calibration pattern caches stay local.
+Ignoring or untracking a file does not remove its local copy. Keep separate
+backups of recordings, face data, and vendor assets that cannot be recreated
+from this repository; avoid `git clean -fdx` on this working lab.
 
 ---
 
