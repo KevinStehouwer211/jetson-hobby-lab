@@ -1,0 +1,40 @@
+{
+  "recorded_utc": "2026-10-16T10:22:26.662445+00:00",
+  "purpose": "Reference of the existing tested host; not a lockfile or generic pip install list.",
+  "platform": {
+    "architecture": "aarch64",
+    "python": "3.10.12",
+    "kernel": "5.15.148-tegra",
+    "os_release": "PRETTY_NAME=\"Ubuntu 22.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"22.04\"\nVERSION=\"22.04.5 LTS (Jammy Jellyfish)\"\nVERSION_CODENAME=jammy\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=jammy\n",
+    "jetson_release": "# R36 (release), REVISION: 4.7, GCID: 42132812, BOARD: generic, EABI: aarch64, DATE: Thu Sep 18 22:54:44 UTC 2025\n# KERNEL_VARIANT: oot\nTARGET_USERSPACE_LIB_DIR=nvidia\nTARGET_USERSPACE_LIB_DIR_PATH=usr/lib/aarch64-linux-gnu/nvidia\n"
+  },
+  "python_distribution_versions": {
+    "smbus": "1.1.post2",
+    "smbus2": "0.5.0",
+    "torch": "2.5.0a0+872d972e41.nv24.8",
+    "torchvision": "0.20.0a0+afc54f7",
+    "opencv-python": "4.10.0.84",
+    "numpy": "1.23.5",
+    "ipykernel": "6.29.5",
+    "jupyterlab": "4.3.4",
+    "jupyter-server": "2.15.0",
+    "setuptools": "59.6.0"
+  },
+  "ros": {
+    "distribution": "humble",
+    "setup": "/opt/ros/humble/setup.bash"
+  },
+  "hardware_test_configuration": {
+    "i2c_bus": 7,
+    "address": "0x15",
+    "configured_clock_hz": 100000,
+    "controller_version": "0.21",
+    "post_feedback_recovery_s": 0.1
+  },
+  "not_included": [
+    "Operating system image",
+    "NVIDIA drivers/CUDA packages",
+    "Vendor USB filesystem",
+    "Runtime model/binary files excluded by Git"
+  ]
+}

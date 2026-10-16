@@ -100,6 +100,20 @@ pgrep -af 'download-models|wget|curl'
 
 ---
 
+## 🦾 DOFBOT robotic arm
+
+The dedicated [dofbot/](dofbot/README.md) folder contains the tested Python servo
+library, isolated Python/Jupyter launchers, recovered Yahboom manual notebooks,
+and ROS application source. Start with its README for the 100 kHz boot setup,
+query-only checks, manual examples, and the full application's remaining work.
+
+- [Rebuild checklist and filesystem map](dofbot/docs/REBUILD.md): fresh clone,
+  dependencies, boot overlay, validation, vendor assets, and Git backup.
+- [Basic angle scripts](python_scripts/dofbot/README.md): read, write, read/write,
+  and set a configured pose.
+
+---
+
 ## 🦾 ROS 2 and Yahboom hardware
 
 Alongside the AI tutorials, I have been experimenting with **Isaac ROS**, GPIO,
@@ -156,6 +170,7 @@ cd ~/jetson-hobby-lab
 
 ```text
 jetson-hobby-lab/
+├── dofbot/                  # DOFBOT library, manual notebooks, diagnostics and setup
 ├── python_scripts/           # Paul McWhorter tutorial work and my Python experiments
 ├── jetson-inference/         # local NVIDIA checkout and downloaded models (ignored)
 ├── docker/isaac-ros-humble/  # Isaac ROS container launcher and shell configuration

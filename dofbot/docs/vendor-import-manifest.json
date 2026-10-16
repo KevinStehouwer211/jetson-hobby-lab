@@ -1,0 +1,2797 @@
+{
+  "image": "192.168.2.51:5000/dofbot_ai:3.0.2",
+  "image_id": "sha256:7c8163d6767300d881553f424e3991509ba63f94c09811ebb50cf5032dd527e3",
+  "architecture": "arm64",
+  "files": [
+    {
+      "path": "vendor/manual/Dofbot/0.py_install/Arm_Lib/Arm_Lib.py",
+      "bytes": 16614,
+      "sha256": "eef2dcce86c33e94314f28e8c002167ba24ceb3cf3fe09337a7fe2bd18920f61"
+    },
+    {
+      "path": "vendor/manual/Dofbot/0.py_install/Arm_Lib/__init__.py",
+      "bytes": 33,
+      "sha256": "f19b7ae8edda3a7148a066c4e2c225b6e66e4fa6a40051e9782e51c4c89cd846"
+    },
+    {
+      "path": "vendor/manual/Dofbot/0.py_install/Arm_Lib.egg-info/PKG-INFO",
+      "bytes": 186,
+      "sha256": "d66745d1a4a9ce41c71628f145762b59ca4d286bcbd65c1dedc46dee320fefa1"
+    },
+    {
+      "path": "vendor/manual/Dofbot/0.py_install/Arm_Lib.egg-info/SOURCES.txt",
+      "bytes": 171,
+      "sha256": "c862c53eccd05ff190086782283b47cd3688f8459e09ee1ab0f49a09cc6828b3"
+    },
+    {
+      "path": "vendor/manual/Dofbot/0.py_install/Arm_Lib.egg-info/dependency_links.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "vendor/manual/Dofbot/0.py_install/Arm_Lib.egg-info/top_level.txt",
+      "bytes": 8,
+      "sha256": "7202653c831e00afd4332d045c30c755d051126416d5659c717787f90a53d43b"
+    },
+    {
+      "path": "vendor/manual/Dofbot/0.py_install/dist/Arm_Lib-0.0.5-py3.6.egg",
+      "bytes": 8821,
+      "sha256": "9f27c0f9302ea2d9f1ace311e9b58b0301965df7cddbdabe27bf220c3923fd1e"
+    },
+    {
+      "path": "vendor/manual/Dofbot/0.py_install/dist/Arm_Lib-0.0.5-py3.8.egg",
+      "bytes": 10196,
+      "sha256": "dbc63b07d9b84439ffb676d65f8814c24122e340f3a7844c16dcd7aaf67f6cb1"
+    },
+    {
+      "path": "vendor/manual/Dofbot/0.py_install/setup.py",
+      "bytes": 205,
+      "sha256": "c10b783b37252c47645acdb4f76f5ed45aa26f038b9ae5cedc359a6ba500563e"
+    },
+    {
+      "path": "vendor/manual/Dofbot/1.telecontrol/4.arm_handle/arm_handle.ipynb",
+      "bytes": 11692,
+      "sha256": "542f2c3120fdd8ee3a8ccfce62a00b93148a8b59b5cfeb599a8b05400ec2dac3"
+    },
+    {
+      "path": "vendor/manual/Dofbot/2.sys_settings/1.OLED/dofbot_oled.service",
+      "bytes": 263,
+      "sha256": "e028a75f18f7f642e263b0c2a045ec6206f7bf777a6aeb15c14d70b33862d43d"
+    },
+    {
+      "path": "vendor/manual/Dofbot/2.sys_settings/1.OLED/oled.ipynb",
+      "bytes": 6771,
+      "sha256": "79252c6eb5f019561c765867059952fcf3cc7e02eedad6432ea9e41bf93d20f8"
+    },
+    {
+      "path": "vendor/manual/Dofbot/2.sys_settings/1.OLED/oled.py",
+      "bytes": 4902,
+      "sha256": "ed61e55036a4b26fdb508801ad75c98eeb25189c25f0c069acc676294a048584"
+    },
+    {
+      "path": "vendor/manual/Dofbot/2.sys_settings/2.Offset/offset.ipynb",
+      "bytes": 3766,
+      "sha256": "399946b4a91c6e5f59b3e56c5c6200d0e5a8416190e78648a57ec4e276d42079"
+    },
+    {
+      "path": "vendor/manual/Dofbot/3.ctrl_Arm/1.rgb.ipynb",
+      "bytes": 1743,
+      "sha256": "ba3f3d8eafcfd1d86edab518499db0ab44061c947932509716cddb391aecdc8c"
+    },
+    {
+      "path": "vendor/manual/Dofbot/3.ctrl_Arm/10.move_block.ipynb",
+      "bytes": 5132,
+      "sha256": "111ec1762e5ce34c1d694fbc9035e58b603360718f123bb4aac66ff3b5d3e3a7"
+    },
+    {
+      "path": "vendor/manual/Dofbot/3.ctrl_Arm/11.heap_up.ipynb",
+      "bytes": 5107,
+      "sha256": "4e17252f40ac3460b495c1057dd39077d2c0bfbc895b5c48ccab065650b25d51"
+    },
+    {
+      "path": "vendor/manual/Dofbot/3.ctrl_Arm/12.sync_movement/A_arm_follow.py",
+      "bytes": 2617,
+      "sha256": "31536a7ad4de2a5317b653f857b10b7b4987ddd22afb33dd6e90081589e2c4d1"
+    },
+    {
+      "path": "vendor/manual/Dofbot/3.ctrl_Arm/12.sync_movement/B_arm_ctrl.py",
+      "bytes": 1687,
+      "sha256": "c8084e745122302bded66ff334d9dd931c08b5a292b04fd11c05599e3740a48d"
+    },
+    {
+      "path": "vendor/manual/Dofbot/3.ctrl_Arm/2.beep.ipynb",
+      "bytes": 2041,
+      "sha256": "60af47cbc86c0e980c442eef36dab480ae692954754491a5c371fd4fe922a759"
+    },
+    {
+      "path": "vendor/manual/Dofbot/3.ctrl_Arm/3.ctrl_servo.ipynb",
+      "bytes": 2718,
+      "sha256": "3a53067c6c7e0fbf4190253ea47c6132febce3e27b439b6399a004f6c3c3fd5f"
+    },
+    {
+      "path": "vendor/manual/Dofbot/3.ctrl_Arm/4.read_servo.ipynb",
+      "bytes": 2409,
+      "sha256": "1281bb03a5442cf4ad86446db408c18824c5824190898cfff58d082656474836"
+    },
+    {
+      "path": "vendor/manual/Dofbot/3.ctrl_Arm/5.ctrl_all.ipynb",
+      "bytes": 2313,
+      "sha256": "a14a535861b7830383b9f3bde78bf89b54509195893d6ec8ba38b2890dae124b"
+    },
+    {
+      "path": "vendor/manual/Dofbot/3.ctrl_Arm/6.left_right.ipynb",
+      "bytes": 2220,
+      "sha256": "e672d1f73bf7770ded3173bc668800d26d5561a4c17dbe274a9b4cad0de5b287"
+    },
+    {
+      "path": "vendor/manual/Dofbot/3.ctrl_Arm/7.dance.ipynb",
+      "bytes": 6444,
+      "sha256": "e6529bdbb881c62b17bb48e6ed7edce9928425f7dc184b110d46f8df7cceaf02"
+    },
+    {
+      "path": "vendor/manual/Dofbot/3.ctrl_Arm/8.study_mode.ipynb",
+      "bytes": 3960,
+      "sha256": "8fcb4285931c5a05b8d94ecc6c11a4d3e1cd51707ab0e0a05da4b94f49e54858"
+    },
+    {
+      "path": "vendor/manual/Dofbot/3.ctrl_Arm/9.clamp_block.ipynb",
+      "bytes": 5062,
+      "sha256": "667688199b6e17a1f4d114b8c08623b23d626d69f5c85766aaa4dc4c04c6d157"
+    },
+    {
+      "path": "vendor/manual/Dofbot/3.ctrl_Arm/Untitled.ipynb",
+      "bytes": 184,
+      "sha256": "e3d32aabdcf75d78102b0890fc2d75cdad4acad05a8722bd70ccc024ac959e8a"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/01_Getting_Started_with_OpenCV/01_OpenCVImage reading and display.ipynb",
+      "bytes": 2106,
+      "sha256": "74a3902ae49a3e8194d977f878be30b19750602e98a900d8e08c5a5a26c798b6"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/01_Getting_Started_with_OpenCV/02_OpenCV Image writing.ipynb",
+      "bytes": 2310,
+      "sha256": "c7d9cf4157853f8dfdcbae01ba492ed46a7dfa4face4e6234edf54cfb61de4cc"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/01_Getting_Started_with_OpenCV/03_OpenCV Picture quality.ipynb",
+      "bytes": 2944,
+      "sha256": "76131a2be1ad8ca715f14c2d513104a52dc80eb4ca9e3ee9892e7bbec27e24d5"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/01_Getting_Started_with_OpenCV/04_OpenCV pixel operation.ipynb",
+      "bytes": 2780,
+      "sha256": "904f92af4c2ab705db8e2a5b4e11f55147cb64ee88ac2503f3578810d044bfdc"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/01_Getting_Started_with_OpenCV/yahboom.jpg",
+      "bytes": 250495,
+      "sha256": "025bda45db27310bfa48f570371688fa99632a9d6c4b300bfc7c848d6fdd1b00"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/01_Getting_Started_with_OpenCV/yahboom1.jpg",
+      "bytes": 352260,
+      "sha256": "f2b46e49daf88664e1770289d91d5465a234be6e2543ed74d51ac69d280e9206"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/01_Getting_Started_with_OpenCV/yahboomTest.jpg",
+      "bytes": 109831,
+      "sha256": "b27e1e17a10989d641757c682d0d4c7c65c1878e4b84d3789941d4fcb7098f01"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/01_Getting_Started_with_OpenCV/yahboomTest.png",
+      "bytes": 1923961,
+      "sha256": "2be85cddc46a34d2f73a61e5012e911b0577e72be58f9559fd76ab946c1e5fec"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/02_OpenCV Transform/01 pixel operation.ipynb",
+      "bytes": 3628,
+      "sha256": "8df542cd9b6efc9295752b2dacdfd1d05deb8dab38e08799fb8639a28efcf8c5"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/02_OpenCV Transform/02Picture clipping.ipynb",
+      "bytes": 2461,
+      "sha256": "a6e82e8e44c278cd203cee7e414c9bb76b34245fc0c4b092ffff79447c1fe09c"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/02_OpenCV Transform/03Picture Pan.ipynb",
+      "bytes": 2897,
+      "sha256": "1f9890d4519f71897bd0092ea4a301bf6cd6b879315572867006d280e312f900"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/02_OpenCV Transform/04 Image mirroring.ipynb",
+      "bytes": 2912,
+      "sha256": "f4ba6c39007be9539bcce46252ef2708da954eba4d232320dce31bfead23cbd8"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/02_OpenCV Transform/05Affine transformation.ipynb",
+      "bytes": 2056,
+      "sha256": "cc84db45a1efbcef75dc277a36a3e13ee5d7f23bcd6ae7aa5fa537f0924e079a"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/02_OpenCV Transform/06 pictures rotating.ipynb",
+      "bytes": 3044,
+      "sha256": "b7db608364696b7b987573fb2b552984d9c82f2885148a95e03c5d2f6a7f23ff"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/02_OpenCV Transform/07 perspective transformation.ipynb",
+      "bytes": 1859,
+      "sha256": "b1d88a08426839b776a20bbdcb855b60b2db383794d1dec1429f759175fba08c"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/02_OpenCV Transform/yahboom.jpg",
+      "bytes": 250495,
+      "sha256": "025bda45db27310bfa48f570371688fa99632a9d6c4b300bfc7c848d6fdd1b00"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/03_Image processing and text drawing/01gray processing.ipynb",
+      "bytes": 5057,
+      "sha256": "8757b74487ef2590452ab77a367d5e082cc5e5a6b6dbca4a8a9e9b6721abe581"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/03_Image processing and text drawing/02Binarization processing.ipynb",
+      "bytes": 2138,
+      "sha256": "1d89d586a328884ef5c90aa5e01090848b51a21730ce87b44c105224503c0227"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/03_Image processing and text drawing/03_1Edge detection 1.ipynb",
+      "bytes": 2331,
+      "sha256": "077163ff51ff5266064b771ac252fea06623e9dd21425b0d6a82f2c0a785f8bf"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/03_Image processing and text drawing/03_2 Edge detection 2.ipynb",
+      "bytes": 2984,
+      "sha256": "fb2a02df5e735fcea1020afbca29a5c5e0a34ab5914e41b14458c68536af4a33"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/03_Image processing and text drawing/04 Line segment drawing.ipynb",
+      "bytes": 1973,
+      "sha256": "00e85d84043baa451e1288a694ac265cd85b32f9568a9d1b641d27332d934e7b"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/03_Image processing and text drawing/05Draw a rectangular circle.ipynb",
+      "bytes": 2163,
+      "sha256": "9ab11d64037f090461217fc24b45cd6221e816e137d4e80c79ad70cb71fdaa2a"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/03_Image processing and text drawing/06Text and image drawing.ipynb",
+      "bytes": 2726,
+      "sha256": "c7b162ada961e00e2b7811ccb229917a491b78b03d34274687a5b9d1cb0cb3f1"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/03_Image processing and text drawing/image.jpg",
+      "bytes": 19201,
+      "sha256": "02b7a93e2fa2a531c392a1e774d2a1183d8cc9223cd354ad382f285dc4b5cc27"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/03_Image processing and text drawing/yahboom.jpg",
+      "bytes": 250495,
+      "sha256": "025bda45db27310bfa48f570371688fa99632a9d6c4b300bfc7c848d6fdd1b00"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/4.Image beautification/01Color Picture Histogram.ipynb",
+      "bytes": 2099,
+      "sha256": "3acc7f5d498f6a25018a27121ad3e8e01b906cbd0c65214c8a2dbb475bb0eb58"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/4.Image beautification/02Histogram equalization.ipynb",
+      "bytes": 4456,
+      "sha256": "b9699cd07e86d2fc0aa42df152e1cf30199c4d6c0014dd640a00e2f5203af173"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/4.Image beautification/03Image Patching.ipynb",
+      "bytes": 3516,
+      "sha256": "d2bb93291778505896050da825cdfc876ca886a51198586a1e9c9ae7abfdb119"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/4.Image beautification/04brightness enhancement.ipynb",
+      "bytes": 2292,
+      "sha256": "259036aadfca045e9b80d918948bf10f9ff7e9e5e1f48af25fe2b6b5057dcb03"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/4.Image beautification/05Peeling and whitening.ipynb",
+      "bytes": 3100,
+      "sha256": "fb1c00c6b50b84ef0f2c0829a22b8ca1c3ac3592647bd620a644917473943d76"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/4.Image beautification/06Gaussian mean filtering.ipynb",
+      "bytes": 3449,
+      "sha256": "1e80391822eee5b3928c7105b115f08ef3da2671402d17afa42695fa1192886c"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/4.Image beautification/07median filtering.ipynb",
+      "bytes": 2755,
+      "sha256": "9ce9fc4d39b5b35a6300be96539704e994d8434b4a44bf991bb7afdd47962a09"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/4.Image beautification/Road_test.jpg",
+      "bytes": 423498,
+      "sha256": "07329fc5bf7017007ea7db7f3220d71c3ec6351bf5b03866016cfe211107c179"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/4.Image beautification/damaged.jpg",
+      "bytes": 352814,
+      "sha256": "cf0a978cbb6f3a28e6f9187149ab72f355c5a2c9a123130853cd8e5fa9846ade"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/4.Image beautification/yahboom.jpg",
+      "bytes": 250495,
+      "sha256": "025bda45db27310bfa48f570371688fa99632a9d6c4b300bfc7c848d6fdd1b00"
+    },
+    {
+      "path": "vendor/manual/Dofbot/4.opencv/logo.png",
+      "bytes": 21005,
+      "sha256": "dc60fe2c9054f493e503f2d13c601f86d6d431a59eaa35a476afe22d2673ee24"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/0.\u6444\u50cf\u5934\u9a71\u52a8\u6559\u7a0b.ipynb",
+      "bytes": 3211,
+      "sha256": "7559e575be510b378cde4c44264e7fc37377ff3a9eec565b02b12445da691ceb"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/1.gesture_action.ipynb",
+      "bytes": 14578,
+      "sha256": "09d85a319e64b0c9af87ab37b1cca80cb66c2beef870dfdf39068a914026f72d"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/2.gesture_stack.ipynb",
+      "bytes": 16517,
+      "sha256": "ac068de17670379106878ee878ba51dc919d9928ce65534030d75ce0197ce14a"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/3.color_grab.ipynb",
+      "bytes": 14440,
+      "sha256": "1959992e4a6efcc63932b3aba313d92f9faf7e07c138075bd6c317cf4da887b8"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/4.Gesture recognition.ipynb",
+      "bytes": 8264,
+      "sha256": "48a841e7724d6c372d5b255d4f34dd2f2909f9319165f7b68d33d857065bd21f"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/5.Color recognition.ipynb",
+      "bytes": 8463,
+      "sha256": "7c2d0bd4c94c943685acc31a8ce63d195c75cb753726261abfa90848de5faf3f"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/6.Face recognition.ipynb",
+      "bytes": 3798,
+      "sha256": "8e23e7e7e05cfcf4295a1ec05fc8eb97c4e0adb807a1275b184e7df14bcb47ef"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/7.Garbage identification.ipynb",
+      "bytes": 3918,
+      "sha256": "a6d347018d6ac04ab87c65be8f1eeb72a9ac800ca750b978545ef59527bf116d"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/Thumbs.db",
+      "bytes": 8192,
+      "sha256": "669a5ff69a50b27a9cf7136e0d65105d466894fc1d900e1a7c95356f22f5de6e"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/Untitled.ipynb",
+      "bytes": 3304,
+      "sha256": "61b735bb1c7d409cc5bbdbd2a293e723da5cb0f0c0caf622d9ccd03f7feac441"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/face_follow.py",
+      "bytes": 1709,
+      "sha256": "d8b064876e3d4d643234166f2fd423d184670ee9098ca47046f30a54da9b7333"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/garbage_identify.py",
+      "bytes": 4407,
+      "sha256": "9b2815a74c18617569c64c8d23e74542dcf231c4e6c778a8577c9361b12c03e6"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/haarcascade_frontalface_default.xml",
+      "bytes": 930127,
+      "sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/logo.png",
+      "bytes": 21005,
+      "sha256": "dc60fe2c9054f493e503f2d13c601f86d6d431a59eaa35a476afe22d2673ee24"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/model0.pt",
+      "bytes": 58893757,
+      "sha256": "7c395c30f7e5df04b1d9f43c01bdf71cbf0034ee415c1b98361776a5d538ab9e"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/common.py",
+      "bytes": 4724,
+      "sha256": "4c45825b8757e17c8f911fb8fc6c8fdde2ae8e1773cabda40c13ee498f774035"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/experimental.py",
+      "bytes": 5553,
+      "sha256": "1b7457c386a0618bbdd46d0aa2fd1dcc56cb3b56c276e36a9afc6a9cf14d254e"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/export.py",
+      "bytes": 3374,
+      "sha256": "225b42e69b0b9795a5c8a92c8b524e9f0ba314bcf870c2b25744f8b0b74f1ca4"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/yolo.py",
+      "bytes": 11928,
+      "sha256": "e0a4bd3175939143492c0fffd3a11d4825ad0d22b5a37e1de3f1652e570f8d35"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/yolov5l.yaml",
+      "bytes": 1453,
+      "sha256": "3e5ccbdcc9d52674c848f4e801c0e5f29cb1514979add522596c7ea17beef903"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/yolov5m.yaml",
+      "bytes": 1455,
+      "sha256": "fdb29504f50b07a2423b6925db2f32af99c08aa8013b207034661b36d95e0e5a"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/yolov5s.yaml",
+      "bytes": 1455,
+      "sha256": "4190a66858fd5bf756cf4b8d7b280d86288660d4d8580051c21567ef77661eeb"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/yolov5x.yaml",
+      "bytes": 1455,
+      "sha256": "3bb749a86425f7373ebe8d32e09e05d6d7eff2c20d2f8e0e203aa63b3e8f89f4"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/simhei.ttf",
+      "bytes": 10044356,
+      "sha256": "0ee6f6723c29dbf427d12d58ffc11d58e9aa89adda0ab6b06468ee765b1eadf8"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/single_garbage_identify.py",
+      "bytes": 3106,
+      "sha256": "4c92d8e5775c768519865209932ee62a8a86d439f196089e2a5e140f9890d64c"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/utils/activations.py",
+      "bytes": 2176,
+      "sha256": "dcc1ba1d8c1c79d7361b737f261ab9422c057b2ebd987b2a2914c2eeccb3255b"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/utils/datasets.py",
+      "bytes": 39107,
+      "sha256": "3b83b52117f056842a90202a508ffd2d024807d63cc9031ec13212abac0cc896"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/utils/general.py",
+      "bytes": 53760,
+      "sha256": "24404906a17be6b7c81c30804eedb063c8a739f79338f5dfbb372e811794fbb5"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/utils/google_utils.py",
+      "bytes": 4971,
+      "sha256": "d6467c59341da9c8d6ed4523661f6b1286ffb8884d8c3f93122dcd2ddbe218ee"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/utils/torch_utils.py",
+      "bytes": 8958,
+      "sha256": "5a1e16edf5b896b80f99af479eabeb8a067a3a73c2801971e9d5d31d8a2b8838"
+    },
+    {
+      "path": "vendor/manual/Dofbot/7.Voice_control_basics/1.Loop detection of speech recognition.ipynb",
+      "bytes": 2396,
+      "sha256": "42efae7e56ff88e5453c13b27b47716413eb86ba31fb0fd082b1cff1bb7762b2"
+    },
+    {
+      "path": "vendor/manual/Dofbot/7.Voice_control_basics/3.Voice Chinese broadcast.ipynb",
+      "bytes": 1562,
+      "sha256": "715b067413533fe4801d9718211d8587a793b04d9d9950f1473289bff0739ede"
+    },
+    {
+      "path": "vendor/manual/Dofbot/7.Voice_control_basics/4.Phonetic Pinyin Broadcast.ipynb",
+      "bytes": 1564,
+      "sha256": "69cfefaa147fc241a43caf3aee8489f0f7d61e4f15c32887ed49fde5f2d2e280"
+    },
+    {
+      "path": "vendor/manual/Dofbot/7.Voice_control_basics/5.Voice English broadcast.ipynb",
+      "bytes": 1843,
+      "sha256": "938cf4e91a1f7f676d99e7dcdbf590a40b2110cfd1d91ecef709b0bead487bb4"
+    },
+    {
+      "path": "vendor/manual/Dofbot/8.Voice_advanced_control/1.Simple_voice_control.ipynb",
+      "bytes": 4243,
+      "sha256": "4f0e5c3039e3de8d9a3912d69146e4f17a94093e54eadc005aa3f481dc7504d3"
+    },
+    {
+      "path": "vendor/manual/Dofbot/8.Voice_advanced_control/2.Voice intelligent control.ipynb",
+      "bytes": 4269,
+      "sha256": "3b30fb5f708222fe5aec7debedd9ecababa613a7d194b23cb7c170235f97fffb"
+    },
+    {
+      "path": "vendor/manual/Dofbot/8.Voice_advanced_control/3.Voice_action_control.ipynb",
+      "bytes": 16863,
+      "sha256": "9ea15a4e4002c677103efcfb76884ec23f3a781e0667509e37e37515809b7007"
+    },
+    {
+      "path": "vendor/manual/Dofbot/8.Voice_advanced_control/4.Memory learning model.ipynb",
+      "bytes": 3681,
+      "sha256": "67baedd68fb5c265fa1181f0fb000853969e73d7e36d751e15e5060ba2eaaa4b"
+    },
+    {
+      "path": "vendor/manual/Dofbot/9.Voice_AI_interaction/1.Color&broadcast&speech_recognition.ipynb",
+      "bytes": 11352,
+      "sha256": "2932fed170ec088ef95bb0326982be47f6722cb3cc4367b816cde9d804583301"
+    },
+    {
+      "path": "vendor/manual/Dofbot/9.Voice_AI_interaction/2.Color_recognition_grab_broadcast.ipynb",
+      "bytes": 16429,
+      "sha256": "2507a83daf27af5423a3e0a8eae5f7adfa952af9b9956ff85563898f1efcac14"
+    },
+    {
+      "path": "vendor/manual/Dofbot/9.Voice_AI_interaction/3.Voice_control_stack.ipynb",
+      "bytes": 11197,
+      "sha256": "664becb8c39d99805499da1c931c240b228a711d0d443db959031a26110211ec"
+    },
+    {
+      "path": "vendor/manual/Dofbot/kill_YahboomArm.sh",
+      "bytes": 492,
+      "sha256": "699a3d0ae8e37b54fd1378c22acb23d5c5f943a2c5e25da75e4c1d0ef2047545"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/CMakeLists.txt",
+      "bytes": 7376,
+      "sha256": "b5c44c6d427f79a9f707b4f5298ca7a56370880a81782c23d54fefcd9bbca147"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/launch/01_HandCtrlArm.launch",
+      "bytes": 133,
+      "sha256": "dc0549be5a13298a0c250d5d117d8e771355eb8bd5ff1d71957a6e2d1788a448"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/launch/02_PoseCtrlArm.launch",
+      "bytes": 128,
+      "sha256": "245b0c7dab73e5241bcd15ada27a053dcdc3b14c861db8cd0a17d5621ebbb8da"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/launch/mediaArm.launch",
+      "bytes": 470,
+      "sha256": "2587755f7f313a49f74a317c91343340f749d423ef8ba032e5cf63bb40ead8ab"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/package.xml",
+      "bytes": 3052,
+      "sha256": "be560181ce9d34149b0aec424328a15d207a12dd9de91eed3c130d05c82993f4"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/scripts/ArmCtrl.py",
+      "bytes": 2748,
+      "sha256": "7cb696e9139180f7ddf752aadc5f94888ac021b83d3d0c2fc76e2519d2b94a81"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/scripts/Find_Hand.py",
+      "bytes": 2113,
+      "sha256": "eb00c30dac867399fce9a40a30501fb8d37c94027238bd39e50dc498a178021f"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/scripts/FingerCtrl.py",
+      "bytes": 6766,
+      "sha256": "d2acb5ea4abf4a73678b24b0888c1e2556f1299936c0c1bb7ef3c080ba330059"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/scripts/HandCtrl.py",
+      "bytes": 9253,
+      "sha256": "7bd12c170eb5c504f5f6733dbe956dd3526a9f270f851b09732358892a589e07"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/scripts/PoseArm.py",
+      "bytes": 5059,
+      "sha256": "0abc201f272214c91dfe47c160e6c4d8d59b09d1ec8ef7395ad1d9837018d547"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/scripts/RobotCtrl.py",
+      "bytes": 4177,
+      "sha256": "d9018c6c3a270dd9bd0efc3f3f2cf707fbf7c2e1fa286c649d9f30b3742e4919"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/scripts/arm_driver.py",
+      "bytes": 1430,
+      "sha256": "68adc0dba2b3d4d9d5d9b895a7e2c16a473526e4786682ba0a93dc6d0542aecd"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/scripts/img/face_landmarks.png",
+      "bytes": 79658,
+      "sha256": "80a26f8b75f7dd46e9b918bfe84791766a7774518a54121ba17bd7aa37a17eea"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/scripts/img/hand_landmarks.png",
+      "bytes": 159592,
+      "sha256": "24ce896420149a7b9dc0c05e547681e3027b4a65ce3a0a6c73685ba1cc535496"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/scripts/img/pose_tracking_full_body_landmarks.png",
+      "bytes": 123013,
+      "sha256": "c93063a83adff4db00c02aec8cf04d7444ae9169956c8ec67ee2351adbcd8c0f"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/scripts/media_library.py",
+      "bytes": 11210,
+      "sha256": "eb5124c1548bc0e0d6802645f0b2ce36abd16bba0e092ac8515e60a3eb1a1bba"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/arm_mediapipe/scripts/msgToimg.py",
+      "bytes": 1574,
+      "sha256": "f9a157c3e972e1bf55d63191bc0586d948f786bac85cc18120b3e4d4129cada0"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/.idea/dofbot_color_follow.iml",
+      "bytes": 794,
+      "sha256": "7578d44dd9923bb2fe205fc76b9ef257bd38ef3d43a0da9605853555f9007e26"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/.idea/inspectionProfiles/Project_Default.xml",
+      "bytes": 900,
+      "sha256": "7282766ef034cea340d645dfbdf8b00e7b3a3681742576ee9e80f2e6b9c7703b"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/.idea/libraries/ROS.xml",
+      "bytes": 170,
+      "sha256": "c90c2a791c1bc3d11d716cc7e5b46574ecdbf134e2f020df407e55fa1074a3ec"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/.idea/libraries/workspace.xml",
+      "bytes": 118,
+      "sha256": "4b9e37c0c789e79318394f217c94603db92c1f27aad85820305b7ee3d1ff5571"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/.idea/misc.xml",
+      "bytes": 288,
+      "sha256": "927799ac448eee3d3c4174dff4da1c3da674c33b471f7cda962ce38289d76d9e"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/.idea/modules.xml",
+      "bytes": 290,
+      "sha256": "f6ea6193957ec86746f4c408d9c6c9d952347de206b7dd552b3defde434b7089"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/.idea/ros.xml",
+      "bytes": 695,
+      "sha256": "7f8cb49820da0a54cd23da739959e7c67cb2e4b3b1664e9aa4c6e9ec8c44a545"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/.idea/workspace.xml",
+      "bytes": 6553,
+      "sha256": "4365df2a0e4cd0dfe5bca297e6be06c0f1d6695c9bfce3c6963769af38bc6675"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/Color block positioning.ipynb",
+      "bytes": 5798,
+      "sha256": "527129fb79b6127334efa96a53bbfb629d7cbb7184bea9130026b287065e8aab"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/Color_tracking.ipynb",
+      "bytes": 7303,
+      "sha256": "74c9d84a133c4ecfee6985904331657e21e56eab5bcba5cffcc1a7729b863ba8"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/HSV_calibration.ipynb",
+      "bytes": 11493,
+      "sha256": "3e6f0106f3122e5baacc4536016b87370c67c40d38b8f1f3b9a42004c5c281a3"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/HSV_config.txt",
+      "bytes": 155,
+      "sha256": "2fadfff90ac9ef0f92246004fb25ce039b0044e7e08ac4d24f46e62bca0eeb4f"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/HSV\u93cd\u2033\u566f.ipynb",
+      "bytes": 11335,
+      "sha256": "34388a8cdd58b0ddb0c4cb06dc0b2ee49c6b94b5108caf91aee5dd3219496f3a"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/PID.py",
+      "bytes": 2546,
+      "sha256": "2a9b4f1e5c85d2b45fd87c3ef54afa55ae923630125fee2b0fddafffa5f04245"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/Voice recognition target tracking.ipynb",
+      "bytes": 26494,
+      "sha256": "e482f839c49ade996fa638b5259f7ea6d409f362b204a1d0008dbb2ed7054136"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/color_follow.py",
+      "bytes": 4639,
+      "sha256": "7c6149c1a147cfccac486cb11aab63998e46954b98872bde88319bea8f6dfc82"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/dofbot_config.py",
+      "bytes": 11662,
+      "sha256": "c096576d11af83183418adc01fa15e2d27beb338fd671df53396d2cdcd1eb2d4"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/face_follow.py",
+      "bytes": 3141,
+      "sha256": "3a603f17700933ad9105facc47f24c0a98251121d175532ecf3df117021a74e1"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/haarcascade_frontalface_default.xml",
+      "bytes": 930127,
+      "sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/positioning.py",
+      "bytes": 3647,
+      "sha256": "46d4cfbea5ea99961eca194bc7b4be71b899e3c7b304eaccd023e9549ebc3d98"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/\u7487\ue162\u7176\u7487\u55d7\u57c6\u9429\ue1bd\u7223\u6769\u501f\u91dc.ipynb",
+      "bytes": 25968,
+      "sha256": "533ab83ec175114b4d295591359328ad2da18a10d79c18abb3460af57ce01012"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/\u9479\u63d2\u6f61\u6769\u501f\u91dc.ipynb",
+      "bytes": 7303,
+      "sha256": "74c9d84a133c4ecfee6985904331657e21e56eab5bcba5cffcc1a7729b863ba8"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_follow/\u9479\u63d2\u6f61\u7039\u6c2b\u7d85.ipynb",
+      "bytes": 6464,
+      "sha256": "41895409ece5c0861783ec2cf5c6f8bac5d1c6b297a9c81dee7958d25da42449"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_grab/CMakeLists.txt",
+      "bytes": 7094,
+      "sha256": "49a316f1d41d47967cd5bd1860cd19ba524dfd79f3f7fbe87f1c46c315b35b94"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_grab/package.xml",
+      "bytes": 2513,
+      "sha256": "9f3a99df9fe4c91e1d83786f851750101f2794ff897b2ca3e09ea9bd77e800ad"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_grab/scripts/Color_Grab.ipynb",
+      "bytes": 4756,
+      "sha256": "cc1a7c7f7adec0e3abe6fa1464900fdef498b36b2e0f183cb3b2c797c0ed0c44"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_grab/scripts/Put_and_Grab.ipynb",
+      "bytes": 5489,
+      "sha256": "92f8c060f9992153d3f9d846a1f8e68798b78d6f47c8e7497dbdee07d613f96e"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_grab/scripts/color_grab.py",
+      "bytes": 7363,
+      "sha256": "96957c9e4008981cd65280814a05f533841ce2f69549b611615ebb672d89ef9a"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_grab/scripts/put_grab.py",
+      "bytes": 8014,
+      "sha256": "dd2c59ad9683209677b4d536fbe96b79480484dc4d69d70137fba5b136495346"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_grab/scripts/speech_color_sorting-Copy1.py",
+      "bytes": 17038,
+      "sha256": "352fb17ede714b524a3ad97366633e60cf03adf537ff74691502b0298c250fe2"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_grab/scripts/speech_color_sorting.py",
+      "bytes": 7458,
+      "sha256": "49445e76a9ac5c29b194636a50f91b84a9494af34082a3f377ff7c1a092603ca"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_identify/CMakeLists.txt",
+      "bytes": 7246,
+      "sha256": "6d7f477cbe1ec900eb60c1872326fda2b2909b1f3704e82d29a31474e82bc2b4"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_identify/package.xml",
+      "bytes": 3150,
+      "sha256": "5f98ab495adbd0f5c4c7ee1cd45396c5ed7874d09495d7b73c1cb07a7c17f823"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_identify/scripts/Color_sorting.ipynb",
+      "bytes": 14152,
+      "sha256": "b033282191db208e9960d6959edbc0207f7cda589f6c7592fd95a6df4e119e19"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_identify/scripts/HSV_calibration.ipynb",
+      "bytes": 12506,
+      "sha256": "957d047c8c3ccbcd18d0aa0c290fb761661274f9a6cdd35cc5a02de3e45f754d"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_identify/scripts/HSV_config.txt",
+      "bytes": 154,
+      "sha256": "980cc7cd5c93991a9ec039ade04c5b5f09af80dcd946d72baff5f86b6d352ee2"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_identify/scripts/Voice_recognition_color_sorting.ipynb",
+      "bytes": 42891,
+      "sha256": "79ed162fa700fc4d788d47252ee962948cecb5a73a5eb4ba2c2322ceaf192f32"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_identify/scripts/XYT_config.txt",
+      "bytes": 21,
+      "sha256": "7ff5fa71bc8e165da6389edbc08eaa716305ae5cabbcdf108a5d0eadb4fbc657"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_identify/scripts/dofbot_config.py",
+      "bytes": 12426,
+      "sha256": "e625c8aedc463fcf32c15da4bbfd52b9b66213aa639ff31dde8d90862dcfaf99"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_identify/scripts/identify_grap.py",
+      "bytes": 5032,
+      "sha256": "c42a7f46984c40f95b4447bca93f34220182e74117939b5093fca3c47a3ad765"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_identify/scripts/identify_target.py",
+      "bytes": 12051,
+      "sha256": "46a4b23d5f99d5d11e891bac207243d79013cdfe4f8edd606bf40d180923ce86"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_identify/scripts/speech_identify_target.py",
+      "bytes": 8417,
+      "sha256": "a6e4d4168d5c68ea6912c53f9767a91f57eb4017e15ed6f658fa9613f3959f91"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_identify/scripts/\u68f0\u6ec6\u58ca\u9352\u55d8\u5ade\u941c\u2542\u7876.ipynb",
+      "bytes": 14231,
+      "sha256": "1c12e1c11005a36f06c9b0e564d97899d8b93e048e91ffe6b8064a4a41717b67"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_identify/scripts/\u7487\ue162\u7176\u7487\u55d7\u57c6\u68f0\u6ec6\u58ca\u9352\u55d8\u5ade.ipynb",
+      "bytes": 42891,
+      "sha256": "79ed162fa700fc4d788d47252ee962948cecb5a73a5eb4ba2c2322ceaf192f32"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/.idea/dofbot_color_sorting.iml",
+      "bytes": 678,
+      "sha256": "f8f2ec68aadcc7a7bece58257fd7e496566ae17b5fd5f20f0464af5b832885fe"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/.idea/libraries/ROS.xml",
+      "bytes": 170,
+      "sha256": "c90c2a791c1bc3d11d716cc7e5b46574ecdbf134e2f020df407e55fa1074a3ec"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/.idea/libraries/workspace.xml",
+      "bytes": 118,
+      "sha256": "4b9e37c0c789e79318394f217c94603db92c1f27aad85820305b7ee3d1ff5571"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/.idea/misc.xml",
+      "bytes": 174,
+      "sha256": "8e20542282cda0edcf55934715b7ae3ea2bb8b682180a12999b82f0475ea8b36"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/.idea/modules.xml",
+      "bytes": 292,
+      "sha256": "49531daeede04a0e21bc4282c59ca31aad09191dd5c5794c752eb5c969f1f3a2"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/.idea/ros.xml",
+      "bytes": 695,
+      "sha256": "7f8cb49820da0a54cd23da739959e7c67cb2e4b3b1664e9aa4c6e9ec8c44a545"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/.idea/workspace.xml",
+      "bytes": 2841,
+      "sha256": "df8a96f56ff82105abc0415880eba195fa2f4caec9545c798982e624f3df7889"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/Color recognition sorting broadcast.ipynb",
+      "bytes": 5714,
+      "sha256": "c870663a110cbd879c7fb7ef61fe3e149c7473eb26bddbc40eb9b3e5b3711dbe"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/Color_interaction.ipynb",
+      "bytes": 4806,
+      "sha256": "d8614103bd2b82805870fc257d7ddf11d480c5b02f863159697c6ee2a596f228"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/HSV_calibration.ipynb",
+      "bytes": 11495,
+      "sha256": "768d8852fb6c4f314a00e26210cd3858299e8dd8ac1b6873bff5012145d70457"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/HSV_config.txt",
+      "bytes": 154,
+      "sha256": "10d2c99bac4248174066ac5e6d351d4783d40c5ce61f600d1ac49363f8ecad97"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/HSV\u93cd\u2033\u566f.ipynb",
+      "bytes": 11336,
+      "sha256": "09f50d079f380d4e5a00d44cba1b3e63b09c7a142524cb1e42cbf96ab9a80fb7"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/color_sorting.py",
+      "bytes": 5216,
+      "sha256": "38494d5e7ec7b226abdabd191bac39396a7a5bc7c2180df91e50954c25f2a74b"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/dofbot_config.py",
+      "bytes": 8738,
+      "sha256": "9bb12ac596e27623ac5a6547e1a8b4bc8c8959a42624962f4c2125dc234580ee"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/identify_grap.py",
+      "bytes": 4460,
+      "sha256": "c3dfeb17bcfc176671c668ccdbf273586c9e8216da7bfe2177373f1c8e67a34a"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/speech_color_sorting.py",
+      "bytes": 17037,
+      "sha256": "a38c89ffa11566b0e6a7b1a8725bcd7becf3b6cfd494e2c7a7c8bd7ca19ca416"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/speech_identify_target.py",
+      "bytes": 7739,
+      "sha256": "ab2879cea7ac9dfafbcf6867cddf7fadf38f2b7dd7f036d17a39ceb451476c27"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/\u4f60\u653e\u6211\u6293.ipynb",
+      "bytes": 5139,
+      "sha256": "9e6e9a877b09ab73e952fd35f409f194027f19e2a089e3dce07e166235f3a1f6"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_sorting/\u68f0\u6ec6\u58ca\u7487\u55d7\u57c6\u9352\u55d8\u5ade\u93be\ue15f\u59e4.ipynb",
+      "bytes": 5165,
+      "sha256": "3d6d03484c312e0fbd2dadeea362aa9513f9e2c26bbb8978330d7c537c1f8dca"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_stacking/CMakeLists.txt",
+      "bytes": 7279,
+      "sha256": "0b1c0e8a97930c51a4fdbd93acea7f0ec4d9908fff64277c08a6e63d66858a7b"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_stacking/package.xml",
+      "bytes": 3035,
+      "sha256": "436990c94be45641f9859f4be972bd0f94791dd0171581eb52ab107356348f98"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_stacking/scripts/Color_stacking.ipynb",
+      "bytes": 13434,
+      "sha256": "4655113999f4bf0b2f17219f22bca86b05537ac048adbdae138adf9e5b1112e7"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_stacking/scripts/HSV_calibration.ipynb",
+      "bytes": 11495,
+      "sha256": "cb38030e927d76f8c148597f41253fc0864a333ff48b30d3478deca6f60a367b"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_stacking/scripts/HSV_config.txt",
+      "bytes": 156,
+      "sha256": "609c5f46df09eb40ad5c6ef68a17d3579c50bf1ec8669cf80f80dead3556da95"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_stacking/scripts/HSV\u93cd\u2033\u566f.ipynb",
+      "bytes": 11359,
+      "sha256": "6dc2d368520ae3754abd8e492b49853fc2c05cffe42456309f7c953c0cc9127b"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_stacking/scripts/XYT_config.txt",
+      "bytes": 21,
+      "sha256": "509d360900ced3982ba02929665389df14e5f276e9283a70ad387e48d21a34bd"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_stacking/scripts/color_stacking.txt",
+      "bytes": 157,
+      "sha256": "7f444ba5ba2e8fe61e8d4b3b2af2ee7d22302ce40263112c62b7a41ca7c38def"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_stacking/scripts/dofbot_config.py",
+      "bytes": 8742,
+      "sha256": "6087702c65f38e8aa179350d8ee1e1863e4f5666e6cd0b3c76860d1c114226f9"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_stacking/scripts/stacking_grap.py",
+      "bytes": 3057,
+      "sha256": "4e4b2556fa8f6492f84a3ceea26cfbaa25a090794175c1bcb592578d98878518"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_stacking/scripts/stacking_target.py",
+      "bytes": 4935,
+      "sha256": "480a32f4806280cc8e4cd85c91877a5e223ff1bb687d4e97cf363d4606e558d8"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_color_stacking/scripts/\u68f0\u6ec6\u58ca\u936b\u55d7\u5f54\u941c\u2542\u7876.ipynb",
+      "bytes": 13781,
+      "sha256": "b0b9197bc5f437f8c0522c6bcfa334273d68d702261c76a8812b63b2074b350f"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/.idea/dofbot_config.iml",
+      "bytes": 97,
+      "sha256": "b8d7d2d100026ea24ead768cc03feb6bc711b1a543535351b4ab2f9e7db4b881"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/.idea/misc.xml",
+      "bytes": 240,
+      "sha256": "002937a82d402769fe7a6f4c7541dca0e14e5da8ccbe89dbec78b96d8a707e67"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/.idea/modules.xml",
+      "bytes": 278,
+      "sha256": "8e7a47dd27adc5207dae013fb875bc543ca0c14bc220436a53a30a2217985502"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/.idea/workspace.xml",
+      "bytes": 7519,
+      "sha256": "7171231d408015b73196be4d396f414d1d7d97623f1aa4fb92f1c79466488b8c"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/.setup_assistant",
+      "bytes": 268,
+      "sha256": "2c6e4b353283e08973f9d3ea358dbe4b4a9d1878260dff5beb20c837cbd33158"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/CMakeLists.txt",
+      "bytes": 302,
+      "sha256": "1c910bb3eb45e0c7a203c50ff6d409b33ecd35ba73edcfbacaa3002808a4f97a"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/config/chomp_planning.yaml",
+      "bytes": 486,
+      "sha256": "e9640b7c87ff4f1ba4a70e893c00aa6286db2b2b76149b3b16b924e8352cde33"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/config/dofbot.srdf",
+      "bytes": 3420,
+      "sha256": "978860acfd264bbd2558fddcf2f0c564ebff7992de623f360663db97dceb97a3"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/config/fake_controllers.yaml",
+      "bytes": 207,
+      "sha256": "b65a71d2741c0a81e8a5af1aea0b0c0cee29909e694f8f2ee8d0184ab21e901b"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/config/joint_limits.yaml",
+      "bytes": 1220,
+      "sha256": "92a8157fae730068e4c34d2810027e65d77a0d12c54a077ca255267108297e58"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/config/kinematics.yaml",
+      "bytes": 150,
+      "sha256": "866d275d8a7a7074fbdd2d21df5d430f651f632e6095edc904431ebd85e4812a"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/config/ompl_planning.yaml",
+      "bytes": 9067,
+      "sha256": "4c6c89cbb9d8ccf99c54f6574bf7b2329154173582fcecf64df27df751d7b910"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/config/ros_controllers.yaml",
+      "bytes": 848,
+      "sha256": "8250772bc43be8f41a2d4b3781fae56e4fd8cb517074288d5048910d01fcb7f0"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/config/sensors_3d.yaml",
+      "bytes": 385,
+      "sha256": "bcd2ffeaeb2865a58c016a3ebf9b582d3067289bf52ad96b00c7ee5a2415c286"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/chomp_planning_pipeline.launch.xml",
+      "bytes": 1068,
+      "sha256": "f49ce50a45249410b4d9096c3ddb29e5cfdf0356e2215b03af33c2c5aeeba303"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/default_warehouse_db.launch",
+      "bytes": 699,
+      "sha256": "b0ed37922c86c905ac0795406a96f32f6595aceb4fb033038f73a0177a696645"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/demo.launch",
+      "bytes": 2904,
+      "sha256": "c55f7c3a98fc7bfb7a34e5a2f084c1027c340e1ae1e465bdc134d95551587a2c"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/demo_gazebo.launch",
+      "bytes": 3391,
+      "sha256": "949d6ff5984a7892021d244efc4ef8199ac91c7a4a9ad1cd9033daa5ce09d27d"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/dofbot_moveit_controller_manager.launch.xml",
+      "bytes": 516,
+      "sha256": "6a0f8411ad568f181b765aaa1dac8f7682ece7e217591e1ca03ac2a2558c8a18"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/dofbot_moveit_sensor_manager.launch.xml",
+      "bytes": 20,
+      "sha256": "5559e003df14cf781ff9cd80c3f21f0422503013309f532093bc1132f96baba8"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/fake_moveit_controller_manager.launch.xml",
+      "bytes": 362,
+      "sha256": "2f4b9e607919e8f954f7dc713e4b883d051aba19254904b9f89ca97aa35ce533"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/gazebo.launch",
+      "bytes": 964,
+      "sha256": "ce199ea3f2d1e8237250c1a12b2a9b78753abe35de56a8f6f4dd844816da8c6b"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/joystick_control.launch",
+      "bytes": 621,
+      "sha256": "933827068fdeb44555e605148fb38efca4dbedeab076eea1e69b5aaf17f0b93e"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/move_group.launch",
+      "bytes": 3865,
+      "sha256": "ff3e957598982bd03178b178a6f996ab68670f1527c6ef626ab238a0b249139a"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/moveit_rviz.launch",
+      "bytes": 569,
+      "sha256": "e2627e8e04fb9b1d046629b27b6faf661a7143bac8de3e63c57289159c940da5"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/ompl_planning_pipeline.launch.xml",
+      "bytes": 1060,
+      "sha256": "8f1b518a0f6dd4070b045792b7945d9fbc8474f9ac6917a6fdc83044a2f8fd20"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/planning_context.launch",
+      "bytes": 1152,
+      "sha256": "055eda50aee7be34f79c79146f28f7001377af903957b9c19d1f683c6d3f1f22"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/planning_pipeline.launch.xml",
+      "bytes": 324,
+      "sha256": "6352da50d2b7dfabdd0236269a1c7a0735e2eaef0bf41fe3c1f2d85f58221d55"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/ros_controllers.launch",
+      "bytes": 365,
+      "sha256": "b492ed20ff8a79f2a330e892d8bfd5a7289147bf48eb511bd51f2742a2dd762d"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/run_benchmark_ompl.launch",
+      "bytes": 793,
+      "sha256": "90033c6454fe226197c39c1eae3c5989bff2d5a3b521d5be118000353bf536a3"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/sensor_manager.launch.xml",
+      "bytes": 758,
+      "sha256": "076ccec06420c8344d9c7637e0b2403d71331fb8747d6866eaad290b306cfae2"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/setup_assistant.launch",
+      "bytes": 531,
+      "sha256": "629d8d3679dea8b35b1186f08c48cb116ce38da13fb484c13e41a683c2e1d417"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/trajectory_execution.launch.xml",
+      "bytes": 1314,
+      "sha256": "0ae687f71a7ed8b8b020a562ad4083b0bb05b85968fd11df9e7d6ec779002660"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/warehouse.launch",
+      "bytes": 517,
+      "sha256": "f98379ad58c2b44eb90410d1a96ac9df43344239bfde1d9bda5fc7921d8c59a6"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/launch/warehouse_settings.launch.xml",
+      "bytes": 675,
+      "sha256": "8fba5e61ea2da17e000690cab8ad92ce758a8e780981bf8dd8068077f38c4d18"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/package.xml",
+      "bytes": 1418,
+      "sha256": "2e3a8f18ebebbaa8d45362dd1e93b8e0fddd121121456af64fa5cb379e628e43"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/rviz/dofbot.rviz",
+      "bytes": 7622,
+      "sha256": "d881310f49eb99eb972d4516d2980b1b02ce03635cf92d68a484c8ff592ac767"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/scene/floor.scene",
+      "bytes": 125,
+      "sha256": "8dfd68c9c0782fe336d6ae63f7a237a3a1fd476c0fec65a63d5654ecd72cc43b"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_config/scene/shape.scene",
+      "bytes": 295,
+      "sha256": "ac166e16054f98c273666f8dd0c615aaa2b9a21f379b5b6401839d601c22fe78"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/.idea/dofbot_face_follow.iml",
+      "bytes": 678,
+      "sha256": "f8f2ec68aadcc7a7bece58257fd7e496566ae17b5fd5f20f0464af5b832885fe"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/.idea/libraries/ROS.xml",
+      "bytes": 170,
+      "sha256": "c90c2a791c1bc3d11d716cc7e5b46574ecdbf134e2f020df407e55fa1074a3ec"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/.idea/libraries/workspace.xml",
+      "bytes": 118,
+      "sha256": "4b9e37c0c789e79318394f217c94603db92c1f27aad85820305b7ee3d1ff5571"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/.idea/misc.xml",
+      "bytes": 174,
+      "sha256": "8e20542282cda0edcf55934715b7ae3ea2bb8b682180a12999b82f0475ea8b36"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/.idea/modules.xml",
+      "bytes": 288,
+      "sha256": "a78889230f5a49026ecea3f8f3a52e009b8ab8844fc637149e1085c620e6a44b"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/.idea/ros.xml",
+      "bytes": 695,
+      "sha256": "7f8cb49820da0a54cd23da739959e7c67cb2e4b3b1664e9aa4c6e9ec8c44a545"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/.idea/workspace.xml",
+      "bytes": 5166,
+      "sha256": "933d87d869752feb39df83981a3209d9f2a2feaa54d6cb4598646ba97dcce2b4"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/Face positioning.ipynb",
+      "bytes": 3400,
+      "sha256": "255a8b16186fd5b4b2be83638a1984f5348f0b18fff264b35d2f7fe9129b7bf7"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/Face_follow.ipynb",
+      "bytes": 4242,
+      "sha256": "1a22717f6b9105132c1883ffe657877f4acc832b92ce3b3b4ff5dfa3c368f16f"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/PID.py",
+      "bytes": 2546,
+      "sha256": "2a9b4f1e5c85d2b45fd87c3ef54afa55ae923630125fee2b0fddafffa5f04245"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/dofbot_config.py",
+      "bytes": 9738,
+      "sha256": "6490ab59a3af6eb368685f8db0ab15c47ec43bfd8836e22753ef09adb51c5908"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/face_follow.py",
+      "bytes": 2553,
+      "sha256": "b15f0e02d51e024266ffbb537e7ae164cfab5fda2ef87bf56038e14d96b33cca"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/face_pose.py",
+      "bytes": 1939,
+      "sha256": "925dbb45eddec262e3252f800f643d76942fb50398c555e510287123844b8339"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/haarcascade_frontalface_default.xml",
+      "bytes": 930127,
+      "sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/\u6d5c\u9e3f\u52af\u6769\u501f\u91dc.ipynb",
+      "bytes": 4358,
+      "sha256": "1099ac591f0cac050292589d4e72224ba998eaf3751c18ccc69e8f337e30b602"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_face_follow/\u6d5c\u9e3f\u52af\u7039\u6c2b\u7d85.ipynb",
+      "bytes": 3729,
+      "sha256": "6880626534ff1ab695518440d44bbc23361ce36da17be5cafdbe48c9d522320f"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_garbage/1",
+      "bytes": 352,
+      "sha256": "d69a00fc7d4a677e232398910499fb8cc8c65ecc03167e45c8b4e457f9f2f37f"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_garbage/detect_garbage_broadcast.py",
+      "bytes": 3991,
+      "sha256": "528fb78d093e818ee21556dbb5fc251a086345ac0303e1d5928178ab1e69453e"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_garbage/garbage_detect.py",
+      "bytes": 1613,
+      "sha256": "60582cf71051698a5ec691b09c8b6516a0f007244d07b000a4c61e7bb045ab61"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_garbage/grasp_garbage.py",
+      "bytes": 2921,
+      "sha256": "d475c767a3edb96451b6be8270e2e6e5cd60a3cf4b331e4275269ac5973a2746"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_garbage/grasp_garbage_broadcast.py",
+      "bytes": 4263,
+      "sha256": "fba3f7c15757e57c27be16afad2fc1e3f112fa0ba8085f6a46689d72cb87cff6"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_garbage/grasp_node.py",
+      "bytes": 2698,
+      "sha256": "0c3623a8627a1ed504b073b45be2ab3c930d09ac6aeb11ab9e532e17a0ec45b6"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_garbage/objetion_detect.py",
+      "bytes": 1362,
+      "sha256": "407cd3ddb0fa3d3619fc1e0a121770528ed967fc0fa6bde09d82621a97d863a2"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/CMakeLists.txt",
+      "bytes": 7097,
+      "sha256": "d040df67f516bc3267beebc7f8ddbfda8e8ba2f9f54716a0d5eaffe7e495c0e8"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/package.xml",
+      "bytes": 2893,
+      "sha256": "0a3c3a2494d0fded4e13090d587c85dbccadea4c7fa153259f3ea5b33962efdd"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/01_HandDetector.py",
+      "bytes": 4113,
+      "sha256": "2b5a83b805f1f4cfb0b6a4399eabc78c1ee82e141cfc477cab5a31926af3595e"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/02_PoseDetector.py",
+      "bytes": 3428,
+      "sha256": "1e0b90c3905cd54e4f040c6caabe066cc5cdbfc1407659c997356d0a22bfd1df"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/03_Holistic.py",
+      "bytes": 5241,
+      "sha256": "dec3affb3e126069a873db85061fe32c102a1c3b1e0677d997fc4620dc797ffd"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/04_FaceMesh.py",
+      "bytes": 3592,
+      "sha256": "131cdaee1f72170a8210a3e9660b83ca579f08dbaaa56d9cb32257728ab1b6a8"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/05_FaceEyeDetection.py",
+      "bytes": 3640,
+      "sha256": "9cf00c9d9d9d421f968081a568aa7889bc57f5f8c0245ce3b05bf89af877bf79"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/06_FaceLandmarks.py",
+      "bytes": 5052,
+      "sha256": "158c9dbfbcf6e811b966f0e2b30adf73e60701f803e0ad0993a7b47c44880df1"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/07_FaceDetection.py",
+      "bytes": 2871,
+      "sha256": "a90831bfb1c6b65ee361a6cf3e14b778e55e582e8261ec2ec6a6036741c10da4"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/08_Objectron.py",
+      "bytes": 2528,
+      "sha256": "f34fe32e45ad5ca96f4dbdea194d5ee1859db6d45184522cf0f827601b82082a"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/09_VirtualPaint.py",
+      "bytes": 7221,
+      "sha256": "3cded69aa56f668007779a007b941b3a12380f8a0a8fafc814e5a207282e85d9"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/10_HandCtrl.py",
+      "bytes": 6470,
+      "sha256": "abcf92e1220b115ade9e2c292c128d6f6f3e03f60afc15885a2dbc50ac52ee0b"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/11_GestureRecognition.py",
+      "bytes": 7841,
+      "sha256": "bcb625c38f48366656d551f54d68be727528f1ff64aec2d8e7d6e6b1091b53ba"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/file/haarcascade_eye.xml",
+      "bytes": 353619,
+      "sha256": "111549988ac12e0156ec4ae315d3a8cb18e37c182c3174d845bcfe4e6c88a0b3"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/file/haarcascade_frontalface_default.xml",
+      "bytes": 963441,
+      "sha256": "a71c83e9d0ffd53a00fdb3f1fd91905149d8d001e1076eabc32f2edb945f8ef3"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/file/shape_predictor_68_face_landmarks.dat",
+      "bytes": 99693937,
+      "sha256": "fbdc2cb80eb9aa7a758672cbfdda32ba6300efe9b6e6c7a299ff7e736b11b92f"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/img/face_landmarks.png",
+      "bytes": 79658,
+      "sha256": "80a26f8b75f7dd46e9b918bfe84791766a7774518a54121ba17bd7aa37a17eea"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/img/hand_landmarks.png",
+      "bytes": 159592,
+      "sha256": "24ce896420149a7b9dc0c05e547681e3027b4a65ce3a0a6c73685ba1cc535496"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/img/pose_tracking_full_body_landmarks.png",
+      "bytes": 123013,
+      "sha256": "c93063a83adff4db00c02aec8cf04d7444ae9169956c8ec67ee2351adbcd8c0f"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_snake_follow/CMakeLists.txt",
+      "bytes": 7269,
+      "sha256": "b583d3ab9633d7d9a2c40fc1ec00249a3f4eb05bb0d9ab2cf81e88225cef5bfe"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_snake_follow/package.xml",
+      "bytes": 3029,
+      "sha256": "8e3fedd5bf9d0bddc5578a59f50222ab88f8273e0d580c9fd0f4d3643f4713c7"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_snake_follow/scripts/Catch_game.ipynb",
+      "bytes": 5513,
+      "sha256": "96fa8a547fd2d0c736fc73248c72edc7e01dd1098258d337816def5207c8301a"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_snake_follow/scripts/HSV_calibration.ipynb",
+      "bytes": 10865,
+      "sha256": "7f097f5da4f90e36d279be129fda2ba34a438c95575c66942a3de7a79ce155c0"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_snake_follow/scripts/HSV_config.txt",
+      "bytes": 154,
+      "sha256": "980cc7cd5c93991a9ec039ade04c5b5f09af80dcd946d72baff5f86b6d352ee2"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_snake_follow/scripts/HSV\u93cd\u2033\u566f.ipynb",
+      "bytes": 11345,
+      "sha256": "29b4c3cad6f3bf6a689c9d83c217b23ca285b4f5548d29927c092382e4d7e423"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_snake_follow/scripts/dofbot_config.py",
+      "bytes": 9743,
+      "sha256": "20d003601ac5486a3bb42af934391c7f1494c050be37997a29036ffb93a8dd09"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_snake_follow/scripts/snake_ctrl.py",
+      "bytes": 8341,
+      "sha256": "c3e0cf15f7df282f452da1f9c0a4e1b90132794ab03c48d97dde787e48aca162"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_snake_follow/scripts/snake_move.py",
+      "bytes": 1427,
+      "sha256": "d5131fa8ca10bebd917701f994e7de98b2bcaf4170945587ded1927b21bc01ca"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_snake_follow/scripts/snake_target.py",
+      "bytes": 2326,
+      "sha256": "6fc421013835e5c31d665a6825001bf3cf49317d29d4ce08d8f06f165c1dca62"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_snake_follow/scripts/\u5f15\u86c7\u51fa\u6d1e.ipynb",
+      "bytes": 5727,
+      "sha256": "8584038e8f0dbbb2fcf9152e29f2664b50f5980659063f461d10da2b128752c9"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/AR/astra.yaml",
+      "bytes": 715,
+      "sha256": "5f359d551672a525bc1565978d384e6b0b59b20fccc837011f356ee5e6e3cb8d"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/AR/simple_AR.py",
+      "bytes": 10584,
+      "sha256": "e7eb4ff83f9c274c8f7a342d205e2f4cde9cbc669e1c9bb6cfcb762636b7c61f"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/CMakeLists.txt",
+      "bytes": 7353,
+      "sha256": "df64041c1a84852f7254b25311706335579671e525a5f737d36c0623ba29c258"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/Marker/MarkerData_0_1_2_3_4_5_6_7_8.png",
+      "bytes": 19400,
+      "sha256": "3a8bfac3d1ac97d3decce79297e6b4d7658511c192d498c2b080fccf50a41e42"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/Marker/MarkerData_0_1_2_3_4_5_6_7_8.xml",
+      "bytes": 2038,
+      "sha256": "2178ec0ed3818e189e52a4855d732bad9252a6bdb5dca646159e649173ea29e7"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/Marker/MarkerData_9_10_11_12_13_14_15_16_17.png",
+      "bytes": 19492,
+      "sha256": "30bb960ba7512734115fce2c0859626bd4e04779371cd2079d7b9e8bb8cb1112"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/Marker/MarkerData_9_10_11_12_13_14_15_16_17.xml",
+      "bytes": 2046,
+      "sha256": "d6540d26e5fcffda345dc44874b587f9c61d18ba66f975141b06e7644a9ada12"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/detection/Detection.jpg",
+      "bytes": 149480,
+      "sha256": "784b37992d7dd126722ac715130c6aa852e63f919c7c27eeb8b579f03e0e19a1"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/detection/OpenPose.pdf",
+      "bytes": 1413120,
+      "sha256": "0bbd70c229aa2ec41a2fdd03f4667bb244cc2505bf1e6d38204946057bcdea3b"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/detection/frozen_inference_graph.pb",
+      "bytes": 69688296,
+      "sha256": "2a8d8a89d695842e60d8c6d144181100555563e21acf2fa1e8f561fec5c3c6ad"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/detection/graph_opt.pb",
+      "bytes": 7804434,
+      "sha256": "51f84ea82b3d0143dd4cf362e018c125e832c64771908ee8766fbd8b0328008d"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/detection/object_detection_coco.txt",
+      "bytes": 692,
+      "sha256": "cf743111a02d083f91ada4d99ccd3b937cdfc853cf0f5582ee20ca6621b4393f"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/detection/person.jpg",
+      "bytes": 24563,
+      "sha256": "ab8390501f754c83eaac1cde7d92c18e595be406ecef12755985e6038e0d9385"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/detection/result.jpg",
+      "bytes": 57741,
+      "sha256": "f787d140b74db80634fb2f02232a8ee1553d9e2cf36375170ba01427c44b614e"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/detection/ssd_mobilenet_v2_coco.txt",
+      "bytes": 109740,
+      "sha256": "af72da998866289c47021ca4df447951564a787f00874b59632537546b91fc54"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/detection/target_detection.py",
+      "bytes": 5718,
+      "sha256": "eadab4cee37930cecff3aa7f7e6795b2498fc89acbeb4b7822781248cccdca74"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/font/Block_Simplified.TTF",
+      "bytes": 3920884,
+      "sha256": "aa53dd4434d20641d55a539966fd57b97e42930a6689503f7eb7ad7487b3c3ad"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/launch/ar_track.launch",
+      "bytes": 1284,
+      "sha256": "7b38b1585265aa2b71a35af9b5288f87a84ee84c0369b6f8e50185a5763c92e2"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/launch/astra_calibration.launch",
+      "bytes": 177,
+      "sha256": "5aae2fdcdb33c6fe9d05d097182ba6677d24126fb8f1509ae4040be69040249d"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/launch/astra_get_depth.launch",
+      "bytes": 442,
+      "sha256": "1ce6c817637429e4c64a08a7ca31c27688ad26adb58bceb817d64b2cba652454"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/launch/astra_get_rgb.launch",
+      "bytes": 434,
+      "sha256": "213b586eaead2b9cb8a2993ddf59a4f7090f994a2755dae1ac895f6ea2427c44"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/launch/astra_image_flip.launch",
+      "bytes": 125,
+      "sha256": "b5469d39e6ec4366bb2eaaa361dec22ece3ecd6cb9a21518557291b6b9eb7ed9"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/launch/laser_to_image.launch",
+      "bytes": 183,
+      "sha256": "d27337a93672a24004ef829dad431bf2673ac76309f463e32c541c214089eaa2"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/launch/opencv_apps.launch",
+      "bytes": 677,
+      "sha256": "e211f2800e260852cc4886cafd1612a605020cd08488288435003075b5d48943"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/launch/pointCloud_pub.launch",
+      "bytes": 288,
+      "sha256": "d3864ec6e4d5d17d98fa8ce4eb19866483768290a9097e347e7092bd18c9c4e0"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/launch/pointCloud_visualize.launch",
+      "bytes": 343,
+      "sha256": "bc06272a535c804eac52d3c72bd7bed4db30c477592ec7266857068119ec46ba"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/launch/simple_AR.launch",
+      "bytes": 474,
+      "sha256": "76f70dcfbc4b43b34f2d42e81b5fe8a7483a1d94b620e40e22b0200c7b7057a7"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/package.xml",
+      "bytes": 2752,
+      "sha256": "5b8a0493a91ac87c410e69753640164fbf71de0e7f61e93eac310648ae804425"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/rviz/ar_track.rviz",
+      "bytes": 5993,
+      "sha256": "f9dddfe601299758ed2b57a6f9361ff0689f0f76db4298444345fecfd84d8c25"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/rviz/random_pointCloud.rviz",
+      "bytes": 4914,
+      "sha256": "bbff49bd56aac312e07af262921bf6356f153e7ffd719678ef52cccc9090c178"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/scripts/astra_color_point.py",
+      "bytes": 1290,
+      "sha256": "6ef181f36352c2841e61c0ac7b39f11deafe17ccff77fdbe22785cee70bf3d2e"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/scripts/astra_depth_image.py",
+      "bytes": 854,
+      "sha256": "47b7a2fd635565f894bdff67faf5003423baf7f8376e5ccd625cb5171cfe3c61"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/scripts/astra_image_flip.py",
+      "bytes": 1658,
+      "sha256": "74a816dea67595a8ea534daac889994842db6b04f23e97cefe34658fb8ac134d"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/scripts/astra_rgb_image.py",
+      "bytes": 624,
+      "sha256": "e93804cc528a17d66dc647aa73af9f45d518d425baa2a57715e925603269eebf"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/scripts/laser_to_image.py",
+      "bytes": 1975,
+      "sha256": "408b0fd7d3383f349199f5fb3fc20255785c70adc79b525cede77e55eec9b76c"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/scripts/pub_image.py",
+      "bytes": 840,
+      "sha256": "11c8582144b64af034612d40fc7e1890a2be66c00deeda1207471ddf3e967a42"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/scripts/sub_point.py",
+      "bytes": 552,
+      "sha256": "85321314923c948c3e17b22c5b7fbcecb385960f0f4fd4041802c555b7df3aa6"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/simple_qrcode/QRcode_Create.py",
+      "bytes": 3833,
+      "sha256": "47f87b239aa6c9f1c0b64de87d6121272aa4903afc58ccf49d09f90f009d7c32"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/simple_qrcode/QRcode_Parsing.py",
+      "bytes": 3121,
+      "sha256": "d2bf73f29aa4c14b230f85b414286d6173e4bf8316f56b0a5419567a9591d869"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/simple_qrcode/myQRcode.jpg",
+      "bytes": 1350,
+      "sha256": "9d9d3c96e3722ecffbb5346a1b2937db7a6f611e284e1e5e6d7976eb78b9d77c"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/simple_qrcode/yahboom.jpg",
+      "bytes": 11030,
+      "sha256": "1f9d81aee1ee1664f6bc7dac4a32ee914a90af71a27ef15163aac5bdfe6ee180"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/src/get_rgb_image.cpp",
+      "bytes": 1112,
+      "sha256": "57fb5db5863fcc6083a8d136e7e5bf0ddc9350bc93defe0953c1ffb1f0f46e31"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/.color_grab_broadcast.py.swp",
+      "bytes": 16384,
+      "sha256": "1ab129306b24bcee3c6a12b0fdf4f848ba4cf573822fd13744514f2fc24610df"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/02.Loop_detection.ipynb",
+      "bytes": 6862,
+      "sha256": "1612f8e240735250ec748aef40616464504182575732abb6df4988c1a3039ae5"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/03.Password_trigger_mode.ipynb",
+      "bytes": 6897,
+      "sha256": "3d9814ca596b80ead903a8fa1208a3d51dedfa9c76017f66a56d45487c3adfca"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/05.Voice_Chinese_broadcast.ipynb",
+      "bytes": 11554,
+      "sha256": "4efe796d2346b308c6539634ee0fb94ac2a23c21527b42373f9f3f6f9702e8ce"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/06.Phonetic_Pinyin_Broadcast.ipynb",
+      "bytes": 11918,
+      "sha256": "e5089d07e4120353134cc55fd14d85609580642d6790a28471659660f11062a5"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/07.Voice_Number_broadcast.ipynb",
+      "bytes": 11542,
+      "sha256": "a19d7a206ae59ad801f96a8a3ffa580b121eca7ef73d98f687ba45086204a76c"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/08.Simple_voice_control.ipynb",
+      "bytes": 4255,
+      "sha256": "fcd09bdb7da9ae9cbe08a8e85364ec8f60472e0ac47396b5d1aaa49777cbe514"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/09.Voice_intelligent_control.ipynb",
+      "bytes": 20855,
+      "sha256": "472f9958f0c3cf257da081462bd9bee822f204855e79a0ce7c3e0289e31e811a"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/1",
+      "bytes": 352,
+      "sha256": "9ebf6455ebadcfc44344df0a77f26ad81d83229feef5f4ba71b3be839ccd4bac"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/10.Voice_action_control.ipynb",
+      "bytes": 32358,
+      "sha256": "3d74f6d571de3f24962945fb9d9d34f8b938dd1c425adabb41e5be84f7c6cc62"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/11.Learning_model.ipynb",
+      "bytes": 19860,
+      "sha256": "425df2a8349a20cc41d65aab869104e3b817fc3a53995ae2d08d1ec2fb49e068"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/12.Voice_color_identify.ipynb",
+      "bytes": 25971,
+      "sha256": "d75d3e11e4088fb19ad9c3fb4606d5d27e0040d69aa43b3bcf92c919ce790f87"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/13.Color_grab_broadcast.ipynb",
+      "bytes": 27378,
+      "sha256": "19c353132dcdffaceb3badfa6400d33c96a3923e62da2b170acb198bba47a503"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/14.Put_grab_broadcast.ipynb",
+      "bytes": 5580,
+      "sha256": "060a97daf1ce45e5b7b04cba665bcbcacff3111d66ed970f647ec1d32dcc973f"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/15.Voice_target_follow.ipynb",
+      "bytes": 26714,
+      "sha256": "455418cfacfeb80f086ee869150af9e1706c48a8ac8566769a0740a6ac5aaa95"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/16.Voice_control_stack.ipynb",
+      "bytes": 26529,
+      "sha256": "e9254a3072b6f10fc7f2180da34b876e33b6decef58862faa270c7c4fdbdc48f"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/17.Voice_color_sorting.ipynb",
+      "bytes": 24573,
+      "sha256": "a4e072e6f68426ba97c382c02f179ee06fce0b9be76c1eb7d3ca091dca3e52de"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/18.Garbage_broadcast.ipynb",
+      "bytes": 5141,
+      "sha256": "93a8f66820749aefd9601e1170cbc2ccd4acffe0115ceee19f016278a24fc29c"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/19.Garbage_sorting_broadcast.ipynb",
+      "bytes": 4580,
+      "sha256": "d1dfc7244dd74b62d0fbf017681cbffff29b607c8d246861fe9a228f07f2d808"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/action_voice_ctrl.py",
+      "bytes": 10308,
+      "sha256": "73a914613b408aba6fb4ee75114dc08db77f98a21646e80955fdd3db73e68c63"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/color_grab_broadcast.py",
+      "bytes": 6987,
+      "sha256": "31a23b4fec16077bd8ac85afb4916c66121e20ca50a8fedd8ace5ff009a6c49d"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/garbage_broadcast.py",
+      "bytes": 1199,
+      "sha256": "b6c8c08f7f372137c4c5b9aa36c9a97ae9554c56d5323e28cf93a40dd77c3c77"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/garbage_sorting_broadcast.py",
+      "bytes": 1094,
+      "sha256": "6b8d1c4e1de7dcf1c168cb1f4bd3c63438d52b4cc2ac9058e8c529a5e7e9a5b3"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/intelligent_voice_ctrl.py",
+      "bytes": 2745,
+      "sha256": "9c7da0ac75dc74c65139e7ff11ac5db2646e4ace4cb4da1925f0ec9855068076"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/learnning_model.py",
+      "bytes": 1233,
+      "sha256": "8db873257a222b4d7fccb1dfde5a317a98b1bc189f414b373fb5109e08da70c0"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/learnning_model.py~",
+      "bytes": 1239,
+      "sha256": "e900475d6c2f04e45bf53a40e99942fb5a8c2dcddd737114984c2b54db090c34"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/put_grab_broadcast.py",
+      "bytes": 1970,
+      "sha256": "e39960189f62233e99a6ca221631f1699037966b70ada2b8aeb05f03f20b3b30"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/simple_voice_ctrl.py",
+      "bytes": 2273,
+      "sha256": "a3fe08b19fb9df570365b626117457e4856e6dfc63febe94d68f6859203742ac"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/voice_color_identify.py",
+      "bytes": 3579,
+      "sha256": "cdb1bba58546f76a5103216e3ad4e07fb36ea78b7a0c11f4c3f1602c0c9d6db3"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/voice_color_sorting.py",
+      "bytes": 12178,
+      "sha256": "eaf63e07a3060b04a30b040d9c054273c4177de2d880106b75ee8e2f37df1d82"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/voice_control_stack.py",
+      "bytes": 11477,
+      "sha256": "4c7969b6efc124c799b61a1b4659dda49b26b9c6bc7f16d2d7e6af7825262827"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/voice_target_follow.py",
+      "bytes": 3447,
+      "sha256": "7b5a2b997ab0dff5dbcdaaa4c4296274016c130544a7ae0af1d4406218be93ef"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_voice/scripts/yolov11_garbage_broadcas_detect.py",
+      "bytes": 3282,
+      "sha256": "187c44533a434e15e34681881d4396e6b0304581b44ea18223aa901027cf7cb6"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_ctrl/dofbot_ctrl/SimulateToArm.py",
+      "bytes": 2862,
+      "sha256": "482ddbd1543c88afc32cac86aab356375e8dd3d9fbecf10a5f0d94d84bebf3af"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_ctrl/dofbot_ctrl/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_ctrl/dofbot_ctrl/arm_ctrl.py",
+      "bytes": 1875,
+      "sha256": "f3a7da342eb82aea8efc9385152fe847f33712bc7afdf5c4c1abde4fbe67b00b"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_ctrl/dofbot_ctrl/urdf_arm_ctrl.py",
+      "bytes": 1980,
+      "sha256": "d4eaa58b0dcc0c875a644c5ad3d0b2867b0b169231ddd931fa7b1f0b76a006f7"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_ctrl/package.xml",
+      "bytes": 628,
+      "sha256": "64c90181adc23db0c02dc7d3be4c8a855429cc64a43e9380277dd7f9d2f87509"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_ctrl/resource/dofbot_ctrl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_ctrl/setup.cfg",
+      "bytes": 91,
+      "sha256": "398f50e515e6b6c749e063b7a83f8ecde5af64aba136d301104be1a92eb03286"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_ctrl/setup.py",
+      "bytes": 825,
+      "sha256": "804f26a3dde1fb4372ee82c2990e34bed64685e527b20d0933e83982def75a58"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_ctrl/test/test_copyright.py",
+      "bytes": 962,
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_ctrl/test/test_flake8.py",
+      "bytes": 884,
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_ctrl/test/test_pep257.py",
+      "bytes": 803,
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_follow/dofbot_follow/KCF_follow.py",
+      "bytes": 8291,
+      "sha256": "943c34cbbf66a0c0f907de9bc2628f70e70891d1849fa1905c6d52f5be0ee32e"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_follow/dofbot_follow/PID.py",
+      "bytes": 2798,
+      "sha256": "4f5d18b43203f44b7222102893b19c314fb165174ca5e8fb0bca362df031774a"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_follow/dofbot_follow/Track_Lib.py",
+      "bytes": 3785,
+      "sha256": "85f9d153dfa25e1a6439ad843f70f2853f54a626d7a89b2f10e2a6ef5f9518f6"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_follow/dofbot_follow/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_follow/dofbot_follow/apriltag_follow_2D.py",
+      "bytes": 4685,
+      "sha256": "d174adbed5a821e7dd222fa4662aff4ad89efe848b15a63ed80619f4f3582dd6"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_follow/dofbot_follow/color_follow_2D.py",
+      "bytes": 9068,
+      "sha256": "2d1ffd29d0f5ceea40c0522b81c64eb2d216fb0b2f182048c5805c7cd4996700"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_follow/package.xml",
+      "bytes": 630,
+      "sha256": "700d1d7ea6b0d127378c28574bcb68466cbf1766d35c39d0f631c031633e9b90"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_follow/resource/dofbot_follow",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_follow/setup.cfg",
+      "bytes": 95,
+      "sha256": "2f531d918792f114944c84d367c86e90c875d7c4c55df96073a7afc8c6538241"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_follow/setup.py",
+      "bytes": 851,
+      "sha256": "e183a6092b4b91f22b269544b75fcf6139d7bfcd470992269ebdb247b6048b6e"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_follow/test/test_copyright.py",
+      "bytes": 962,
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_follow/test/test_flake8.py",
+      "bytes": 884,
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_follow/test/test_pep257.py",
+      "bytes": 803,
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_info/CMakeLists.txt",
+      "bytes": 1638,
+      "sha256": "6a46f4945f217fa7c4b1445b74ad36a43e7752bae6b5c788c3a1fd3d45f06ec9"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_info/include/dofbot_info/kin_srv.h",
+      "bytes": 714,
+      "sha256": "699599715c1405e9438ba865bacf3bb57ac7e54ca4b771891f84f480e2f6458a"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_info/include/dofbot_info/kinemarics_dofbot.h",
+      "bytes": 1502,
+      "sha256": "10ae954f5e00ea546b55560c2d82efdc1b19ba6e15841225751c2e11969d512d"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_info/include/dofbot_info/libkin_srv.so",
+      "bytes": 74544,
+      "sha256": "a486dadc89fe907571f6b36eb1734af3562dd703a302b1a222002cbd0b6a0375"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_info/include/libkin_srv.so",
+      "bytes": 74544,
+      "sha256": "a486dadc89fe907571f6b36eb1734af3562dd703a302b1a222002cbd0b6a0375"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_info/launch/aruco_detect.launch.py",
+      "bytes": 1496,
+      "sha256": "b0a19cccad760725a24e36b68cc8241adbe34bf50277eaaf25aaf87ba6216dc4"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_info/launch/camera_arm_kin.launch.py",
+      "bytes": 610,
+      "sha256": "540458d3399c9d535e40903ae199a65de774a2a08ab2d3bdeb9fdc9faf94b77b"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_info/package.xml",
+      "bytes": 598,
+      "sha256": "805d94baa72baceee12f27566c864d33e8ed65a3f99973a2dcf0c16dad6ccc31"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_info/src/kinemarics_dofbot.cpp",
+      "bytes": 4094,
+      "sha256": "eb7f2809712e5a839561830f8e3a8d5faa084ce35438368f5bbeeaa21ff925b4"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/CMakeLists.txt",
+      "bytes": 1639,
+      "sha256": "d0d6870c5396d86b8aab472ebc8ce88aee732a7b8f84f6c73ef81d62d9c3a376"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/msg/AprilTagInfo.msg",
+      "bytes": 41,
+      "sha256": "7c2b50dc20308d80ae871025ef7b76725dec497714ee21b10d09135439f7f9b8"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/msg/ArmJoint.msg",
+      "bytes": 59,
+      "sha256": "88add296abf78bc19176dc63b52214cd9d5b798a7c4d0836d4808183bca4f9f9"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/msg/CenterXY.msg",
+      "bytes": 34,
+      "sha256": "9127ee4f0d61f6841e2516b482fee073a19cd183d02f8973d03f07c4c6bb7e9a"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/msg/ImageMsg.msg",
+      "bytes": 55,
+      "sha256": "81d542293af3b6a0a4d61d86e8732b28353a2f89865bca51596bdca9c4ba45c3"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/msg/JointInfo.msg",
+      "bytes": 102,
+      "sha256": "4c06c38b9ca4d2e047e2a9dfdfc1030394a9b987de286ef6592c324dfa6ffbaa"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/msg/PointArray.msg",
+      "bytes": 54,
+      "sha256": "951033d00e696579d55b111a1753b363e0dce441f3d4420f094300af4c8a3696"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/msg/PosInfo.msg",
+      "bytes": 90,
+      "sha256": "61074fcfc65b899e6bc9c1946dda1460a3150342ff3cd2fe72f8519d4900d7c3"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/msg/Position.msg",
+      "bytes": 31,
+      "sha256": "54c75e9703bfb081185627c5086a5a5ac872a703516f4ae377cabb0d4a5c7da8"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/msg/ShapeInfo.msg",
+      "bytes": 15,
+      "sha256": "0b913aa6fcfd514d7d50b9427cbf9adc0448a05152ba4d30d0f7aebb0f16e4b5"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/msg/WidthInfo.msg",
+      "bytes": 52,
+      "sha256": "68312379d5ce7b0e7d5fdeddbdf2e84eb812c644ffa2699460d5f5c1b117d2c0"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/msg/Yolov11Detect.msg",
+      "bytes": 47,
+      "sha256": "bb55bf35f8f62f653a5dbcfe19f812c1aea90cd051fbbd7d9eaf5f26c2e567ff"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/msg/joint_info.msg",
+      "bytes": 16,
+      "sha256": "be7d2bb5b878eb8714645c8c822fef0db6e4e15ea872829a195528aa167015ad"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/msg/pos_info.msg",
+      "bytes": 90,
+      "sha256": "2d2d41ef883f9976bf5166b13410081913e2d5160496f852abd70375f2e7d06c"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/package.xml",
+      "bytes": 962,
+      "sha256": "0a21fa47aabe684aa83e4c77695c7927e10e017040a467522c8ca29eae9ed230"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/srv/CurJoint.srv",
+      "bytes": 158,
+      "sha256": "b32859e3ecb3bf223cceb687a2b985908d46c6f6906ef524413905f4524ea6b8"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/srv/DofbotProKinemarics.srv",
+      "bytes": 396,
+      "sha256": "8309f5c3e76d06b9d1704518a6fc48baa60157766cc27994bca966a5b6fa0ca2"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_interface/srv/Kinemarics.srv",
+      "bytes": 396,
+      "sha256": "8309f5c3e76d06b9d1704518a6fc48baa60157766cc27994bca966a5b6fa0ca2"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/01_HandDetector.py",
+      "bytes": 4398,
+      "sha256": "ea6009db3e1692722b6dd067468249f4dad4d0b87ef1e32544a3cd1fcc0111f9"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/02_PoseDetector.py",
+      "bytes": 4366,
+      "sha256": "b2bb4d45e0910215be8b6ff4fcb3897af72b7d4da7de1da7be6d330847c44cd7"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/03_Holistic.py",
+      "bytes": 6632,
+      "sha256": "8737fcfd4d3a766d7eb142fc7cddbe86db921f12e7aae2249b481f2d94581835"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/04_FaceMesh.py",
+      "bytes": 5007,
+      "sha256": "8131c35567fc49b629d4a4e6c6372a4db86627258b313ae04845222e9590b583"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/05_FaceDetection.py",
+      "bytes": 3838,
+      "sha256": "8640da09dadd6d854969a4b6e97f824112066cf2a0876ab855473b3388c3ca16"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/06_FaceLandmarks.py",
+      "bytes": 6210,
+      "sha256": "1a47cf954684f28cc17b19d0b222a6f9b09788ab9d7b18c7aca4cade7f2df071"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/07_Objectron.py",
+      "bytes": 3624,
+      "sha256": "03b6ffe0671645a6f102bdd11ad77e165401642d9ae7f9592ba0b2d3f4c27f18"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/08_VirtualPaint.py",
+      "bytes": 8380,
+      "sha256": "757d7f48e9ea03d7539a288a1135118b08d709aa2427ae6f698e813b40b0c331"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/09_HandCtrl.py",
+      "bytes": 7297,
+      "sha256": "94772e2fefa4ae73c2547b6c13b999186fd90f30ac78b9e25932ddd709173a9e"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/10_GestureRecognition.py",
+      "bytes": 8703,
+      "sha256": "e7bde3f6d5c70da57978e99711953853cb4d0d7ec0db30abc9096e99c3704d40"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/11_GestureAction.py",
+      "bytes": 8425,
+      "sha256": "69b44329dc13cfe3c4373739ba4e5ef5dc81e0cec5eea6c5816f7ea40a7a5cb5"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/12_PoseArm.py",
+      "bytes": 8556,
+      "sha256": "47bc660bbe666b8b82c46af8622fb668665b22a1d4f09b4e2a6a13fb179abc37"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/13_FindHand.py",
+      "bytes": 2838,
+      "sha256": "461868a9794669c3144d59d33a54510cb73126e8e54e5604de59c02fc1196962"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/14_HandFollow.py",
+      "bytes": 3630,
+      "sha256": "2295ff56add9a4484e978ea80408376f8531d2c38d2857f7d734abcff31343cf"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/15_FingerTrajectory.py",
+      "bytes": 10431,
+      "sha256": "c6c6c18171a10418a84a4b808391a84802a748efe44f5262a06caeee70765a4c"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/16_FingerAction.py",
+      "bytes": 12663,
+      "sha256": "f4d7b1c938dfa5657e8b70f85b6d588c67f2a300d17c4ae689c91dd938dc812b"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/17_GestureGrasp.py",
+      "bytes": 5458,
+      "sha256": "2b8fe88463665ba89250d68bd58e26124364f6db5d8f63eb3ab1098ef967cf09"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/18_HandCtrlArm.py",
+      "bytes": 7741,
+      "sha256": "fcb9a254c8f0e8f96c57b1843869c6b8c3de240250244b49892fea05abfb9b0d"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/file/haarcascade_eye.xml",
+      "bytes": 353619,
+      "sha256": "111549988ac12e0156ec4ae315d3a8cb18e37c182c3174d845bcfe4e6c88a0b3"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/file/haarcascade_frontalface_default.xml",
+      "bytes": 963441,
+      "sha256": "a71c83e9d0ffd53a00fdb3f1fd91905149d8d001e1076eabc32f2edb945f8ef3"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/file/shape_predictor_68_face_landmarks.dat",
+      "bytes": 99693937,
+      "sha256": "fbdc2cb80eb9aa7a758672cbfdda32ba6300efe9b6e6c7a299ff7e736b11b92f"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/img/Thumbs.db",
+      "bytes": 14336,
+      "sha256": "d0c94acb0998a41a40652ffaca30c1b0051ade17cf8f9193de591be71fd7ce78"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/img/face_landmarks.png",
+      "bytes": 79658,
+      "sha256": "80a26f8b75f7dd46e9b918bfe84791766a7774518a54121ba17bd7aa37a17eea"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/img/hand_landmarks.png",
+      "bytes": 159592,
+      "sha256": "24ce896420149a7b9dc0c05e547681e3027b4a65ce3a0a6c73685ba1cc535496"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/img/pose_tracking_full_body_landmarks.png",
+      "bytes": 123013,
+      "sha256": "c93063a83adff4db00c02aec8cf04d7444ae9169956c8ec67ee2351adbcd8c0f"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/media_library.py",
+      "bytes": 11836,
+      "sha256": "2ad03b5732c40dc4e1a286f55030ae626e60928991123de56276f1a3e75abc83"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/package.xml",
+      "bytes": 633,
+      "sha256": "271e758791fcba8839ddcfcd3716432702e9724d6a0e402a5368da5bf80bad08"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/resource/dofbot_mediapipe",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/setup.cfg",
+      "bytes": 101,
+      "sha256": "40f32cdb25bb059d21ab26e9a5b5fba75ae9ede6f1f85ea0c4a858eb899f2a74"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/setup.py",
+      "bytes": 1905,
+      "sha256": "82290e8efdd949f55b16ef070428b743f559b346898f1061351f72e2d967d49a"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/test/test_copyright.py",
+      "bytes": 962,
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/test/test_flake8.py",
+      "bytes": 884,
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/test/test_pep257.py",
+      "bytes": 803,
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/config/offset.yaml",
+      "bytes": 111,
+      "sha256": "f9425f65841eb3f143f6ce71b78f77d9b8d919f08444240c3f4c3dfa058746f1"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/apriltag_gesture_dist.py",
+      "bytes": 6087,
+      "sha256": "0dd84f75aefc7dcb82f936551cb9a67dd9d1ce5ec0a60a29fd439f73da066247"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/apriltag_gesture_id.py",
+      "bytes": 5954,
+      "sha256": "ced7c8d4be1e7251fd0f19c82265c13785077630f0da13d9f19630c91205ef62"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/apriltag_sorting.py",
+      "bytes": 4824,
+      "sha256": "46353c3578e1bcfaf64edb134053694a626eab7a639cfbcb88f30e4da574734d"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/aruco_gesture_height.py",
+      "bytes": 7693,
+      "sha256": "a91d709ef286bb39d1c4dd9ecfd31c2140b6a7bb509d69d17dfb154117440cbe"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/aruco_sorting.py",
+      "bytes": 6394,
+      "sha256": "1fcd3abb42b127f7e8c57e3700af6e6e5090faf3e4d4eacf1547409ff1f45b0e"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/blue_colorHSV.text",
+      "bytes": 27,
+      "sha256": "162eef8948c2b8cbb29482cec817a90807b7396fb70241349487ca638072ab3b"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/color_common.py",
+      "bytes": 28887,
+      "sha256": "f9982c64d3213fec3f3162261c92faeaef996c0ca57d277fba7491ea97ab0bf3"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/color_sorting.py",
+      "bytes": 7755,
+      "sha256": "7851e49141c6a981480dd4e641c3c9f29e677f1bfe5791c4efba1f714e6a5948"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/compute_joint5.py",
+      "bytes": 161,
+      "sha256": "8d84e405c328a68c4c63d21a0e3aedf3ada01230f790d2e3000d82c715c41518"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/get_offset.py",
+      "bytes": 4506,
+      "sha256": "e16a8d2790079eccea8e82ccd101bd822cc6da7ef6a57e963ff506773675d680"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/grasp.py",
+      "bytes": 6137,
+      "sha256": "9d3c1382547b8e90b15b09ad20b7f64dffb0bd3e2e05ee0241616a614087d07a"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/green_colorHSV.text",
+      "bytes": 26,
+      "sha256": "1415385c002be24cf8036b8b730f3041f3e5998c93d42f63515c758d57822bc7"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/media_library.py",
+      "bytes": 9154,
+      "sha256": "b5985cd047f8709d0c24755332938469b51f7645e54afd5d911dcc5eb09dfcd0"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/mediapipe_detect_fingers.py",
+      "bytes": 3646,
+      "sha256": "e79211a9fea14a1006ff246a65ab90d2a9cdf25abfc5139585605ab0e016c211"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/mediapipe_gesture.py",
+      "bytes": 2790,
+      "sha256": "2e974791912909a53e64f66e88a3ccc713fd32331e376b8d4348fb51a7129b3c"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/objection_grasp.py",
+      "bytes": 5328,
+      "sha256": "1a8ddc9ec82752aa542823b658afb446ff24c7242cec67170f64b7feb92d0a7a"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/point_to.py",
+      "bytes": 5428,
+      "sha256": "864605e49189021db1aa02a2677123e14332b9dfef6dde8b5a3df6936ea6f1dd"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/red_colorHSV.text",
+      "bytes": 26,
+      "sha256": "d3cb321675a2a0c1b34b043e67db921b3fb36c0e0dab44ec776fc54fe9436a1b"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/shape_sorting.py",
+      "bytes": 10311,
+      "sha256": "30bffd81e13f133b749d47b7fa6ff8a70882210027092013152128be6638a4ad"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/untitled.txt",
+      "bytes": 574,
+      "sha256": "3409b5667f4c913415ceb885230d9b4003e1749048ae64e8fdfa5556a0a45d77"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/vutils.py",
+      "bytes": 2098,
+      "sha256": "9bf79e308e16b7f376353bbf8a6a07b150791a24c35de1a6ac994aee2671a9a7"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/dofbot_sorting/yellow_colorHSV.text",
+      "bytes": 26,
+      "sha256": "10fa15133f13d3656f381c32aa4d08f2bd4d79f6f2e3b9252d4631533f2cbbdf"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/package.xml",
+      "bytes": 631,
+      "sha256": "b69c98d0c88cc25f3ce29e04cac4eac628df7f689297fbaf80a37df8c04dae80"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/resource/dofbot_sorting",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/setup.cfg",
+      "bytes": 97,
+      "sha256": "337caa10c9b64d6aaae7b07f649c0b425549df596346270b35d024a7a9cfa7dd"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/setup.py",
+      "bytes": 1551,
+      "sha256": "fe73167d9684f637b91423a1f5f480bc627eae22e44747d7896217bb72b3f414"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/test/test_copyright.py",
+      "bytes": 962,
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/test/test_flake8.py",
+      "bytes": 884,
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_sorting/test/test_pep257.py",
+      "bytes": 803,
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/CMakeLists.txt",
+      "bytes": 986,
+      "sha256": "da368a7186ae1ee7340bd2f6deea80aeb20857ae8d8cc93bba7c8889a88b733d"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/launch/display.launch.py",
+      "bytes": 1306,
+      "sha256": "2a5e6d437022f9015128f5d6254ec007d31e6c89f92e22ca7a6a8524d5c23ae4"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/launch/urdf_display.launch.py",
+      "bytes": 1266,
+      "sha256": "41a0db77d4d8c6105fa5c263ccc2464de556fa0d85e7d8b4eaa716bf8b065090"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Camera_Link.STL",
+      "bytes": 42384,
+      "sha256": "f849dd2e5b21afc97bc8b23957ae360618d00dd6f5d5372cb7dccf1fae2321a4"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Gripping_Link.STL",
+      "bytes": 33984,
+      "sha256": "49abeddd5a9760fdfc49ba89bdf5271d529f1558b002adeff11735bd6a8b823e"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Llink1_Link.STL",
+      "bytes": 1018084,
+      "sha256": "3b3b504e43476b4af7d87bc9dc891c18343407698dffd17dfd318efb984f628f"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Llink2_Link.STL",
+      "bytes": 51284,
+      "sha256": "5a03bae46ed536252387ce4d5745995adb63d727598521ef8e06937ab70371ae"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Llink3_Link.STL",
+      "bytes": 888484,
+      "sha256": "d08717529d83bff35579f549ec67bbce35e6010616b8dca90d2684470593d9f8"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Rlink1_Link.STL",
+      "bytes": 1285184,
+      "sha256": "14393e123429a1ec7c90c7880ba6c2fd8cfe89ffde2370d2fda65c260ee12375"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Rlink2_Link.STL",
+      "bytes": 51284,
+      "sha256": "f8199958674fda97e05d4df17bf3031e38f96d7340aa0a35f4562eb089f646d8"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Rlink3_Link.STL",
+      "bytes": 888484,
+      "sha256": "1afb49c165f5a85602041a968e860e869df8752306c1878b01bfa0dcf1c04c7e"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/arm1_Link.STL",
+      "bytes": 7697284,
+      "sha256": "0f188fd03d73e721254b5b262352656165550fca5fbc39d93c82ea7640e523ea"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/arm2_Link.STL",
+      "bytes": 9290684,
+      "sha256": "89b47c2cf9ed35d01b6d1d293c56a657a69ce4dc08dd64899335ec656c3e1d83"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/arm3_Link.STL",
+      "bytes": 9290684,
+      "sha256": "d8efcc99748d4c59b23d733090bbeb61c8a437b31f186025c51017084082b3fc"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/arm4_Link.STL",
+      "bytes": 12304984,
+      "sha256": "1c469f2fd4080d7ba6aa8c21a380811365a6924e24781ebb801115351e5343d2"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/arm5_Link.STL",
+      "bytes": 3802084,
+      "sha256": "1cf4194dbd01ed33f6b609b82cfa712efb68dc14f8cf598ddfb612a40133c006"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/base_link.STL",
+      "bytes": 38064984,
+      "sha256": "dbb0c4c9124a4969639678b4276c3f539ecd2e0e5bbed426c0deb1d1ef669ff9"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/package.xml",
+      "bytes": 598,
+      "sha256": "140167c4b5f91d2dd76e0a0cad2e7bce5649524dcc3c347256371b7895fd70f2"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/urdf/dofbot-bk.urdf",
+      "bytes": 5990,
+      "sha256": "1beca154539f0da03cdfbdf97de7d15ece3d0e1aded389d21d952999d4898f31"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/urdf/dofbot.urdf",
+      "bytes": 18539,
+      "sha256": "ca1ebe9760fa585f61d7fa6c92c20e95239cdeee4fdebe93b7fbb897d1018075"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/AprilTag/PID.py",
+      "bytes": 2798,
+      "sha256": "4f5d18b43203f44b7222102893b19c314fb165174ca5e8fb0bca362df031774a"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/AprilTag/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/AprilTag/apriltag_detect.py",
+      "bytes": 5350,
+      "sha256": "09b229ee33c0f9faa8f5878e61d0933aea8b412fe438d13b797086d2d39f4775"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/AprilTag/apriltag_follow_2D.py",
+      "bytes": 5101,
+      "sha256": "0350bf51cea020bbcd9da03dcebe33b51241a63bf678da730fde6a09b9e163f2"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/AprilTag/apriltag_grasp_VC.py",
+      "bytes": 5364,
+      "sha256": "9da5511040566b9e2aa15f6073a1565defe79497877b1a425f958e170f50312b"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Color/PID.py",
+      "bytes": 2798,
+      "sha256": "4f5d18b43203f44b7222102893b19c314fb165174ca5e8fb0bca362df031774a"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Color/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Color/blue_colorHSV.text",
+      "bytes": 27,
+      "sha256": "e20e82c232fc1e8013f0c7a3c912dc622a2f26b3369e04bac0bbb61570486793"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Color/color_common.py",
+      "bytes": 29367,
+      "sha256": "4fdb28022a6d6d370b61422ab019f35bbbbed8bed356dddc464a06abe22868f9"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Color/color_follow_2D.py",
+      "bytes": 9445,
+      "sha256": "3913720cd1951ba6fcb4e60d787d193b69b27d5feb56ff3a337f15db34fb3ec1"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Color/color_sorting.py",
+      "bytes": 8084,
+      "sha256": "f0eb629ab51217f501b224d4c6cf5390fad87af355b36cc846f57b9432ef9b3a"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Color/green_colorHSV.text",
+      "bytes": 26,
+      "sha256": "10b84285a0c83b7547d8d67bfb7de40f05c614511da2371069f8be16431ecf18"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Color/red_colorHSV.text",
+      "bytes": 26,
+      "sha256": "109e502497757c38e608d82e84e2511869388a9e1fe5846c96f98b4084594c8f"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Color/yellow_colorHSV.text",
+      "bytes": 27,
+      "sha256": "6a455207abe69964a2d5dc194209f45502f5e13e97cee851b9f5e5c5e1b6f576"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/KCF/KCF_follow.py",
+      "bytes": 8898,
+      "sha256": "a5db9db13960ef3c55d17ed2fabb9a55006cfdd1d6a5fdde623de8c5f15a96dc"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/KCF/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Yolov11/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Yolov11/best.engine",
+      "bytes": 12441047,
+      "sha256": "191776fdc0ccc3f694aed16da202c480cb988e6519fb91ecb3716a8f747b2658"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Yolov11/fps.py",
+      "bytes": 1118,
+      "sha256": "e3ac31d61d1e91c9c6e513fc98eadb1b4f4d0fe6e7dd85e537467a693396a48f"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Yolov11/msgToimg.py",
+      "bytes": 2469,
+      "sha256": "38d5ce3dd82421148320a5c81a64a29f2ea08c4117c3aed7fa549a2c734c3261"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Yolov11/robot_controller.py",
+      "bytes": 5752,
+      "sha256": "6fc2bc31c640d66c5c6b3085b0ac687ed85cf23ca92902350b9e2c29b3b75359"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Yolov11/yolov11_VC.py",
+      "bytes": 5146,
+      "sha256": "c1dbf1837b074620a220b8cca602a969480a6af54b333ac1889990bf61645b3a"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Yolov11/yolov11_garbage.py",
+      "bytes": 7697,
+      "sha256": "6ce1f9583bc10d24f0fdba5c322a58aef88e33c0806b1abd22b36dec4b10dcf1"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Yolov11/yolov11_sortation_VC.py",
+      "bytes": 17825,
+      "sha256": "ea78be77c550924c8c5319aa9ac3aa5334199181f5da53d553300f17d201c79e"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/package.xml",
+      "bytes": 634,
+      "sha256": "ab5776080613b26810063aefada4c2190c22174eed106a5864e2808e2ff12756"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/resource/dofbot_voice_ctrl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/setup.cfg",
+      "bytes": 103,
+      "sha256": "8bc0cea608485453d6d6110781ec5300894eb9a988370a86bb3264431e272d60"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/setup.py",
+      "bytes": 1198,
+      "sha256": "10267ac2f491c9840ff055c4b056e8e77265e7c2875e61dd1a75b3d9b0f53bce"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/test/test_copyright.py",
+      "bytes": 962,
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/test/test_flake8.py",
+      "bytes": 884,
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/test/test_pep257.py",
+      "bytes": 803,
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_yolov11/dofbot_yolov11/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_yolov11/dofbot_yolov11/yolov11_detect.py",
+      "bytes": 1664,
+      "sha256": "a336442d9bbc7a4917e3c8df0e6c3a90171c15825e50952ed972c7405f013339"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_yolov11/dofbot_yolov11/yolov11_garbage.py",
+      "bytes": 4518,
+      "sha256": "4a8fb2e7bdca8cd3430fdb11ad090c1ab4e393042fc9e094e0e24ac0d3472443"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_yolov11/dofbot_yolov11/yolov11_garbage_LM.py",
+      "bytes": 5147,
+      "sha256": "b12ec12ccc67e17ce3653b1370e3b057e2331b0720ab05c849656cc13f55d71d"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_yolov11/package.xml",
+      "bytes": 631,
+      "sha256": "564609c5a4879e33f80ad2a353735ceb00e6524f60e94bda9cd7034769842c0d"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_yolov11/resource/dofbot_yolov11",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_yolov11/setup.cfg",
+      "bytes": 97,
+      "sha256": "b03c50f54a46c4fb309e3ada2038280a202964fdd6266aa20f89755bd414152c"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_yolov11/setup.py",
+      "bytes": 796,
+      "sha256": "d362c4775cbd379edae0c9885011eef23083ec07bbf98f361a54401234a4be95"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_yolov11/test/test_copyright.py",
+      "bytes": 962,
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_yolov11/test/test_flake8.py",
+      "bytes": 884,
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_yolov11/test/test_pep257.py",
+      "bytes": 803,
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda"
+    },
+    {
+      "path": "vendor/ros2_ws/src/yahboom_speech/launch/speech.launch.py",
+      "bytes": 636,
+      "sha256": "f28a755295798e154f2fe1fcef9b86bf4e304f0bcf8ec5d9339a4a5d4254e56a"
+    },
+    {
+      "path": "vendor/ros2_ws/src/yahboom_speech/package.xml",
+      "bytes": 634,
+      "sha256": "e30b9c2942e8a88f3e54b2fbddd3af6047d7706c2ef3217dc085b3790a02c1dd"
+    },
+    {
+      "path": "vendor/ros2_ws/src/yahboom_speech/resource/yahboom_speech",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/yahboom_speech/setup.cfg",
+      "bytes": 97,
+      "sha256": "60a26b2ea632e844bcfa62c5e0b8941c8a29764c70c6f30ea5092e89367502b0"
+    },
+    {
+      "path": "vendor/ros2_ws/src/yahboom_speech/setup.py",
+      "bytes": 896,
+      "sha256": "c676cd0a1ca9b3aa67c72ed7941a5ff0f5e3ef4f950ddd52784bd8172e219ae2"
+    },
+    {
+      "path": "vendor/ros2_ws/src/yahboom_speech/test/test_copyright.py",
+      "bytes": 962,
+      "sha256": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757"
+    },
+    {
+      "path": "vendor/ros2_ws/src/yahboom_speech/test/test_flake8.py",
+      "bytes": 884,
+      "sha256": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2"
+    },
+    {
+      "path": "vendor/ros2_ws/src/yahboom_speech/test/test_pep257.py",
+      "bytes": 803,
+      "sha256": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda"
+    },
+    {
+      "path": "vendor/ros2_ws/src/yahboom_speech/yahboom_speech/1",
+      "bytes": 465,
+      "sha256": "bd06ca75cf16468d3dee48670d5f8670274b62e17553c889a748fcc9fcf6212d"
+    },
+    {
+      "path": "vendor/ros2_ws/src/yahboom_speech/yahboom_speech/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/ros2_ws/src/yahboom_speech/yahboom_speech/speech_recognize.py",
+      "bytes": 991,
+      "sha256": "8355a11a7a6c7b6b05a85c84e9546999db3a857b7a71fce5ba5e38375079a249"
+    },
+    {
+      "path": "vendor/ros2_ws/src/yahboom_speech/yahboom_speech/voice_player.py",
+      "bytes": 852,
+      "sha256": "ffa3b530fe318476fb8b5ab6dcfda15b102ee0ea0ae77388cf387ac49026b246"
+    }
+  ],
+  "symlinks": [],
+  "notebook_outputs_removed": true,
+  "embedded_credentials_replaced_by_environment": true,
+  "crash_dumps_excluded": true,
+  "notebook_kernel": "dofbot"
+}

@@ -1,0 +1,227 @@
+{
+  "note": "Inventory only; ignored payloads require separate backup or original USB. No assets needed for basic servo control.",
+  "files": [
+    {
+      "path": "colcon_ws/src/dofbot_garbage_yolov11/best.engine",
+      "bytes": 12441047,
+      "sha256": "191776fdc0ccc3f694aed16da202c480cb988e6519fb91ecb3716a8f747b2658",
+      "restore": "Original working folder or USB home/jetson/colcon_ws; see REBUILD.md"
+    },
+    {
+      "path": "vendor/manual/Dofbot/0.py_install/Arm_Lib.egg-info/PKG-INFO",
+      "bytes": 186,
+      "sha256": "d66745d1a4a9ce41c71628f145762b59ca4d286bcbd65c1dedc46dee320fefa1",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot/0.py_install/Arm_Lib.egg-info/SOURCES.txt",
+      "bytes": 171,
+      "sha256": "c862c53eccd05ff190086782283b47cd3688f8459e09ee1ab0f49a09cc6828b3",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot/0.py_install/Arm_Lib.egg-info/dependency_links.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot/0.py_install/Arm_Lib.egg-info/top_level.txt",
+      "bytes": 8,
+      "sha256": "7202653c831e00afd4332d045c30c755d051126416d5659c717787f90a53d43b",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/model0.pt",
+      "bytes": 58893757,
+      "sha256": "7c395c30f7e5df04b1d9f43c01bdf71cbf0034ee415c1b98361776a5d538ab9e",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/common.py",
+      "bytes": 4724,
+      "sha256": "4c45825b8757e17c8f911fb8fc6c8fdde2ae8e1773cabda40c13ee498f774035",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/experimental.py",
+      "bytes": 5553,
+      "sha256": "1b7457c386a0618bbdd46d0aa2fd1dcc56cb3b56c276e36a9afc6a9cf14d254e",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/export.py",
+      "bytes": 3374,
+      "sha256": "225b42e69b0b9795a5c8a92c8b524e9f0ba314bcf870c2b25744f8b0b74f1ca4",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/yolo.py",
+      "bytes": 11928,
+      "sha256": "e0a4bd3175939143492c0fffd3a11d4825ad0d22b5a37e1de3f1652e570f8d35",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/yolov5l.yaml",
+      "bytes": 1453,
+      "sha256": "3e5ccbdcc9d52674c848f4e801c0e5f29cb1514979add522596c7ea17beef903",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/yolov5m.yaml",
+      "bytes": 1455,
+      "sha256": "fdb29504f50b07a2423b6925db2f32af99c08aa8013b207034661b36d95e0e5a",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/yolov5s.yaml",
+      "bytes": 1455,
+      "sha256": "4190a66858fd5bf756cf4b8d7b280d86288660d4d8580051c21567ef77661eeb",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/models/yolov5x.yaml",
+      "bytes": 1455,
+      "sha256": "3bb749a86425f7373ebe8d32e09e05d6d7eff2c20d2f8e0e203aa63b3e8f89f4",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot/6.AI_Visual/simhei.ttf",
+      "bytes": 10044356,
+      "sha256": "0ee6f6723c29dbf427d12d58ffc11d58e9aa89adda0ab6b06468ee765b1eadf8",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_mediapipe/scripts/file/shape_predictor_68_face_landmarks.dat",
+      "bytes": 99693937,
+      "sha256": "fbdc2cb80eb9aa7a758672cbfdda32ba6300efe9b6e6c7a299ff7e736b11b92f",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/detection/frozen_inference_graph.pb",
+      "bytes": 69688296,
+      "sha256": "2a8d8a89d695842e60d8c6d144181100555563e21acf2fa1e8f561fec5c3c6ad",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/detection/graph_opt.pb",
+      "bytes": 7804434,
+      "sha256": "51f84ea82b3d0143dd4cf362e018c125e832c64771908ee8766fbd8b0328008d",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/manual/Dofbot_2D/src/dofbot_visual/font/Block_Simplified.TTF",
+      "bytes": 3920884,
+      "sha256": "aa53dd4434d20641d55a539966fd57b97e42930a6689503f7eb7ad7487b3c3ad",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_info/include/dofbot_info/libkin_srv.so",
+      "bytes": 74544,
+      "sha256": "a486dadc89fe907571f6b36eb1734af3562dd703a302b1a222002cbd0b6a0375",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_info/include/libkin_srv.so",
+      "bytes": 74544,
+      "sha256": "a486dadc89fe907571f6b36eb1734af3562dd703a302b1a222002cbd0b6a0375",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_mediapipe/dofbot_mediapipe/file/shape_predictor_68_face_landmarks.dat",
+      "bytes": 99693937,
+      "sha256": "fbdc2cb80eb9aa7a758672cbfdda32ba6300efe9b6e6c7a299ff7e736b11b92f",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Camera_Link.STL",
+      "bytes": 42384,
+      "sha256": "f849dd2e5b21afc97bc8b23957ae360618d00dd6f5d5372cb7dccf1fae2321a4",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Gripping_Link.STL",
+      "bytes": 33984,
+      "sha256": "49abeddd5a9760fdfc49ba89bdf5271d529f1558b002adeff11735bd6a8b823e",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Llink1_Link.STL",
+      "bytes": 1018084,
+      "sha256": "3b3b504e43476b4af7d87bc9dc891c18343407698dffd17dfd318efb984f628f",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Llink2_Link.STL",
+      "bytes": 51284,
+      "sha256": "5a03bae46ed536252387ce4d5745995adb63d727598521ef8e06937ab70371ae",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Llink3_Link.STL",
+      "bytes": 888484,
+      "sha256": "d08717529d83bff35579f549ec67bbce35e6010616b8dca90d2684470593d9f8",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Rlink1_Link.STL",
+      "bytes": 1285184,
+      "sha256": "14393e123429a1ec7c90c7880ba6c2fd8cfe89ffde2370d2fda65c260ee12375",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Rlink2_Link.STL",
+      "bytes": 51284,
+      "sha256": "f8199958674fda97e05d4df17bf3031e38f96d7340aa0a35f4562eb089f646d8",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/Rlink3_Link.STL",
+      "bytes": 888484,
+      "sha256": "1afb49c165f5a85602041a968e860e869df8752306c1878b01bfa0dcf1c04c7e",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/arm1_Link.STL",
+      "bytes": 7697284,
+      "sha256": "0f188fd03d73e721254b5b262352656165550fca5fbc39d93c82ea7640e523ea",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/arm2_Link.STL",
+      "bytes": 9290684,
+      "sha256": "89b47c2cf9ed35d01b6d1d293c56a657a69ce4dc08dd64899335ec656c3e1d83",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/arm3_Link.STL",
+      "bytes": 9290684,
+      "sha256": "d8efcc99748d4c59b23d733090bbeb61c8a437b31f186025c51017084082b3fc",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/arm4_Link.STL",
+      "bytes": 12304984,
+      "sha256": "1c469f2fd4080d7ba6aa8c21a380811365a6924e24781ebb801115351e5343d2",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/arm5_Link.STL",
+      "bytes": 3802084,
+      "sha256": "1cf4194dbd01ed33f6b609b82cfa712efb68dc14f8cf598ddfb612a40133c006",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_urdf/meshes/base_link.STL",
+      "bytes": 38064984,
+      "sha256": "dbb0c4c9124a4969639678b4276c3f539ecd2e0e5bbed426c0deb1d1ef669ff9",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    },
+    {
+      "path": "vendor/ros2_ws/src/dofbot_voice_ctrl/dofbot_voice_ctrl/Yolov11/best.engine",
+      "bytes": 12441047,
+      "sha256": "191776fdc0ccc3f694aed16da202c480cb988e6519fb91ecb3716a8f747b2658",
+      "restore": "tools/import_vendor_sources.py --assets-only"
+    }
+  ]
+}
