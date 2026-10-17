@@ -1,0 +1,307 @@
+[
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/DashCam/Dashcam_patterns.pkl",
+    "new_path": "python_scripts/openCV/CamCalibration/intrinsics/DashCam/Dashcam_patterns.pkl",
+    "sha256_before_move": "ae2fdab615e751a84bd374aa4907bc1225d98482de49a94ee4c594595fb6c021"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/DashCam/Dashcam_intrinsics.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/intrinsics/DashCam/Dashcam_intrinsics.csv",
+    "sha256_before_move": "8bc1d175fb29e5127f428a2128b01f574e450a7675fa623c386c698e600081d1"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/DashCam/Dashcam_intrinsics-profile.txt",
+    "new_path": "python_scripts/openCV/CamCalibration/intrinsics/DashCam/Dashcam_intrinsics-profile.txt",
+    "sha256_before_move": "911f87144c48b329d5f28f5a60dea9f75e6a7a730a890541a0fdf357e578a755"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/Dofbot/Dofbot_intrinsics-profile.txt",
+    "new_path": "python_scripts/openCV/CamCalibration/intrinsics/Dofbot/Dofbot_intrinsics-profile.txt",
+    "sha256_before_move": "5915dfa6053a6c1fc54a74ed709587f0558805895f3ef553bf1f40f3dcdf4147"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/Dofbot/Dofbot_intrinsics.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/intrinsics/Dofbot/Dofbot_intrinsics.csv",
+    "sha256_before_move": "1ea5435b739225b740c114f9255b7a163a6ea90276bfdefd1826f90b88f1c0c5"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/Dofbot/Dofbot_patterns.pkl",
+    "new_path": "python_scripts/openCV/CamCalibration/intrinsics/Dofbot/Dofbot_patterns.pkl",
+    "sha256_before_move": "0925b703a16f25ce2528cc948b21cc57dd220d6cb302ae9a11360691c7f9db82"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/profile.txt",
+    "new_path": "python_scripts/openCV/CamCalibration/intrinsics/camera-profile.txt",
+    "sha256_before_move": "ce1006b4c43787bcdc12c162c00ec6c8762d6ec13c500e4f306b410fae767d2d"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/freefalltest-xyzres.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/freefalltest-xyzres.csv",
+    "sha256_before_move": "03436d9f56d70186e0b3a8abade636c206b1b1dc3411915a33cbe4db2730cf9f"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/freefalltest-xypts.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/freefalltest-xypts.csv",
+    "sha256_before_move": "6331088e59cf377b7876563fb40b31ad31037bc64fdc1d174c3726d6b7dceba0"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/wandpts-xypts_cal-sba-profile.txt",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/wandpts-xypts_cal-sba-profile.txt",
+    "sha256_before_move": "e8419964350e1309088872cd4f4d7e9d455ffbe9d0c422c17022306480756244"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/freefalltest-spline-error-tolerances.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/freefalltest-spline-error-tolerances.csv",
+    "sha256_before_move": "6fef3c6c7195f79ad3b523a1eb233599f4a1f2dd755c72264a4bca66ffd76d7b"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/wandpts-xyzres.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/wandpts-xyzres.csv",
+    "sha256_before_move": "166a1f2e3a6fb86bdf3f4a6e067b2e33e62b671b7c7817724787c26133a49ddc"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/wandpts-offsets.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/wandpts-offsets.csv",
+    "sha256_before_move": "4a3c5b70636aa0408b02963e2136dbae1dacab4c76441c0cb4bd1df7bf59f9cf"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/wandpts-xypts_cal-clicker-profile.txt",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/wandpts-xypts_cal-clicker-profile.txt",
+    "sha256_before_move": "a738c1d3b4ff5a4e1b8200a228c0278e1e968f46e385b2bad43286ec2d663c80"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/referencepts-config.yaml",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/referencepts-config.yaml",
+    "sha256_before_move": "4b021ac6ff1e898e98eeb36dbb2e7ac76c08a8bed1c3aacbc37753d372a2ad72"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/freefalltest-offsets.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/freefalltest-offsets.csv",
+    "sha256_before_move": "a3622ba6d98bdb3b4f38097f937fd739c9c4dfdcea33dcbee3e46f50b4d91c86"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/referencepts-offsets.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/referencepts-offsets.csv",
+    "sha256_before_move": "4a3c5b70636aa0408b02963e2136dbae1dacab4c76441c0cb4bd1df7bf59f9cf"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/freefalltest-xyzpts.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/freefalltest-xyzpts.csv",
+    "sha256_before_move": "a6f8ea71860d4918324b6fd1d19de01d9acd8936c6409f092c88d5d1d8299e31"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/unpairedpts-xyzres.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/unpairedpts-xyzres.csv",
+    "sha256_before_move": "d931345847e5d163856f2e35e8582566e7cfc5283394b4895660c870d3bd5686"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/freefalltest-config.yaml",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/freefalltest-config.yaml",
+    "sha256_before_move": "0a738a3c1fa6df5b8658e2a74731abbb6c8aa64f35299104bcfbb2b91cf457fc"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/referencepts-xyzres.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/referencepts-xyzres.csv",
+    "sha256_before_move": "d931345847e5d163856f2e35e8582566e7cfc5283394b4895660c870d3bd5686"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/wandpts-xypts.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/wandpts-xypts.csv",
+    "sha256_before_move": "e494b902bf0f59a3278ec7a9e5cbb55bf7ce43f96d7d571378cee64a2a04ad3a"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/freefalltest-xyz-cis.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/freefalltest-xyz-cis.csv",
+    "sha256_before_move": "a197bf2782bf3f990260c2633f84c2a90bdbfeb26c0627efe836a9338677a337"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/wandpts-config.yaml",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/wandpts-config.yaml",
+    "sha256_before_move": "e9fbdcdecb8a39e03c2604632327e3b4e1a46bf03f5cc18dcfd4d5ee0f7671e0"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/wandpts-xypts_cal-unpaired-points-xyz.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/wandpts-xypts_cal-unpaired-points-xyz.csv",
+    "sha256_before_move": "91a5291e55d98b071b7226f6fef35a614366d041b04b2ea015359779e3adada8"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/unpairedpts-config.yaml",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/unpairedpts-config.yaml",
+    "sha256_before_move": "c030323400596c555bd2dec72637f807adf461f2e6f1220246a70a333e2a6175"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/wandpts-xypts_cal-sba-profile-orig.txt",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/wandpts-xypts_cal-sba-profile-orig.txt",
+    "sha256_before_move": "93a160415e7826020d2448b1e26029d47d8599a708b734400dd7e14e2c291fca"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/freefalltest-spline-weights.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/freefalltest-spline-weights.csv",
+    "sha256_before_move": "bd578cc2e24c4e0814c038523b5c431a4c99a10286add28af3d5002d72f28cbf"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/referencepts-xypts.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/referencepts-xypts.csv",
+    "sha256_before_move": "81dcd93b7ab25001cca725310d4e9a6f4d19cd15eb4050bc3b3e84e718cc7098"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/unpairedpts-offsets.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/unpairedpts-offsets.csv",
+    "sha256_before_move": "4a3c5b70636aa0408b02963e2136dbae1dacab4c76441c0cb4bd1df7bf59f9cf"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/unpairedpts-xypts.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/unpairedpts-xypts.csv",
+    "sha256_before_move": "fd222d67e28b11670d380cdbcc3819145415be876af0ee299bcb7eb977048515"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/wandpts-xypts_cal-paired-points-xyz.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/wandpts-xypts_cal-paired-points-xyz.csv",
+    "sha256_before_move": "e5fa975ff58a88f92d5c96875936730c6d3547e9a77e19c6ce40471d94cd4d3f"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/wandpts-xypts_cal-dlt-coefficients.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/wandpts-xypts_cal-dlt-coefficients.csv",
+    "sha256_before_move": "da3884c60e570b9ee442f787b969b748a655d956413d13e63fc9ce2aa4dd14a4"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/report.txt",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/report.txt",
+    "sha256_before_move": "51a8317d5ae2e449554a44b363114b18d4ff1be1cf5b626e40287770b39870c2"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/input_manifest.json",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/input_manifest.json",
+    "sha256_before_move": "1832b64c70e343711cdc35430379752d4b6c2cb01a108e1c9f7efd112e9ff7e2"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/uncertainty_comparison.png",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/uncertainty_comparison.png",
+    "sha256_before_move": "e7050fe2549f98b807aa341780a8b035b9316b460db0980046ce5af33ffb7944"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/reconstruction_3d.pdf",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/reconstruction_3d.pdf",
+    "sha256_before_move": "b1e9713d6cd2291ee2610ce12695d88d054b4c45b637b2229e4f554f9b1f6499"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/reconstruction.gif",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/reconstruction.gif",
+    "sha256_before_move": "a1624d7dc17a596e16ed74f48253fe1ed7711d6d5351a8f058f67627266f06db"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/analyze.py",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/analyze.py",
+    "sha256_before_move": "6ed9a3e7a14412becbee05dd94b3ae9c8dcb1d38aea2d421441773f63720988b"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/camera_order_audit.png",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/camera_order_audit.png",
+    "sha256_before_move": "c84500dee237e9e4d04d639b39889b31c77746ed0d645a81260fbfd06855fda1"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/position_projections.png",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/position_projections.png",
+    "sha256_before_move": "88afff3ac9fc4d4f60b45af200dc09ce618031b2c28c25df3ba5e9386e259355"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/pixel_noise_sensitivity.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/pixel_noise_sensitivity.csv",
+    "sha256_before_move": "3eae937767342b95f85b756532446fd8239214ecd6a8967c4b43b84896a16aad"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/position_projections.pdf",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/position_projections.pdf",
+    "sha256_before_move": "c25c1e8827d25036e85d76fbc64a84fe4948383cb590d0820e9b97c10c41071c"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/locations_and_uncertainty.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/locations_and_uncertainty.csv",
+    "sha256_before_move": "ec72ca82ceedb8e5445bf17c87c4353796ca0b2a7203ac22309d3d0d490b0887"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/camera_order_audit.pdf",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/camera_order_audit.pdf",
+    "sha256_before_move": "0f983205eed6ca530cf9c8360760e8a9fe95ab005cb66ad15c0e5f88352c1357"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/locations_over_time.png",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/locations_over_time.png",
+    "sha256_before_move": "3578de7f35c8d446216bd50962ce342a85d5ea63dcdd4ea30f4258150e204b59"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/locations_over_time.pdf",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/locations_over_time.pdf",
+    "sha256_before_move": "ed2129902d143e3909a740b035df91db0558c3952a49e28b88b621bb33b7fc5f"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/camera_locations.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/camera_locations.csv",
+    "sha256_before_move": "4d7cb9f4515b9cfee786d18b4d8b027fe22edab722a43c88b5072ded6e48c912"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/results.json",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/results.json",
+    "sha256_before_move": "520d03a6c0c2fb7c33f1895b0882b5c26d79d621846ed18b39a2814b54bc13c6"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/reconstruction_3d.png",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/reconstruction_3d.png",
+    "sha256_before_move": "fcedd93ce6a988925ba79aed488bce42b21b57512e72b19a9b2e517edfd2d431"
+  },
+  {
+    "old_path": "python_scripts/openCV/CamCalibration/analysis/freefall_2026-10-17/uncertainty_comparison.pdf",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/analysis/freefall_2026-10-17/uncertainty_comparison.pdf",
+    "sha256_before_move": "89259ae1567d843e7f883db8126bdabf535b99ed9610c9b2f5a230f1d645a113"
+  },
+  {
+    "old_path": "python_scripts/openCV/saved_vids/dashcam_wand.avi",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/cam1.avi",
+    "sha256_before_move": "8d617dacfcbdddb001b7ed38c015311945699e1033bb9f048a9d41dc28d7840f"
+  },
+  {
+    "old_path": "python_scripts/openCV/saved_vids/dashcam_freefall.avi",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/cam1.avi",
+    "sha256_before_move": "6bdaa744b81ad6c9ba85dd5cd04763710558815cfff3a4dcd308a976854106dd"
+  },
+  {
+    "old_path": "python_scripts/openCV/saved_vids/dashcamCalibration.avi",
+    "new_path": "python_scripts/openCV/CamCalibration/intrinsics/DashCam/calibration.avi",
+    "sha256_before_move": "2546fb499a478356aa5103947d035f29dd691c138178339deac5f4646ddd10df"
+  },
+  {
+    "old_path": "python_scripts/openCV/saved_vids/dofbot_wand.avi",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/wand_calibration_01/cam2.avi",
+    "sha256_before_move": "353966e9b118208656616ded91dca16aeecb909423d3af3992920e1cc204fc11"
+  },
+  {
+    "old_path": "python_scripts/openCV/saved_vids/dofbot_freefall.avi",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_01/cam2.avi",
+    "sha256_before_move": "b6ce54e10ea65e8724cc8212c1255d53c7d455b763a350ed2005ed651e573b8b"
+  },
+  {
+    "old_path": "python_scripts/openCV/saved_vids/dofbotCalibration.avi",
+    "new_path": "python_scripts/openCV/CamCalibration/intrinsics/Dofbot/calibration.avi",
+    "sha256_before_move": "9eac96c387206162c6e052d551a55019c92a8f75d0daa986892efbe50a4aae5b"
+  },
+  {
+    "old_path": "python_scripts/openCV/saved_vids/capture_20261017_120622_660993/dofbot_freefall.avi",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_02/cam2.avi",
+    "sha256_before_move": "153b0ad322aa073e0e32c0d8eff9f5f53f770569752fa4dd45d5f62fdb1b159b"
+  },
+  {
+    "old_path": "python_scripts/openCV/saved_vids/capture_20261017_120622_660993/frame_timing.csv",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_02/frame_timing.csv",
+    "sha256_before_move": "ea71ec05be80bd5f5361d2bccede470771b58277503ef368a3d1364d44d904f0"
+  },
+  {
+    "old_path": "python_scripts/openCV/saved_vids/capture_20261017_120622_660993/dashcam_freefall.avi",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_02/cam1.avi",
+    "sha256_before_move": "54b82255ff0fe977c8f5ab1149561e45b33e32c392fdc3462b038e7ab46c2f4d"
+  },
+  {
+    "old_path": "python_scripts/openCV/saved_vids/capture_20261017_120622_660993/timing_notes.txt",
+    "new_path": "python_scripts/openCV/CamCalibration/2026-10-17/trial_02/timing_notes.txt",
+    "sha256_before_move": "38aa8a000a8452b375d7c711d8e812ee0d75f38c6c2a26c407b2e6fe81454d90"
+  }
+]

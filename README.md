@@ -67,6 +67,20 @@ libraries into Argus's resources directory. Run it again after reinstalling Argu
 if the libraries are missing. The projection library finds `libsba.so` beside it
 using an `$ORIGIN` runtime path; no system-wide library installation is needed.
 
+If Wand calibration reports divide-by-zero warnings in `triangulate.py`,
+`Mean of empty slice`, and `initial motstr-SBA error nan`, repair the single-point
+OpenCV calls:
+
+```bash
+argus_env/bin/python scripts/fix-argus-triangulation.py
+```
+
+OpenCV 5 interprets the old one-dimensional coordinate arrays as two points,
+leaving Argus's output buffer empty. This repair passes explicit 2-by-1 arrays
+and uses the returned homogeneous coordinates. It backs up `triangulate.py`
+beside the original, is safe to rerun, and should be reapplied after reinstalling
+Argus. Restart the GUI after applying it.
+
 ## 🧠 jetson-inference and pretrained models
 
 I recently cloned [NVIDIA jetson-inference](https://github.com/dusty-nv/jetson-inference)
@@ -208,7 +222,7 @@ and ROS build output are excluded through [.gitignore](.gitignore).
 A fresh clone needs its own dependencies, model downloads, and face data.
 
 Git keeps source code, setup scripts, documentation, cleaned notebooks, small
-example inputs, and camera calibration parameters (`CamCalibration/*.txt` and
+example inputs, and camera calibration parameters (`stereoCam/CamCalibration/intrinsics/` and
 the per-camera CSV/text profiles). Firmware source and project files are kept,
 along with the documented release image `Yahboom_firmware/stree_free_ii.hex`.
 Firmware compiler output, duplicate ZIP archives, Python environments (including

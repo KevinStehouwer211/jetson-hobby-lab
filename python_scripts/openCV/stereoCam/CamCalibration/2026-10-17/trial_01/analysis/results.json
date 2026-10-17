@@ -1,0 +1,42 @@
+{
+  "trial": "trial_01",
+  "source_config": "/home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/trial_01/freefalltest-config.yaml",
+  "source_fps": 7.0,
+  "stereo_samples": 6,
+  "frames": [
+    19,
+    20,
+    21,
+    97,
+    98,
+    99
+  ],
+  "release_fall_frames": [
+    97,
+    98,
+    99
+  ],
+  "focus_selection": "last_consecutive_stereo_run",
+  "animation_regenerated": true,
+  "has_host_timing": false,
+  "coordinate_system": "video_aligned_fall_frame",
+  "orientation_file": "orientation.json",
+  "sigma_px_assumed": 2.0,
+  "high_residual_frames": [],
+  "argus_exported_residual_max_px": 2.601369029619629,
+  "max_raw_coordinate_rms_px": 1.5888536200925272,
+  "max_reconstruction_difference_from_argus_mm": 4.325833496841695,
+  "halfwidth_mm_min": [
+    9.730926821943958,
+    17.75099331166533,
+    16.500328052995386
+  ],
+  "halfwidth_mm_max": [
+    11.708916337311083,
+    22.257128387644983,
+    30.607769803463764
+  ],
+  "recording_repeats": null,
+  "marked_frame_repeats": null,
+  "marked_arrival_difference_ms_range": null
+}

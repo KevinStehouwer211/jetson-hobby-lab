@@ -1,0 +1,56 @@
+TRIAL 03 — SHARED ANALYSIS
+
+10 matched samples at 25 fps; marked frames 130–139.
+Focus window: F130–F139, 10 samples, 0.360 s.
+Focus selection: last_consecutive_stereo_run. This selects a plotting window, not physical release.
+All matched samples are retained. A contiguous track can include hand contact.
+
+OUTPUTS:
+reconstruction_3d.png/pdf: full track, camera centers and focus close-up with 95% regions.
+locations_over_time.png/pdf: full track and focus XYZ with marginal 95% intervals.
+position_projections.png/pdf: focus XY, XZ, YZ with marginal 95% intervals.
+video_aligned_view.png/pdf: equal-scale X-Z view with fall toward negative Z.
+quality_and_timing.png/pdf: reprojection errors and host timing, when available.
+camera_overlay.png/pdf: marked pixels and independently reprojected locations.
+reconstruction.gif: measured focus samples alongside both source videos.
+locations_and_uncertainty.csv: original/calibration XYZ, rotated XYZ, intervals and flags.
+camera_locations.csv: camera centers in calibration and display frames.
+orientation.json: rigid transform, direction-fitting samples and isometric view.
+results.json: sample counts, quality metrics and run options.
+input_manifest.json: source-file and shared-script hashes.
+
+ORIENTATION:
+The principal direction of reliable focus samples defines down (-Z). Its sign follows time.
+Samples with raw coordinate RMS above 3 px are excluded from this direction fit only.
+Zero is the mean of the first three reliable focus samples; +X follows cam1 image-right.
+The 3D view is orthographic isometric: azimuth -45 degrees, elevation 35.264 degrees, Z up.
+Points, camera centers and covariance matrices receive the same rigid rotation.
+Original calibration coordinates are preserved in calibration_* CSV columns.
+Vertical is inferred from the selected motion, not independent gravity/floor measurements.
+Lateral motion is retained. Different tests can use different inferred display frames;
+use calibration_* coordinates for comparisons in the original shared calibration frame.
+
+UNCERTAINTY AND QUALITY:
+Independent XYZ minimizes all four raw distorted pixel residuals; sigma=2 px is assumed.
+Covariance = sigma^2 * inverse(J.T @ J), rotated into the display coordinate system.
+Marginal 95% intervals use +/-1.96 SD; joint ellipsoids use chi-square(3) at 95%.
+These local conditional ranges exclude calibration, exposure timing, motion blur,
+orientation estimation and systematic model errors. They do not measure total accuracy.
+Frames with raw coordinate RMS above 3 px: [133, 134, 138, 139].
+This is a diagnostic threshold, not an estimated certainty percentage. Flagged points remain plotted.
+Maximum difference from saved Argus XYZ: 25.36 mm.
+Original Argus exports are preserved and shown in gray after applying the same display rotation.
+Independent refinement uses all four equations, avoiding the installed Argus uv_to_xyz
+initialization that overwrites one equation in the two-camera case.
+Host timing available: True. Missing timing is unknown, never assumed synchronized.
+Reused source reads in recording: {'dofbot_repeated': 1, 'dashcam_repeated': 0}.
+Reused source reads at marked frames: {'dofbot_repeated': 0, 'dashcam_repeated': 0}.
+Marked host arrival difference range (ms): [-18.6377319987514, 10.0256330006232].
+Host receipt timestamps are not exposure timestamps; equal output indices do not prove synchronization.
+No gravity magnitude or physical release/impact time is inferred from the display alignment.
+
+REPRODUCE:
+argus_env/bin/python python_scripts/openCV/stereoCam/CamCalibration/analysis/analyze.py 2026-10-17/trial_03
+Add --fall-frames START:END to select a different focus window (1-based inclusive).
+Use --all to run every trial with an Argus results project. Code lives only in CamCalibration/analysis/.
+Original inputs remain unchanged.

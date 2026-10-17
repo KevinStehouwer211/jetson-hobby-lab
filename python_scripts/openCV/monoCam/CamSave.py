@@ -1,5 +1,7 @@
 import cv2
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 print(cv2.__version__)
 
@@ -16,7 +18,9 @@ if not cam.isOpened():
     raise RuntimeError("Could not open webcam")
 
 # Video output
-output_path = Path("python_scripts/saved_vids/dofbotCalibration.avi")
+stamp = datetime.now(ZoneInfo('Europe/Amsterdam')).strftime('%Y%m%d_%H%M%S_%f')
+output_path = (Path(__file__).resolve().parent / 'stereoCam' / 'CamCalibration' / 'intrinsics' /
+               'Dofbot' / f'calibration_{stamp}.avi')
 output_path.parent.mkdir(parents=True, exist_ok=True)
 
 fps = 30

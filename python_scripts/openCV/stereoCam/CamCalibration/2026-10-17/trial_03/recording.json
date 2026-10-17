@@ -1,0 +1,26 @@
+{
+  "started_at": "2026-10-17T12:25:42.325057+02:00",
+  "kind": "trial",
+  "output_fps": 25,
+  "resolution": [
+    640,
+    480
+  ],
+  "cameras": {
+    "cam1": {
+      "name": "Dashcam",
+      "device": "/dev/video2",
+      "file": "cam1.avi",
+      "capture_format": "MJPG"
+    },
+    "cam2": {
+      "name": "Dofbot",
+      "device": "/dev/video0",
+      "file": "cam2.avi",
+      "capture_format": "YUYV"
+    }
+  },
+  "shared_intrinsics": "/home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/stereoCam/CamCalibration/intrinsics/camera-profile.txt",
+  "wand_calibration": null,
+  "note": "Select the applicable wand calibration in Argus; equal output frame counts do not establish synchronized exposures."
+}

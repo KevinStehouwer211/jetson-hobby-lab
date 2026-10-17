@@ -1,0 +1,42 @@
+[
+  {
+    "path": "python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/trial_01/freefalltest-config.yaml",
+    "sha256": "82ca40ee30e6459f133ecb2ab27812f36a80c5151c23fd6457fb8e44b231e460"
+  },
+  {
+    "path": "python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/trial_01/freefalltest-xypts.csv",
+    "sha256": "6331088e59cf377b7876563fb40b31ad31037bc64fdc1d174c3726d6b7dceba0"
+  },
+  {
+    "path": "python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/trial_01/freefalltest-xyzpts.csv",
+    "sha256": "a6f8ea71860d4918324b6fd1d19de01d9acd8936c6409f092c88d5d1d8299e31"
+  },
+  {
+    "path": "python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/trial_01/freefalltest-xyzres.csv",
+    "sha256": "03436d9f56d70186e0b3a8abade636c206b1b1dc3411915a33cbe4db2730cf9f"
+  },
+  {
+    "path": "python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/trial_01/freefalltest-offsets.csv",
+    "sha256": "a3622ba6d98bdb3b4f38097f937fd739c9c4dfdcea33dcbee3e46f50b4d91c86"
+  },
+  {
+    "path": "python_scripts/openCV/stereoCam/CamCalibration/intrinsics/camera-profile.txt",
+    "sha256": "ce1006b4c43787bcdc12c162c00ec6c8762d6ec13c500e4f306b410fae767d2d"
+  },
+  {
+    "path": "python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/wand_calibration_01/wandpts-xypts_cal-dlt-coefficients.csv",
+    "sha256": "da3884c60e570b9ee442f787b969b748a655d956413d13e63fc9ce2aa4dd14a4"
+  },
+  {
+    "path": "python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/trial_01/cam1.avi",
+    "sha256": "6bdaa744b81ad6c9ba85dd5cd04763710558815cfff3a4dcd308a976854106dd"
+  },
+  {
+    "path": "python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/trial_01/cam2.avi",
+    "sha256": "b6ce54e10ea65e8724cc8212c1255d53c7d455b763a350ed2005ed651e573b8b"
+  },
+  {
+    "path": "python_scripts/openCV/stereoCam/CamCalibration/analysis/analyze.py",
+    "sha256": "52e3d41efababc7dc0c9fea1688bbe1468b853676c643bd9d1ca4a449b3f90e9"
+  }
+]

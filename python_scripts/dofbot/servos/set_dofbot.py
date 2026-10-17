@@ -3,7 +3,10 @@
 import time
 from Arm_Lib import Arm_Device
 
-servos = [(1, 90), (2, 155), (3, 60), (4, 0), (5, 90), (6, 90)]
+arm = Arm_Device(i2c_bus=7, strict_errors=True)
+
+#servos = [(1, 60), (2, 155), (3, 60), (4, 0), (5, 90), (6, 90)]
+servos = [(1, 90), (2, 90), (3, 90), (4, 90), (5, 90), (6, 90)]
 duration_ms = 1000
 
 # Check every target before sending any movement commands.
@@ -16,7 +19,6 @@ for servo, angle in servos:
 if not isinstance(duration_ms, int) or not 0 <= duration_ms <= 65535:
     raise ValueError("duration_ms must be an integer between 0 and 65535")
 
-arm = Arm_Device(i2c_bus=7, strict_errors=True)
 try:
     for servo, angle in servos:
         arm.Arm_serial_servo_write(servo, angle, duration_ms)

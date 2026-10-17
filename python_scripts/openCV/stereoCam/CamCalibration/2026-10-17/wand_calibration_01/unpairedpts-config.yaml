@@ -1,0 +1,23 @@
+- videos:
+  - /home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/wand_calibration_01/cam1.avi
+  - /home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/wand_calibration_01/cam2.avi
+- points: /home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/wand_calibration_01/unpairedpts-xypts.csv
+- resolution: 1
+- last_frame: 276
+- offsets: /home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/wand_calibration_01/unpairedpts-offsets.csv
+- dlt_coefficents: null
+- camera_profile: /home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/stereoCam/CamCalibration/intrinsics/camera-profile.txt
+- settings:
+    auto_advance: false
+    bstrap: false
+    current_track: Track 1
+    data_loaded_from_dlc: false
+    displaying_all_tracks: false
+    dlc_h5_file_paths: []
+    dlc_likelihood: 0.9
+    dlc_scorer: []
+    global_filename: /home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/wand_calibration_01/unpairedpts
+    init_track: Track 1
+    output_sparse: false
+    rgb: true
+    sync: true

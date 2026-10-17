@@ -1,0 +1,6 @@
+{
+  "previous_root": "python_scripts/openCV/CamCalibration",
+  "current_root": "python_scripts/openCV/stereoCam/CamCalibration",
+  "date": "2026-10-17",
+  "note": "Older file-relocations.json records the previous reorganization; its historical paths are retained."
+}

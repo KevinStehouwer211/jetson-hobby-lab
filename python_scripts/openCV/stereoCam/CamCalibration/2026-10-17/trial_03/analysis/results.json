@@ -1,0 +1,67 @@
+{
+  "trial": "trial_03",
+  "source_config": "/home/kstehouwer/jetson-hobby-lab/python_scripts/openCV/stereoCam/CamCalibration/2026-10-17/trial_03/freefalltest3-config.yaml",
+  "source_fps": 25.0,
+  "stereo_samples": 10,
+  "frames": [
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139
+  ],
+  "release_fall_frames": [
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139
+  ],
+  "focus_selection": "last_consecutive_stereo_run",
+  "animation_regenerated": true,
+  "has_host_timing": true,
+  "coordinate_system": "video_aligned_fall_frame",
+  "orientation_file": "orientation.json",
+  "sigma_px_assumed": 2.0,
+  "high_residual_frames": [
+    133,
+    134,
+    138,
+    139
+  ],
+  "argus_exported_residual_max_px": 17.231869406182042,
+  "max_raw_coordinate_rms_px": 10.346108077477247,
+  "max_reconstruction_difference_from_argus_mm": 25.364310660114747,
+  "halfwidth_mm_min": [
+    8.269354633632142,
+    17.557481893358847,
+    10.943913043110003
+  ],
+  "halfwidth_mm_max": [
+    10.83312546677407,
+    23.90094960187672,
+    31.838160403866535
+  ],
+  "recording_repeats": {
+    "dofbot_repeated": 1,
+    "dashcam_repeated": 0
+  },
+  "marked_frame_repeats": {
+    "dofbot_repeated": 0,
+    "dashcam_repeated": 0
+  },
+  "marked_arrival_difference_ms_range": [
+    -18.6377319987514,
+    10.0256330006232
+  ]
+}

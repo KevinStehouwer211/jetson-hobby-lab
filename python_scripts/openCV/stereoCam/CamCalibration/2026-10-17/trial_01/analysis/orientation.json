@@ -1,0 +1,48 @@
+{
+  "coordinate_system": "video_aligned_fall_frame",
+  "formula": "display_xyz = rotation @ (calibration_xyz - origin)",
+  "rotation": [
+    [
+      -0.9826689762189139,
+      -0.08747901667240596,
+      -0.1634292043023538
+    ],
+    [
+      0.061401816982042334,
+      0.6782608594996391,
+      -0.7322513389145248
+    ],
+    [
+      0.17490425966275192,
+      -0.7295955236381589,
+      -0.6611345338423829
+    ]
+  ],
+  "origin_calibration_m": [
+    -0.06383765531132478,
+    -0.08816150542335131,
+    -0.2515712052388576
+  ],
+  "direction_fit_frames": [
+    97,
+    98,
+    99
+  ],
+  "down_direction_calibration": [
+    -0.17490425966275192,
+    0.7295955236381589,
+    0.6611345338423829
+  ],
+  "view_camera": "orthographic isometric",
+  "projection": "orthographic",
+  "dashcam_azimuth_deg": -92.22943054769974,
+  "dashcam_elevation_deg": -48.225408331491735,
+  "view_elevation_deg": 35.264389682754654,
+  "view_azimuth_deg": -45.0,
+  "axes": {
+    "x": "Dashcam image-right projected perpendicular to inferred vertical",
+    "y": "Depth, completing a right-handed frame",
+    "z": "Up, opposite observed fall direction"
+  },
+  "note": "Orientation inferred from this track; not surveyed gravity or floor. Rotation uncertainty is not included."
+}

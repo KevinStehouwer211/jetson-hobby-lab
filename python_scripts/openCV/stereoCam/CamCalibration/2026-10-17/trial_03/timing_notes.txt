@@ -1,0 +1,7 @@
+Output FPS: 25; capture requests 30 FPS; four buffers per camera.
+Arrival times use the host monotonic clock immediately after OpenCV read().
+They are not sensor exposure timestamps and do not establish synchronization.
+Source sequences count successful reads; repeats flag reuse of the same read.
+Identical exposures returned as separate reads cannot be detected this way.
+Late output slots repeat the latest frames and are flagged in the CSV.
+Segments identify recording resumes; pauses are omitted from AVI time.
